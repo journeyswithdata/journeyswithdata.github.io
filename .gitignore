@@ -1,0 +1,17 @@
+# ---- Quarto rendered output ----
+_site/
+
+# ---- Quarto internal state ----
+.quarto/
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+
+# ---- Python (if used) ----
+__pycache__/
+*.py[cod]
+.env
+.venv/
+
+/.quarto/

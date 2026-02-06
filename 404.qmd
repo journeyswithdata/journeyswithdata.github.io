@@ -1,0 +1,12 @@
+::: {.text-center}
+
+![](images/404-error.png){width=40% fig-align="center"}
+
+# Oops!
+
+The page you are looking for seems to have gone missing. 
+It might have been moved or deleted.
+
+[Take me home](index.qmd){.btn .btn-primary .btn-lg .mt-3 role="button"}
+
+:::

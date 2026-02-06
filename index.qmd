@@ -1,0 +1,23 @@
+---
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+## Hello, traveller 🧭
+
+This site is a trail of notes left while wandering through data science, infrastructure, policy, and AI.
+
+Some posts are maps.  
+Some are sketches.  
+A few are probably wrong — but hopefully interesting in the attempt.
+
+I write to understand things better, not to look clever. If that sounds like your kind of internet, have a look around.
+
+## Latest posts

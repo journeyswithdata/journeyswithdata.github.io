@@ -1,0 +1,8 @@
+---
+title: "Post With Code"
+date: "2026-02-06"
+categories: [code, analysis]
+image: "about.png"
+---
+
+This is a post with code, or at least it will be once I add some code to it. For now, it's just a placeholder for a future post that will include some code snippets and analysis.
