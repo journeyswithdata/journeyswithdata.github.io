@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Journeys With Data",
+    "section": "",
+    "text": "This site is a trail of notes left while wandering through data science, infrastructure, policy, and AI.\nSome posts are maps.\nSome are sketches.\nA few are probably wrong — but hopefully interesting in the attempt.\nI write to understand things better, not to look clever. If that sounds like your kind of internet, have a look around."
+  },
+  {
+    "objectID": "index.html#hello-traveller",
+    "href": "index.html#hello-traveller",
+    "title": "Journeys With Data",
+    "section": "",
+    "text": "This site is a trail of notes left while wandering through data science, infrastructure, policy, and AI.\nSome posts are maps.\nSome are sketches.\nA few are probably wrong — but hopefully interesting in the attempt.\nI write to understand things better, not to look clever. If that sounds like your kind of internet, have a look around."
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Journeys With Data",
+    "section": "Latest posts",
+    "text": "Latest posts"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Welcome to my blog! This is where I will share my thoughts, ideas, and experiences on various topics. Stay tuned for exciting content and updates!"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with code, or at least it will be once I add some code to it. For now, it’s just a placeholder for a future post that will include some code snippets and analysis."
+  }
+]
