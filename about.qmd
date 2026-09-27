@@ -1,0 +1,27 @@
+---
+title: "About"
+---
+
+![](profile.jpg){.portrait fig-alt="Portrait"}
+
+## Hello, traveller
+
+This site is a trail of notes left while wandering through data science, infrastructure, policy and AI.
+
+Some posts are maps. Some are sketches. A few are probably wrong — but hopefully interesting in the attempt.
+
+I write to understand things better, not to look clever. If that sounds like your kind of internet, have a look around.
+
+## The short version
+
+I am a data scientist working in energy networks — currently Lead Data Scientist at Wales & West Utilities, where a lot of my time goes on asset risk, network data and the organisation's direction on AI. Alongside that I am working through an MSc in Data Science at the University of St Andrews.
+
+
+## Elsewhere
+
+- **GitHub** — [journeyswithdata](https://github.com/journeyswithdata)
+- More ways to reach me, shortly.
+
+::: {.callout-note appearance="simple"}
+Everything here is written in a personal capacity and does not represent the views of my employer.
+:::

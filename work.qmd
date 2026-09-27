@@ -1,0 +1,34 @@
+---
+title: "Work"
+---
+
+[I work where data science meets regulated infrastructure: gas distribution, asset risk and the evidence a regulator expects behind an investment case. Below is the shape of that work — **not a CV, which is what LinkedIn is for.**]{.lede}
+
+## Risk on a real asset base
+
+Network risk models are only as good as the asset data underneath them, and that data is rarely as complete as the model assumes. A lot of my work is the unglamorous part: establishing what is actually known about an asset population, what is inferred, and what is simply asserted — then being honest about which is which.
+
+::: {.pullquote}
+The interesting question is rarely "what does the model say". It is "what would have to be true for the model to be wrong".
+:::
+
+## AI with a regulator in the room
+
+Setting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny.
+
+## Decision modelling
+
+Optimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal.
+
+## Tools
+
+R and Python for the modelling, Quarto for everything that has to be read by someone else, and a long-standing conviction that a well-made document is part of the work rather than an afterthought.
+
+::: {.strip}
+::: {.inner}
+## Working on something similar?
+If you are wrestling with asset data, network risk, or making AI legible to people who have to sign it off, I would be glad to compare notes.
+
+[Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
+:::
+:::

@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+    - profile.jpg
+    - .nojekyll
+
+website:
+  title: "Journeys With Data"
+  description: "Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure."
+  site-url: https://journeyswithdata.dev
+  favicon: favicon.svg
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: writing.qmd
+        text: Writing
+      - href: work.qmd
+        text: Work
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/journeyswithdata
+        aria-label: GitHub
+  page-footer:
+    left: "Journeys With Data"
+    center: "*Some posts are maps. Some are sketches.*"
+    right: "v1.0 · 2026"
+
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    toc: false
+    anchor-sections: false
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">

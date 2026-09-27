@@ -1,0 +1,10 @@
+---
+title: "Presentation is evidence"
+description: "A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data."
+date: 2026-09-26
+categories: [submissions, design]
+---
+
+*Still being written — the thinking is done, the words are not.*
+
+A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.

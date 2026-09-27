@@ -1,0 +1,10 @@
+---
+title: "The asset that exists in four systems and three taxonomies"
+description: 'Reconciling an asset population across SAP, GIS and a risk model — and what "how many assets do we have" actually means.'
+date: 2026-09-18
+categories: [asset data, energy]
+---
+
+*Still being written — the thinking is done, the words are not.*
+
+Reconciling an asset population across SAP, GIS and a risk model — and what "how many assets do we have" actually means.

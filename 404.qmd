@@ -1,0 +1,7 @@
+---
+title: "Off the map"
+---
+
+[That page is not here. It may have been moved, renamed, or never existed — the last of which is the most likely.]{.lede}
+
+Try [the writing](writing.qmd), or start again from [the beginning](index.qmd).

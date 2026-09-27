@@ -1,0 +1,93 @@
+---
+pagetitle: "Journeys With Data"
+page-layout: full
+listing:
+  id: latest
+  contents: posts
+  type: default
+  max-items: 3
+  sort: "date desc"
+  fields: [date, title, description, categories]
+  date-format: "D MMM YYYY"
+---
+
+::: {.chart-hero}
+::: {.inner}
+[DATA SCIENCE []{.dot} ENERGY NETWORKS []{.dot} DECISION MODELLING]{.eyebrow}
+
+# Some posts are maps. Some are *sketches*. {.chart-hero-title}
+
+[I am a data scientist working on **the systems that keep the gas flowing** — asset risk, network data and the decisions a regulated utility has to justify with evidence. This is where I think out loud about it.]{.standfirst}
+
+::: {.hero-meta}
+::: {}
+Currently
+**Lead Data Scientist, Wales & West Utilities**
+:::
+::: {}
+Studying
+**MSc Data Science, University of St Andrews**
+:::
+::: {}
+Interested in
+**Applied decision science for energy & infrastructure**
+:::
+:::
+:::
+:::
+
+::: {.section-mark}
+[01]{.num}
+
+## What I actually work on
+:::
+
+[Most data science writing is about models. Comparatively little is about **the messy, regulated, consequential systems models get deployed into** — where a wrong number becomes a wrong investment, and a regulator will ask you to show your working. That is the part I find interesting, and it is what I write about.]{.lede}
+
+::: {.areas}
+::: {.area}
+[Asset risk]{.tag}
+
+### Risk on real networks
+
+Turning an asset register into a defensible view of risk — what the data actually supports, where it is thin, and what follows for spend.
+:::
+::: {.area}
+[AI strategy]{.tag}
+
+### AI that survives contact
+
+Setting a direction for AI in an organisation that has to answer to a regulator — less about capability, more about evidence, assurance and sequencing.
+:::
+::: {.area}
+[Decision science]{.tag}
+
+### Decisions, not dashboards
+
+Optimisation and scenario modelling aimed at a decision someone has to make, rather than a chart someone has to look at.
+:::
+:::
+
+::: {.pullquote}
+A few are probably wrong — but hopefully interesting in the attempt.
+:::
+
+::: {.section-mark}
+[02]{.num}
+
+## Latest writing
+:::
+
+::: {#latest}
+:::
+
+[See everything in [Writing](writing.qmd) →]{.meta}
+
+::: {.strip}
+::: {.inner}
+## Get in touch
+I am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.
+
+[Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
+:::
+:::

@@ -1,0 +1,10 @@
+---
+title: "Derive the population, don't assert it"
+description: "Why an eligibility rule you can re-run beats a number somebody typed in 2019."
+date: 2026-09-05
+categories: [method, asset data]
+---
+
+*Still being written — the thinking is done, the words are not.*
+
+Why an eligibility rule you can re-run beats a number somebody typed in 2019.
