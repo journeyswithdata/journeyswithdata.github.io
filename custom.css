@@ -203,3 +203,11 @@ main.content h2,.section-mark h2,#title-block-header h1{border-bottom:none !impo
 .portrait img,img.portrait{width:150px;height:150px;object-fit:cover;float:right;
   margin:0 0 1.25rem 1.75rem;border:1px solid var(--rule);}
 @media(max-width:600px){.portrait img,img.portrait{float:none;margin:0 0 1.25rem;}}
+
+/* ---------- full-bleed dark bands must meet the chrome ----------
+   Quarto always emits <header id="title-block-header"> even when a page has
+   no title; empty, it still pushed a paper-coloured band between the navbar
+   and the hero. main.content's own padding did the same at both ends. */
+main.content > header.quarto-title-block:empty{display:none;}
+main.content:has(> .chart-hero){padding-top:0;}
+main.content:has(> .strip:last-child){padding-bottom:0;}
