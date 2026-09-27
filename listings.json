@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/writing.html",
+    "items": [
+      "/posts/presentation-is-evidence/index.html",
+      "/posts/four-systems-three-taxonomies/index.html",
+      "/posts/derive-dont-assert/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/presentation-is-evidence/index.html",
+      "/posts/four-systems-three-taxonomies/index.html",
+      "/posts/derive-dont-assert/index.html"
+    ]
+  }
+]

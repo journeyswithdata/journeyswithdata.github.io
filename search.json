@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
+    "section": "",
+    "text": "Notes, working-out and the occasional map. I write to understand things better, not to look clever.\n\n\n\n\n\n\n\n\n\nPresentation is evidence\n\n\n\nsubmissions\n\ndesign\n\n\n\nA diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.\n\n\n\n\n\n26 Sep 2026\n\n1 min\n\n\n\n\n\n\nThe asset that exists in four systems and three taxonomies\n\n\n\nasset data\n\nenergy\n\n\n\nReconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.\n\n\n\n\n\n18 Sep 2026\n\n1 min\n\n\n\n\n\n\nDerive the population, don’t assert it\n\n\n\nmethod\n\nasset data\n\n\n\nWhy an eligibility rule you can re-run beats a number somebody typed in 2019.\n\n\n\n\n\n5 Sep 2026\n\n1 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Some posts are maps. Some are sketches.",
+    "section": "",
+    "text": "DATA SCIENCE  ENERGY NETWORKS  DECISION MODELLING\n\n\nI am a data scientist working on the systems that keep the gas flowing — asset risk, network data and the decisions a regulated utility has to justify with evidence. This is where I think out loud about it.\n\n\nCurrently Lead Data Scientist, Wales & West Utilities\n\n\nStudying MSc Data Science, University of St Andrews\n\n\nInterested in Applied decision science for energy & infrastructure\nMost data science writing is about models. Comparatively little is about the messy, regulated, consequential systems models get deployed into — where a wrong number becomes a wrong investment, and a regulator will ask you to show your working. That is the part I find interesting, and it is what I write about.\nSee everything in Writing →"
+  },
+  {
+    "objectID": "index.html#what-i-actually-work-on",
+    "href": "index.html#what-i-actually-work-on",
+    "title": "Some posts are maps. Some are sketches.",
+    "section": "What I actually work on",
+    "text": "What I actually work on"
+  },
+  {
+    "objectID": "index.html#latest-writing",
+    "href": "index.html#latest-writing",
+    "title": "Some posts are maps. Some are sketches.",
+    "section": "Latest writing",
+    "text": "Latest writing"
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "Some posts are maps. Some are sketches.",
+    "section": "Get in touch",
+    "text": "Get in touch\nI am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.\nFind me on GitHub  more ways to reach me coming shortly."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html",
+    "href": "posts/four-systems-three-taxonomies/index.html",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "",
+    "text": "Still being written — the thinking is done, the words are not.\nReconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html",
+    "href": "posts/derive-dont-assert/index.html",
+    "title": "Derive the population, don’t assert it",
+    "section": "",
+    "text": "Still being written — the thinking is done, the words are not.\nWhy an eligibility rule you can re-run beats a number somebody typed in 2019."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html",
+    "href": "posts/presentation-is-evidence/index.html",
+    "title": "Presentation is evidence",
+    "section": "",
+    "text": "Still being written — the thinking is done, the words are not.\nA diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data."
+  },
+  {
+    "objectID": "work.html",
+    "href": "work.html",
+    "title": "Work",
+    "section": "",
+    "text": "I work where data science meets regulated infrastructure: gas distribution, asset risk and the evidence a regulator expects behind an investment case. Below is the shape of that work — not a CV, which is what LinkedIn is for."
+  },
+  {
+    "objectID": "work.html#risk-on-a-real-asset-base",
+    "href": "work.html#risk-on-a-real-asset-base",
+    "title": "Work",
+    "section": "Risk on a real asset base",
+    "text": "Risk on a real asset base\nNetwork risk models are only as good as the asset data underneath them, and that data is rarely as complete as the model assumes. A lot of my work is the unglamorous part: establishing what is actually known about an asset population, what is inferred, and what is simply asserted — then being honest about which is which.\n\nThe interesting question is rarely “what does the model say”. It is “what would have to be true for the model to be wrong”."
+  },
+  {
+    "objectID": "work.html#ai-with-a-regulator-in-the-room",
+    "href": "work.html#ai-with-a-regulator-in-the-room",
+    "title": "Work",
+    "section": "AI with a regulator in the room",
+    "text": "AI with a regulator in the room\nSetting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny."
+  },
+  {
+    "objectID": "work.html#decision-modelling",
+    "href": "work.html#decision-modelling",
+    "title": "Work",
+    "section": "Decision modelling",
+    "text": "Decision modelling\nOptimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal."
+  },
+  {
+    "objectID": "work.html#tools",
+    "href": "work.html#tools",
+    "title": "Work",
+    "section": "Tools",
+    "text": "Tools\nR and Python for the modelling, Quarto for everything that has to be read by someone else, and a long-standing conviction that a well-made document is part of the work rather than an afterthought."
+  },
+  {
+    "objectID": "work.html#working-on-something-similar",
+    "href": "work.html#working-on-something-similar",
+    "title": "Work",
+    "section": "Working on something similar?",
+    "text": "Working on something similar?\nIf you are wrestling with asset data, network risk, or making AI legible to people who have to sign it off, I would be glad to compare notes.\nFind me on GitHub  more ways to reach me coming shortly."
+  },
+  {
+    "objectID": "about.html#hello-traveller",
+    "href": "about.html#hello-traveller",
+    "title": "About",
+    "section": "Hello, traveller",
+    "text": "Hello, traveller\nThis site is a trail of notes left while wandering through data science, infrastructure, policy and AI.\nSome posts are maps. Some are sketches. A few are probably wrong — but hopefully interesting in the attempt.\nI write to understand things better, not to look clever. If that sounds like your kind of internet, have a look around."
+  },
+  {
+    "objectID": "about.html#the-short-version",
+    "href": "about.html#the-short-version",
+    "title": "About",
+    "section": "The short version",
+    "text": "The short version\nI am a data scientist working in energy networks — currently Lead Data Scientist at Wales & West Utilities, where a lot of my time goes on asset risk, network data and the organisation’s direction on AI. Alongside that I am working through an MSc in Data Science at the University of St Andrews."
+  },
+  {
+    "objectID": "about.html#elsewhere",
+    "href": "about.html#elsewhere",
+    "title": "About",
+    "section": "Elsewhere",
+    "text": "Elsewhere\n\nGitHub — journeyswithdata\nMore ways to reach me, shortly.\n\n\n\n\n\n\n\nEverything here is written in a personal capacity and does not represent the views of my employer."
+  }
+]

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Journeys With Data</title>
+<link>https://journeyswithdata.dev/writing.html</link>
+<atom:link href="https://journeyswithdata.dev/writing.xml" rel="self" type="application/rss+xml"/>
+<description>Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure.</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Fri, 25 Sep 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Presentation is evidence</title>
+  <link>https://journeyswithdata.dev/posts/presentation-is-evidence/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><em>Still being written — the thinking is done, the words are not.</em></p>
+<p>A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.</p>
+
+
+
+ ]]></description>
+  <category>submissions</category>
+  <category>design</category>
+  <guid>https://journeyswithdata.dev/posts/presentation-is-evidence/</guid>
+  <pubDate>Fri, 25 Sep 2026 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The asset that exists in four systems and three taxonomies</title>
+  <link>https://journeyswithdata.dev/posts/four-systems-three-taxonomies/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><em>Still being written — the thinking is done, the words are not.</em></p>
+<p>Reconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.</p>
+
+
+
+ ]]></description>
+  <category>asset data</category>
+  <category>energy</category>
+  <guid>https://journeyswithdata.dev/posts/four-systems-three-taxonomies/</guid>
+  <pubDate>Thu, 17 Sep 2026 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Derive the population, don’t assert it</title>
+  <link>https://journeyswithdata.dev/posts/derive-dont-assert/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><em>Still being written — the thinking is done, the words are not.</em></p>
+<p>Why an eligibility rule you can re-run beats a number somebody typed in 2019.</p>
+
+
+
+ ]]></description>
+  <category>method</category>
+  <category>asset data</category>
+  <guid>https://journeyswithdata.dev/posts/derive-dont-assert/</guid>
+  <pubDate>Fri, 04 Sep 2026 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
