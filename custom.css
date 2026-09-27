@@ -209,5 +209,13 @@ main.content h2,.section-mark h2,#title-block-header h1{border-bottom:none !impo
    no title; empty, it still pushed a paper-coloured band between the navbar
    and the hero. main.content's own padding did the same at both ends. */
 main.content > header.quarto-title-block:empty{display:none;}
-main.content:has(> .chart-hero){padding-top:0;}
-main.content:has(> .strip:last-child){padding-bottom:0;}
+
+/* main carries an 18px margin at each end, and Quarto's page grid reserves a
+   60px row beneath the content (.page-rows-contents). Both render in paper
+   and so appear as a light band against a full-bleed dark section. Measured
+   at 430px viewport: 18px above, 78px below. */
+main.content:has(> .chart-hero){padding-top:0;margin-top:0;}
+main.content:has(> .strip:last-child){padding-bottom:0;margin-bottom:0;}
+#quarto-content:has(main.content > .strip:last-child){
+  grid-template-rows:[content-top] minmax(max-content,1fr) [content-bottom] 0 [page-bottom];
+}
