@@ -39,9 +39,8 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, theme.scss]
     highlight-style: nord
-    css: custom.css
     toc: false
     anchor-sections: false
     include-in-header:

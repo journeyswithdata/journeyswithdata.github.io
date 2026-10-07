@@ -1,6 +1,7 @@
 ---
 pagetitle: "Journeys With Data"
-page-layout: full
+title-block-style: none
+body-classes: home
 listing:
   id: latest
   contents: posts
@@ -11,7 +12,7 @@ listing:
   date-format: "D MMM YYYY"
 ---
 
-::: {.chart-hero}
+::: {.chart-hero .column-screen}
 ::: {.inner}
 [DATA SCIENCE []{.dot} ENERGY NETWORKS []{.dot} DECISION MODELLING]{.eyebrow}
 
@@ -122,11 +123,9 @@ A few are probably wrong — but hopefully interesting in the attempt.
 
 [See everything in [Writing](writing.qmd) →]{.meta}
 
-::: {.strip}
-::: {.inner}
+::: {.contact}
 ## Get in touch
 I am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
-:::
 :::

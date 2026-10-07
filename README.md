@@ -1,6 +1,6 @@
 # journeyswithdata.dev
 
-Quarto website. Chart-room styling lives entirely in `custom.css`.
+Quarto website. Chart-room styling lives entirely in `theme.scss` (Quarto theme variables + a few component styles).
 
 ## Run it
 
@@ -30,7 +30,7 @@ so they are copied into the published output and the custom domain keeps working
     about.qmd           you, in your own words
     posts/              one post per folder
     posts/_metadata.yml shared post settings: contents sidebar, reading time, footer
-    custom.css          all styling
+    theme.scss          all styling (Bootstrap/Quarto theme variables)
 
 ## Writing a new post
 

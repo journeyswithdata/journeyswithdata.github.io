@@ -61,11 +61,9 @@ I am always interested in comparing notes with people working on similar problem
 - **Mentoring** people moving into data science from engineering or operations, or the other way round.
 - **Collaboration** with academics and other utilities on shared methodological problems.
 
-::: {.strip}
-::: {.inner}
+::: {.contact}
 ## Working on something similar?
 If you are wrestling with asset data, network risk, or making AI legible to people who have to sign it off, I would be glad to compare notes.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
-:::
 :::
