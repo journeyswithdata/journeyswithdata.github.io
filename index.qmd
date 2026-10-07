@@ -13,7 +13,7 @@ listing:
 ---
 
 ::: {.chart-hero .column-screen}
-::: {.inner}
+::: {.wrap}
 [DATA SCIENCE []{.dot} ENERGY NETWORKS []{.dot} DECISION MODELLING]{.eyebrow}
 
 # Some posts are maps. Some are *sketches*. {.chart-hero-title}
@@ -36,6 +36,9 @@ Interested in
 :::
 :::
 :::
+
+::: {.column-screen}
+::: {.wrap}
 
 ::: {.section-mark}
 [01]{.num}
@@ -128,4 +131,6 @@ A few are probably wrong — but hopefully interesting in the attempt.
 I am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
+:::
+:::
 :::

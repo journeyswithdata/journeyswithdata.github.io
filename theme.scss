@@ -86,6 +86,13 @@ h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this desig
 .nav-footer .nav-footer-center { font-family: $headings-font-family; font-style: italic;
   text-transform: none; letter-spacing: 0; font-size: .95rem; }
 
+// ---------- home page width ----------
+// Quarto's grid is fixed-width by design. The home page uses .column-screen
+// bands, and .wrap gives their contents a share of the screen instead, so it
+// scales on large and 4K displays.
+.wrap { width: min(88%, 2000px); margin-inline: auto;
+  > p { max-width: 75ch; } }   // keep running text at a readable length
+
 // ---------- home hero (a .column-screen band) ----------
 // body-classes: home (index.qmd) lets the hero sit directly under the navbar.
 .home #quarto-document-content { margin-top: 0; padding-top: 0; }
@@ -93,14 +100,13 @@ h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this desig
 .chart-hero {
   background-color: $sage-50;
   color: $text;
-  padding: 5rem 1.25rem 4.5rem;
+  padding: 5rem 0 4.5rem;
   border-bottom: 1px solid $rule;
   margin-bottom: 3rem;
   // contour lines, drawn not decorated
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23d5e0d0' stroke-width='1'%3E%3Cpath d='M-50 480 C 180 430 300 520 520 470 S 900 380 1250 430'/%3E%3Cpath d='M-50 430 C 180 380 310 470 530 420 S 900 330 1250 380'/%3E%3Cpath d='M-50 380 C 190 330 320 420 540 370 S 900 280 1250 330'/%3E%3Cpath d='M-50 330 C 200 280 330 370 550 320 S 900 230 1250 280'/%3E%3Cpath d='M-50 280 C 210 230 340 320 560 270 S 900 180 1250 230'/%3E%3Cpath d='M-50 230 C 220 180 350 270 570 220 S 900 130 1250 180'/%3E%3Cpath d='M-50 180 C 230 130 360 220 580 170 S 900 80 1250 130'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 100% 100%;
 
-  .inner { max-width: $grid-body-width; margin: 0 auto; }
   h1 { font-size: clamp(2.9rem, 7vw, 5.2rem); color: $forest-900; margin: 0 0 1.25rem; max-width: 18ch; }
   h1 em { color: $moss; }
   .standfirst { font-size: clamp(1.05rem, 1.7vw, 1.3rem); color: $text-soft; max-width: 62ch; line-height: 1.55; }
@@ -156,7 +162,7 @@ h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this desig
 @media (max-width: 1000px) { .principles { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 760px) {
   .areas, .principles, .theme-list { grid-template-columns: 1fr; }
-  .chart-hero { padding: 3.5rem 1.25rem 3rem; }
+  .chart-hero { padding: 3.5rem 0 3rem; }
 }
 
 // ---------- contact card ----------
