@@ -1,6 +1,6 @@
 # journeyswithdata.dev
 
-Quarto website. Chart-room styling lives entirely in `custom.css`.
+Quarto website. Chart-room styling lives entirely in `theme.scss` (Quarto theme variables + a few component styles).
 
 ## Run it
 
@@ -16,19 +16,24 @@ so they are copied into the published output and the custom domain keeps working
 
 ## Before you publish — checklist
 
-- [ ] `_quarto.yml` — real GitHub and LinkedIn URLs in the navbar (two `TODO`s)
-- [ ] `index.qmd` — the contact strip at the bottom (email / LinkedIn / GitHub)
-- [ ] `index.qmd` — confirm the three hero facts are how you want to be described
-- [ ] `work.qmd` — the contact strip
-- [ ] `about.qmd` — **rewrite in your own voice**; three TODOs marked inline
-- [ ] `posts/hello-again/` — replace with a real post, remove `draft: true`
-- [ ] Add your name somewhere — I deliberately did not guess your surname
+- [ ] Read all five posts and rewrite anything that doesn't sound like you
+- [ ] `work.qmd` — "Ways to work together": keep only what you're happy to offer
+- [ ] `about.qmd` — "What I believe about data work": make sure you do
+- [ ] Contact strips (`index.qmd`, `work.qmd`) and `about.qmd` "Elsewhere" — add email / LinkedIn when ready
+- [ ] Add your name somewhere (deliberately not guessed)
 
 ## Structure
 
-    index.qmd      home: hero, what I work on, latest 3 posts, contact
-    writing.qmd    full post listing with categories + RSS
-    work.qmd       the substance, positioned as work not CV
-    about.qmd      you, in your own words
-    posts/         one post per folder
-    custom.css     all styling
+    index.qmd           home: hero, focus areas, principles, latest posts, contact
+    writing.qmd         full post listing with categories, search + RSS (writing.xml)
+    work.qmd            the substance, writing by theme, ways to work together
+    about.qmd           you, in your own words
+    posts/              one post per folder
+    posts/_metadata.yml shared post settings: contents sidebar, reading time, footer
+    theme.scss          all styling (Bootstrap/Quarto theme variables)
+
+## Writing a new post
+
+Create `posts/<slug>/index.qmd` with `title`, `description`, `date` and
+`categories`. Add `draft: true` to keep it out of the published site until ready.
+Code blocks use plain ```` ```python ```` fences, so the site renders without Python or R installed.

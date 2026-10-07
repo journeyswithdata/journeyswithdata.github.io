@@ -5,6 +5,141 @@ date: 2026-09-05
 categories: [method, asset data]
 ---
 
-*Still being written — the thinking is done, the words are not.*
+Every regulated investment plan rests on a handful of counts. How many assets are in scope. How many are eligible for intervention. How many will be done in the period, and at what unit cost. Multiply them together and you have a large part of a business plan.
 
-Why an eligibility rule you can re-run beats a number somebody typed in 2019.
+What surprises people outside the industry is how often those counts are *asserted* rather than *derived*. Somewhere there is a spreadsheet cell containing `14,382`, and that cell has been copied, linked and pasted into a dozen later documents. Ask where it came from and you will hear one of three answers: "it's the figure from the last submission", "it came from the asset team", or a long pause.
+
+This post argues for a simple discipline. **A population count should be the output of a rule you can re-run, not a number someone remembers.**
+
+## What an asserted number costs you
+
+An asserted number is not necessarily wrong. It may have been carefully worked out by someone competent. The problem is that nobody can tell any more, and that causes three practical failures.
+
+**It cannot be refreshed.** The asset register changes every week. Assets are replaced, surveyed, reclassified and corrected. An asserted count is fixed at the moment someone typed it, and drifts away from reality without anyone noticing.
+
+**It cannot be explained.** When a reviewer asks *why* 14,382 rather than 13,900, the honest answer is "we don't know what was included". That is not an answer you want to give to a regulator, or to your own executive.
+
+**It cannot be challenged.** This is the subtle one. If you cannot see the rule, you cannot argue about it. Disagreements turn into disputes about whose number is right, not productive arguments about which *definition* is right.
+
+## What a derived population looks like
+
+A derived population is the result of applying an explicit eligibility rule to the asset register as it stands on a given date. The rule is written down, versioned and executable. Here is a deliberately simplified example. The criteria are illustrative and do not describe any real network's policy.
+
+```python
+import pandas as pd
+
+RULE_VERSION = "2026.1"
+
+def eligible_population(register: pd.DataFrame, as_of: str) -> pd.DataFrame:
+    """Apply the eligibility rule to the register as of a given date.
+
+    Returns every asset with a status and the reason for it. Excluded
+    assets stay in the output; they are not silently dropped.
+    """
+    df = register.copy()
+    df["status"] = "eligible"
+    df["reason"] = "meets all criteria"
+
+    in_scope_materials = ["cast iron", "spun iron", "ductile iron"]
+
+    # Each condition fires only on a *known* value; a missing attribute
+    # is dealt with below rather than being counted as out of scope.
+    rules = [
+        # (label, condition for EXCLUSION)
+        ("not in service",        df["operational_status"] != "in service"),
+        ("material out of scope", df["material"].notna()
+                                  & ~df["material"].isin(in_scope_materials)),
+        ("diameter out of scope", df["diameter_mm"] > 200),
+        ("already scheduled",     df["work_order_id"].notna()),
+    ]
+
+    for label, excluded in rules:
+        newly_out = excluded & (df["status"] == "eligible")
+        df.loc[newly_out, ["status", "reason"]] = ["excluded", label]
+
+    # Assets we cannot classify are neither in nor out — say so.
+    unknown = df["material"].isna() | df["diameter_mm"].isna()
+    df.loc[unknown & (df["status"] == "eligible"), ["status", "reason"]] = [
+        "undetermined", "missing material or diameter"
+    ]
+
+    df["rule_version"] = RULE_VERSION
+    df["as_of"] = as_of
+    return df
+```
+
+There is nothing clever here, and that is the point. Four properties make this better than a typed-in number.
+
+1. **Every asset gets a status and a reason.** Exclusions are not silent. You can count how many assets fell out at each step, and anyone can look up a specific asset and see why it is or is not in scope.
+2. **"Undetermined" is a legitimate answer.** Most asserted counts hide the assets nobody could classify. They get quietly included or quietly dropped, depending on who did the work. Here they are reported as their own category, which turns a hidden assumption into a visible data-quality finding.
+3. **The rule has a version.** When the definition changes, and it will, the count changes for a reason you can name.
+4. **It runs against a dated snapshot.** "Eligible as of 31 March" is a claim you can reproduce. "Eligible" on its own is not.
+
+## The exclusion waterfall
+
+The most useful single output of a derived population is not the final count. It is the waterfall that gets you there.
+
+```python
+def waterfall(pop: pd.DataFrame) -> pd.DataFrame:
+    steps = (
+        pop.groupby(["status", "reason"])
+           .size()
+           .rename("assets")
+           .reset_index()
+           .sort_values(["status", "assets"], ascending=[True, False])
+    )
+    return steps
+```
+
+Presented as a table it reads something like this (numbers invented):
+
+| Step                              | Assets | Remaining |
+|-----------------------------------|-------:|----------:|
+| Register, all records             | 61,240 |    61,240 |
+| Not in service                    | −3,115 |    58,125 |
+| Material out of scope             | −29,870|    28,255 |
+| Diameter out of scope             | −8,402 |    19,853 |
+| Already scheduled                 | −4,117 |    15,736 |
+| Undetermined (missing attributes) | −1,354 |    14,382 |
+| **Eligible**                      |        | **14,382**|
+
+Notice what the table gives a reviewer. They can see that the largest single exclusion is on material, so the quality of the material attribute matters more than anything else. They can see that 1,354 assets are undetermined, and they can ask whether that number is acceptable. If the plan assumes all 14,382 are delivered, they can see that the 1,354 are a risk to that assumption in either direction.
+
+None of those questions can even be *asked* of an asserted number.
+
+## Diffing two runs
+
+Once the population is derived, the next question writes itself: what changed since last time? Because each asset carries its own status, you can compare two runs asset by asset rather than total by total.
+
+```python
+def diff_runs(old: pd.DataFrame, new: pd.DataFrame, key: str = "asset_id") -> pd.DataFrame:
+    merged = old[[key, "status", "reason"]].merge(
+        new[[key, "status", "reason"]],
+        on=key, how="outer", suffixes=("_old", "_new"), indicator=True,
+    )
+    changed = merged[
+        (merged["_merge"] != "both")
+        | (merged["status_old"] != merged["status_new"])
+    ]
+    return changed.groupby(
+        ["_merge", "status_old", "status_new"], dropna=False
+    ).size().rename("assets").reset_index()
+```
+
+This turns "the number went down by 600" into a statement you can defend: 410 assets were replaced, 130 were reclassified after survey, and 60 left scope because the rule changed in version 2026.1. That last line is the one reviewers will care about most, and now you can show it on its own.
+
+## Objections I have heard
+
+**"The rule is too simple to capture engineering judgement."** Then write down the judgement. If an engineer excludes an asset for a reason the rule does not capture, that reason belongs in an override table with a name, a date and a justification attached. Overrides are fine. *Untraceable* overrides are the problem.
+
+**"We don't have time to build this."** The first version of a derived population is usually less work than the archaeology needed to explain an asserted one. And it is the last time anyone has to do that archaeology.
+
+**"The derived number is different from the one we submitted."** Almost certainly. That is not a reason to avoid deriving it. It is a reason to find out why, before someone else does.
+
+## The general principle
+
+This is not really about eligibility rules. It is about where authority sits. An asserted number gets its authority from whoever typed it. A derived number gets its authority from the rule and the data, both of which can be inspected.
+
+In a regulated setting, the second kind of authority is the only kind that lasts. People move on and spreadsheets get orphaned, but a rule you can re-run will still give the same answer to the same question long after its author has left.
+
+{{< include ../_post-end.md >}}

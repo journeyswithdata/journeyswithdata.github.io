@@ -1,0 +1,77 @@
+---
+title: "AI with a regulator in the room"
+description: "Setting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing."
+date: 2026-10-07
+categories: [AI strategy, regulation]
+---
+
+Most writing about AI strategy assumes the binding constraint is capability: what the models can do, how fast they are improving, how quickly an organisation can adopt them. In a regulated utility, capability is rarely the constraint. The constraint is whether you can **show your working** — to a regulator, to an auditor, or to your own board — years after a decision was made.
+
+That changes what a good AI strategy looks like. It is less a list of use cases and more a theory of *assurance*: which kinds of AI use you can stand behind, what evidence you need for each, and in what order to earn the right to the harder ones.
+
+## The question behind every question
+
+Regulators ask a great many specific questions. Underneath almost all of them is one general one: **can you explain why this decision was made, and show that it was a reasonable one at the time?**
+
+For a conventional analytical model, the answer is usually a methodology document, a validated dataset and a reproducible run. For AI systems, particularly generative ones, each of those is harder:
+
+- **Methodology.** The behaviour of a large language model cannot be fully specified in a document, and the model itself may be updated by its vendor.
+- **Data.** What the system "knew" when it produced an output depends on prompts, retrieved context and model version, and none of these is captured by default.
+- **Reproducibility.** The same input can produce different outputs on different days.
+
+None of this makes AI unusable in a regulated setting. It does mean that **the evidence has to be designed in from the start**, because it cannot be reconstructed afterwards.
+
+## Sort uses by what an error costs
+
+The most useful framing I know is to sort uses not by technology, but by **what happens when the system is wrong, and who would notice**.
+
+| Tier | Role of the AI | Who catches an error | Examples |
+|---|---|---|---|
+| **1. Assistive** | Helps a person do their own work faster | The person, immediately | Drafting, summarising, code assistance, searching internal documents |
+| **2. Decision support** | Informs a decision a named person makes | The decision-maker, with effort | Triage of inspection findings, flagging anomalies in asset data, first-pass review of a submission |
+| **3. Embedded** | Produces an output that feeds a regulated process | Possibly nobody, for some time | Classifying assets for a risk model, generating figures that end up in a submission |
+| **4. Automated decision** | Acts without a person in the loop | Only through monitoring | Automatic prioritisation of work, automated customer decisions |
+
+The tiers are not about how sophisticated the AI is. A simple classifier at tier 3 needs far more assurance than a frontier model at tier 1. Moving up a tier is a governance decision, not a technical upgrade.
+
+## Evidence that scales with the tier
+
+Each tier inherits the requirements of the ones below it and adds its own.
+
+**Tier 1 — Assistive.** Clear guidance on what may and may not be put into a tool. Approved tools only. Training that makes people the accountable author of anything they produce with AI help. Most organisations can, and should, move quickly here.
+
+**Tier 2 — Decision support.** All of the above, plus: a named decision-maker for every output; a record that the AI contributed; and a periodic check that people are genuinely reviewing outputs rather than rubber-stamping them. That last one is easy to skip and very important. A human in the loop who agrees 100% of the time is not a control.
+
+**Tier 3 — Embedded.** All of the above, plus everything you would expect of any model feeding a regulated process: a defined validation set with measured performance; versioning of the model, prompts and retrieved context; logs sufficient to reproduce or at least explain a given output; and a fallback if the system becomes unavailable or its vendor changes it.
+
+**Tier 4 — Automated.** All of the above, plus continuous monitoring with thresholds and named owners, a defined route for challenge and correction, and an explicit, documented decision by the accountable executive that automation is appropriate here.
+
+## Sequencing is the strategy
+
+Given those tiers, the sequencing almost writes itself.
+
+1. **Start where errors are cheap and visible.** Tier 1 builds familiarity, surfaces risks in a low-stakes setting, and produces evidence about where the tools are and are not reliable *on your own work*. That is worth more than any vendor benchmark.
+2. **Build the evidence machinery before you need it.** Logging, versioning, evaluation sets and review records are boring to build and impossible to backfill. Build them during tier 2, so that tier 3 does not start from nothing.
+3. **Promote individual uses, not the whole programme.** A specific use moves up a tier when it has the evidence for that tier. An organisation does not "move to tier 3" all at once.
+4. **Be willing to move uses down.** If monitoring shows a tier 3 use is drifting, demoting it to decision support is a sign that the controls are working, not a failure.
+
+## What this asks of data scientists
+
+The most common failure I see is treating assurance as somebody else's job: the AI team builds, the governance team approves. That produces systems that are hard to assure and governance that is mostly paperwork.
+
+The better pattern is for the people building the system to own its evidence, and to design for it from day one. In practice that means:
+
+- writing the evaluation set *before* building the system, so "good enough" is defined in advance;
+- logging every input the output depended on, not only the output;
+- reporting performance on the cases that matter most, not just the average;
+- and being as clear about what the system should not be used for as about what it can do.
+
+None of this is exotic. It is what good analytical practice in a regulated industry has always required. AI does not change the standard of evidence. It raises the cost of not having designed for it.
+
+## A closing thought
+
+The organisations that get the most from AI in regulated sectors will not be the ones that adopt fastest. They will be the ones that can show, for every use, why it was appropriate and how they would know if it stopped being so.
+
+That is a slower start, and a much faster middle.
+
+{{< include ../_post-end.md >}}

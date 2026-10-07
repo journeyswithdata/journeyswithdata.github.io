@@ -1,0 +1,196 @@
+/*
+  Journeys With Data
+  Crisp white page; organic greens and calm blue-greens.
+  Display: Instrument Serif · Body: IBM Plex Sans · Labels: IBM Plex Mono
+
+  Layout is left to Quarto: full-width bands use .column-screen, widths come
+  from the $grid-* variables below. Colours and fonts are Bootstrap/Quarto
+  theme variables, so there is nothing here to fight the framework.
+*/
+
+/*-- scss:defaults --*/
+
+// palette — crisp white with organic greens
+$white:      #ffffff;
+$sage-50:    #f4f7f2;   // softest wash (hero, cards, footer)
+$sage-100:   #e8efe5;
+$sage-300:   #b9cbb3;
+$forest:     #2f5d46;   // primary green
+$forest-900: #1d2b24;   // text: green-tinted charcoal
+$moss:       #6f8f4e;
+$teal:       #4b7f84;   // calm blue-green
+$clay:       #b98a5e;   // warm accent, used sparingly
+$text:       $forest-900;
+$text-soft:  #56645b;
+$text-faint: #8a978e;
+$rule:       #e1e7de;
+
+// fonts (loaded in _quarto.yml)
+$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+$font-family-monospace:  "IBM Plex Mono", ui-monospace, monospace;
+$headings-font-family:   "Instrument Serif", Georgia, serif;
+$headings-font-weight:   400;
+$font-size-root:         17px;
+$line-height-base:       1.65;
+
+// colours
+$body-bg:      $white;
+$body-color:   $text;
+$link-color:   $forest;
+$border-color: $rule;
+$primary:      $forest;
+
+$navbar-bg: $white;
+$navbar-fg: $text-soft;
+$navbar-hl: $forest;
+$footer-bg: $sage-50;
+$footer-fg: $text-soft;
+
+$code-color:    $forest;
+$code-bg:       $sage-50;
+$code-block-bg: $sage-50;
+
+$callout-border-width: 3px;
+$border-radius:        0;     // square corners everywhere (chart-room look)
+$border-radius-sm:     0;
+$border-radius-lg:     0;
+$text-muted:           $text-soft;  // listing categories, metadata
+$h1h2h3-font-weight:   400;   // Instrument Serif has one weight
+$table-border-color:   $rule;
+$callout-color-note:   $teal;
+
+// layout widths (Quarto defaults: 800 / 250 / 250)
+$grid-body-width:    1000px;
+$grid-sidebar-width: 260px;
+$grid-margin-width:  280px;
+
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4 { letter-spacing: -0.01em; line-height: 1.1; }
+h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this design doesn't
+::selection { background: $sage-300; color: $forest-900; }
+
+%label {
+  font-family: $font-family-monospace;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .68rem;
+}
+
+// ---------- navbar and footer ----------
+.navbar { border-bottom: 1px solid $rule; }
+.navbar-brand { font-family: $headings-font-family; font-size: 1.35rem; }
+.navbar .nav-link { @extend %label; font-size: .72rem; }
+.nav-footer { @extend %label; font-size: .66rem; border-top: 1px solid $rule; }
+.nav-footer .nav-footer-center { font-family: $headings-font-family; font-style: italic;
+  text-transform: none; letter-spacing: 0; font-size: .95rem; }
+
+// ---------- home hero (a .column-screen band) ----------
+// body-classes: home (index.qmd) lets the hero sit directly under the navbar.
+.home #quarto-document-content { margin-top: 0; padding-top: 0; }
+.home #title-block-header { display: none; }
+.chart-hero {
+  background-color: $sage-50;
+  color: $text;
+  padding: 5rem 1.25rem 4.5rem;
+  border-bottom: 1px solid $rule;
+  margin-bottom: 3rem;
+  // contour lines, drawn not decorated
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23d5e0d0' stroke-width='1'%3E%3Cpath d='M-50 480 C 180 430 300 520 520 470 S 900 380 1250 430'/%3E%3Cpath d='M-50 430 C 180 380 310 470 530 420 S 900 330 1250 380'/%3E%3Cpath d='M-50 380 C 190 330 320 420 540 370 S 900 280 1250 330'/%3E%3Cpath d='M-50 330 C 200 280 330 370 550 320 S 900 230 1250 280'/%3E%3Cpath d='M-50 280 C 210 230 340 320 560 270 S 900 180 1250 230'/%3E%3Cpath d='M-50 230 C 220 180 350 270 570 220 S 900 130 1250 180'/%3E%3Cpath d='M-50 180 C 230 130 360 220 580 170 S 900 80 1250 130'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 100% 100%;
+
+  .inner { max-width: $grid-body-width; margin: 0 auto; }
+  h1 { font-size: clamp(2.9rem, 7vw, 5.2rem); color: $forest-900; margin: 0 0 1.25rem; max-width: 18ch; }
+  h1 em { color: $moss; }
+  .standfirst { font-size: clamp(1.05rem, 1.7vw, 1.3rem); color: $text-soft; max-width: 62ch; line-height: 1.55; }
+  .standfirst strong { color: $forest-900; }
+}
+.eyebrow {
+  @extend %label;
+  letter-spacing: .24em; color: $teal;
+  display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;
+}
+.dot { width: 5px; height: 5px; border-radius: 50%; background: $moss; display: inline-block; }
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; margin-top: 2.5rem;
+  @extend %label; color: $text-faint;
+  p { margin: 0; }
+  strong { display: block; margin-top: .35rem; color: $forest-900; font-weight: 400;
+    font-family: $font-family-sans-serif; text-transform: none; letter-spacing: 0; font-size: .95rem; }
+}
+
+// ---------- section furniture ----------
+.section-mark {
+  display: flex; align-items: baseline; gap: 1rem;
+  margin: 4.5rem 0 1.5rem; padding-bottom: .6rem; border-bottom: 1px solid $rule;
+  .num { @extend %label; color: $moss; }
+  h2 { font-size: 1.9rem; margin: 0; }
+}
+.lede { font-size: 1.2rem; line-height: 1.6; color: $text-soft; max-width: 72ch;
+  strong { color: $text; } }
+.pullquote {
+  border-left: 3px solid $moss; padding: .35rem 0 .35rem 1.5rem; margin: 2.75rem 0;
+  font-family: $headings-font-family; font-size: 1.65rem; line-height: 1.3;
+}
+.tag { @extend %label; color: #fff; padding: .25rem .5rem; display: inline-block; margin-bottom: .75rem; }
+
+// ---------- card grids: focus areas and principles ----------
+.areas, .principles {
+  display: grid; gap: 1px; background: $rule; border: 1px solid $rule; margin: 2rem 0;
+  > div { background: $white; padding: 1.6rem 1.4rem; }
+  h3 { font-size: 1.35rem; margin: .5rem 0 .6rem; }
+  p { margin: 0; color: $text-soft; font-size: .95rem; line-height: 1.6; }
+}
+.areas { grid-template-columns: repeat(3, 1fr); }
+.principles { grid-template-columns: repeat(4, 1fr);
+  .num { @extend %label; color: $moss; } }
+.areas > div:nth-child(1) .tag, .theme-list > div:nth-child(1) .tag { background: $forest; }
+.areas > div:nth-child(2) .tag, .theme-list > div:nth-child(3) .tag { background: $teal; }
+.areas > div:nth-child(3) .tag, .theme-list > div:nth-child(2) .tag { background: $moss; }
+
+.theme-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin: 1.5rem 0;
+  ul { padding-left: 1.1rem; margin: 0; }
+  li { margin-bottom: .4rem; line-height: 1.45; } }
+
+@media (max-width: 1000px) { .principles { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) {
+  .areas, .principles, .theme-list { grid-template-columns: 1fr; }
+  .chart-hero { padding: 3.5rem 1.25rem 3rem; }
+}
+
+// ---------- contact card ----------
+.contact {
+  background: $sage-50; border-top: 3px solid $moss; padding: 2rem 2rem 1.5rem; margin: 4rem 0 1rem;
+  h2 { margin-top: 0; font-size: 1.9rem; }
+  p { max-width: 66ch; color: $text-soft; }
+}
+
+// ---------- listings ----------
+.quarto-post {
+  .listing-title { font-size: 1.6rem; line-height: 1.15; }
+  .listing-title a { color: $text; text-decoration: none; }
+  .listing-title a:hover { color: $moss; }
+  .listing-description, .listing-description a { color: $text-soft; text-decoration: none; }
+  .metadata { @extend %label; color: $text-faint; }
+}
+.listing-category { font-family: $font-family-monospace; letter-spacing: .14em; }
+
+// ---------- prose, tables, code ----------
+main.content > p, main.content > ul, main.content > ol,
+main.content section > p, main.content section > ul, main.content section > ol { max-width: 78ch; }
+.table { --bs-table-bg: transparent; font-size: .92rem; }
+.table th { @extend %label; color: $text-soft; }
+main.content blockquote { font-family: $headings-font-family; font-size: 1.35rem; line-height: 1.35;
+  border-left: 3px solid $moss; padding-left: 1.25rem; color: $text; }
+div.sourceCode { border: none; }
+
+#title-block-header .description { font-size: 1.2rem; color: $text-soft; max-width: 62ch; }
+.quarto-title-meta-heading, #toc-title { @extend %label; color: $text-faint; }
+
+.post-end { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid $rule;
+  font-size: .9rem; color: $text-soft; p { margin: .3rem 0; } }
+
+img.portrait, .portrait img { width: 150px; height: 150px; object-fit: cover; float: right;
+  margin: 0 0 1.25rem 1.75rem; border: 1px solid $rule; }
+@media (max-width: 600px) { img.portrait, .portrait img { float: none; margin: 0 0 1.25rem; } }

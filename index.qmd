@@ -1,6 +1,7 @@
 ---
 pagetitle: "Journeys With Data"
-page-layout: full
+title-block-style: none
+body-classes: home
 listing:
   id: latest
   contents: posts
@@ -11,7 +12,7 @@ listing:
   date-format: "D MMM YYYY"
 ---
 
-::: {.chart-hero}
+::: {.chart-hero .column-screen}
 ::: {.inner}
 [DATA SCIENCE []{.dot} ENERGY NETWORKS []{.dot} DECISION MODELLING]{.eyebrow}
 
@@ -68,12 +69,51 @@ Optimisation and scenario modelling aimed at a decision someone has to make, rat
 :::
 :::
 
+::: {.section-mark}
+[02]{.num}
+
+## How I work
+:::
+
+[Four habits that run through everything here. They are less about technique than about **making numbers that survive scrutiny**.]{.lede}
+
+::: {.principles}
+::: {.principle}
+[i]{.num}
+
+### Derive, don't assert
+
+A count should be the output of a rule you can re-run, not a number someone remembers. [Read more →](posts/derive-dont-assert/index.qmd)
+:::
+::: {.principle}
+[ii]{.num}
+
+### Make disagreement legible
+
+Systems will disagree. The job is to show where, why and by how much — not to pick a winner quietly. [Read more →](posts/four-systems-three-taxonomies/index.qmd)
+:::
+::: {.principle}
+[iii]{.num}
+
+### Ask how it could be wrong
+
+Find the assumptions that carry the decision, and test them before anyone else does. [Read more →](posts/what-would-have-to-be-true/index.qmd)
+:::
+::: {.principle}
+[iv]{.num}
+
+### Treat the page as evidence
+
+The reader only has the document. A clipped diagram reads as missing data. [Read more →](posts/presentation-is-evidence/index.qmd)
+:::
+:::
+
 ::: {.pullquote}
 A few are probably wrong — but hopefully interesting in the attempt.
 :::
 
 ::: {.section-mark}
-[02]{.num}
+[03]{.num}
 
 ## Latest writing
 :::
@@ -83,11 +123,9 @@ A few are probably wrong — but hopefully interesting in the attempt.
 
 [See everything in [Writing](writing.qmd) →]{.meta}
 
-::: {.strip}
-::: {.inner}
+::: {.contact}
 ## Get in touch
 I am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
-:::
 :::

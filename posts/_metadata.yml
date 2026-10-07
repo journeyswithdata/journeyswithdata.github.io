@@ -1,0 +1,9 @@
+# Applied to every post in this folder.
+toc: true
+toc-location: right
+toc-title: "On this page"
+toc-depth: 2
+code-copy: true
+code-overflow: wrap
+reading-time: true
+title-block-categories: true

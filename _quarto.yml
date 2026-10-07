@@ -11,6 +11,10 @@ website:
   description: "Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure."
   site-url: https://journeyswithdata.dev
   favicon: favicon.svg
+  image: profile.jpg
+  search: true
+  open-graph: true
+  twitter-card: true
   navbar:
     left:
       - href: index.qmd
@@ -22,6 +26,9 @@ website:
       - href: about.qmd
         text: About
     right:
+      - icon: rss
+        href: writing.xml
+        aria-label: RSS feed
       - icon: github
         href: https://github.com/journeyswithdata
         aria-label: GitHub
@@ -32,8 +39,8 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: custom.css
+    theme: [cosmo, theme.scss]
+    highlight-style: github
     toc: false
     anchor-sections: false
     include-in-header:

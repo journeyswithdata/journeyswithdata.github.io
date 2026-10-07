@@ -16,6 +16,18 @@ I write to understand things better, not to look clever. If that sounds like you
 
 I am a data scientist working in energy networks — currently Lead Data Scientist at Wales & West Utilities, where a lot of my time goes on asset risk, network data and the organisation's direction on AI. Alongside that I am working through an MSc in Data Science at the University of St Andrews.
 
+## What I believe about data work
+
+- **A number is only as good as the rule that produced it.** If nobody can re-run it, nobody can defend it.
+- **Uncertainty belongs on the page.** A figure with honest error bars beats a precise one nobody trusts.
+- **The decision is the point.** A model that does not change what someone does is a hobby.
+- **Presentation is part of the analysis.** The reader only has the document.
+- **Being wrong in public is cheaper than being wrong in a submission.** That is partly why this site exists.
+
+## What you will find here
+
+Longer pieces on [method](writing.qmd#category=method) and [asset data](writing.qmd#category=asset%20data), thinking-out-loud on [AI strategy](writing.qmd#category=AI%20strategy) in regulated settings, and the occasional note on making documents that hold up under scrutiny. There is an [RSS feed](writing.xml) if you would like to follow along.
+
 
 ## Elsewhere
 
