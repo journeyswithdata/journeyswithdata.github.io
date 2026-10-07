@@ -40,7 +40,7 @@ website:
 format:
   html:
     theme: [cosmo, theme.scss]
-    highlight-style: nord
+    highlight-style: github
     toc: false
     anchor-sections: false
     include-in-header:
