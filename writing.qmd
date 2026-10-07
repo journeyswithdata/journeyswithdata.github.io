@@ -1,6 +1,7 @@
 ---
-pagetitle: "Writing"
-title-block-style: none
+title: "Writing"
+subtitle: "Notes, working-out and the occasional map. I write to understand things better, not to look clever."
+page-layout: custom
 listing:
   id: all-posts
   contents: posts
@@ -11,17 +12,9 @@ listing:
   feed: true
 ---
 
-::: {.column-screen}
 ::: {.wrap}
-[ALL POSTS]{.eyebrow}
-
-# Writing {.page-title}
-
-[Notes, working-out and the occasional map. I write to understand things better, not to look clever.]{.lede}
-
-[Click any tag to filter the list. [Show all](writing.qmd)]{.meta}
+Click any tag to filter the list. [Show all](writing.qmd)
 
 ::: {#all-posts}
-:::
 :::
 :::

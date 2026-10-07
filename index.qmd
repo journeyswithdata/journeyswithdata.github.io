@@ -1,7 +1,6 @@
 ---
 pagetitle: "Journeys With Data"
-title-block-style: none
-body-classes: home
+page-layout: custom
 listing:
   id: latest
   contents: posts
@@ -12,11 +11,11 @@ listing:
   date-format: "D MMM YYYY"
 ---
 
-::: {.chart-hero .column-screen}
+::: {.chart-hero}
 ::: {.wrap}
 [DATA SCIENCE []{.dot} ENERGY NETWORKS []{.dot} DECISION MODELLING]{.eyebrow}
 
-# Some posts are maps. Some are *sketches*. {.chart-hero-title}
+# Some posts are maps. Some are *sketches*.
 
 [I am a data scientist working on **the systems that keep the gas flowing** — asset risk, network data and the decisions a regulated utility has to justify with evidence. This is where I think out loud about it.]{.standfirst}
 
@@ -37,9 +36,7 @@ Interested in
 :::
 :::
 
-::: {.column-screen}
 ::: {.wrap}
-
 ::: {.section-mark}
 [01]{.num}
 
@@ -48,23 +45,23 @@ Interested in
 
 [Most data science writing is about models. Comparatively little is about **the messy, regulated, consequential systems models get deployed into** — where a wrong number becomes a wrong investment, and a regulator will ask you to show your working. That is the part I find interesting, and it is what I write about.]{.lede}
 
-::: {.areas}
-::: {.area}
+::: {.grid .cards}
+::: {.g-col-12 .g-col-md-4}
 [Asset risk]{.tag}
 
 ### Risk on real networks
 
 Turning an asset register into a defensible view of risk — what the data actually supports, where it is thin, and what follows for spend.
 :::
-::: {.area}
-[AI strategy]{.tag}
+::: {.g-col-12 .g-col-md-4}
+[AI strategy]{.tag .teal}
 
 ### AI that survives contact
 
 Setting a direction for AI in an organisation that has to answer to a regulator — less about capability, more about evidence, assurance and sequencing.
 :::
-::: {.area}
-[Decision science]{.tag}
+::: {.g-col-12 .g-col-md-4}
+[Decision science]{.tag .moss}
 
 ### Decisions, not dashboards
 
@@ -80,29 +77,29 @@ Optimisation and scenario modelling aimed at a decision someone has to make, rat
 
 [Four habits that run through everything here. They are less about technique than about **making numbers that survive scrutiny**.]{.lede}
 
-::: {.principles}
-::: {.principle}
+::: {.grid .cards}
+::: {.g-col-12 .g-col-md-6 .g-col-xl-3}
 [i]{.num}
 
 ### Derive, don't assert
 
 A count should be the output of a rule you can re-run, not a number someone remembers. [Read more →](posts/derive-dont-assert/index.qmd)
 :::
-::: {.principle}
+::: {.g-col-12 .g-col-md-6 .g-col-xl-3}
 [ii]{.num}
 
 ### Make disagreement legible
 
 Systems will disagree. The job is to show where, why and by how much — not to pick a winner quietly. [Read more →](posts/four-systems-three-taxonomies/index.qmd)
 :::
-::: {.principle}
+::: {.g-col-12 .g-col-md-6 .g-col-xl-3}
 [iii]{.num}
 
 ### Ask how it could be wrong
 
 Find the assumptions that carry the decision, and test them before anyone else does. [Read more →](posts/what-would-have-to-be-true/index.qmd)
 :::
-::: {.principle}
+::: {.g-col-12 .g-col-md-6 .g-col-xl-3}
 [iv]{.num}
 
 ### Treat the page as evidence
@@ -124,13 +121,12 @@ A few are probably wrong — but hopefully interesting in the attempt.
 ::: {#latest}
 :::
 
-[See everything in [Writing](writing.qmd) →]{.meta}
+See everything in [Writing](writing.qmd) →
 
 ::: {.contact}
 ## Get in touch
 I am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
-:::
 :::
 :::

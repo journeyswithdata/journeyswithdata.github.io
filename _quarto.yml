@@ -15,6 +15,7 @@ website:
   search: true
   open-graph: true
   twitter-card: true
+  back-to-top-navigation: true
   navbar:
     left:
       - href: index.qmd
@@ -39,12 +40,11 @@ website:
 
 format:
   html:
-    theme: [cosmo, theme.scss]
+    theme: [cosmo, brand, theme.scss]
     highlight-style: github
     toc: false
+    grid:
+      body-width: 1100px
+      sidebar-width: 260px
+      margin-width: 300px
     anchor-sections: false
-    include-in-header:
-      text: |
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
