@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,22 +11,51 @@
 
 <title>The asset that exists in four systems and three taxonomies – Journeys With Data</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -44,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4faf44808c66243957c3082ea87d90f3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-10f60e20a66d805d3ab0917149f1d2b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,9 +110,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../custom.css">
+<meta property="og:title" content="The asset that exists in four systems and three taxonomies – Journeys With Data">
+<meta property="og:description" content="Reconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.">
+<meta property="og:image" content="https://journeyswithdata.dev/posts/four-systems-three-taxonomies/profile.jpg">
+<meta property="og:site_name" content="Journeys With Data">
+<meta name="twitter:title" content="The asset that exists in four systems and three taxonomies – Journeys With Data">
+<meta name="twitter:description" content="Reconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.">
+<meta name="twitter:image" content="https://journeyswithdata.dev/posts/four-systems-three-taxonomies/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,6 +156,11 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
+    <a class="nav-link" href="../../writing.xml"> <i class="bi bi-rss" role="img" aria-label="RSS feed">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/journeyswithdata"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
@@ -134,7 +176,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#four-systems-four-jobs" id="toc-four-systems-four-jobs" class="nav-link active" data-scroll-target="#four-systems-four-jobs">Four systems, four jobs</a></li>
+  <li><a href="#three-taxonomies" id="toc-three-taxonomies" class="nav-link" data-scroll-target="#three-taxonomies">Three taxonomies</a></li>
+  <li><a href="#reconciliation-is-not-de-duplication" id="toc-reconciliation-is-not-de-duplication" class="nav-link" data-scroll-target="#reconciliation-is-not-de-duplication">Reconciliation is not de-duplication</a></li>
+  <li><a href="#the-crosswalk-is-the-deliverable" id="toc-the-crosswalk-is-the-deliverable" class="nav-link" data-scroll-target="#the-crosswalk-is-the-deliverable">The crosswalk is the deliverable</a></li>
+  <li><a href="#so-how-many-assets-do-we-have" id="toc-so-how-many-assets-do-we-have" class="nav-link" data-scroll-target="#so-how-many-assets-do-we-have">So how many assets <em>do</em> we have?</a></li>
+  <li><a href="#a-closing-observation" id="toc-a-closing-observation" class="nav-link" data-scroll-target="#a-closing-observation">A closing observation</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -172,10 +227,133 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Still being written — the thinking is done, the words are not.</em></p>
-<p>Reconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.</p>
+<p>“How many assets do we have?” sounds like the easiest question in asset management. In practice it is one of the hardest, because the honest answer starts with another question: <em>according to which system?</em></p>
+<p>In a typical utility, the same physical object is recorded in at least four places. Each was built for a different job, by a different team, at a different time. They do not agree, and they were never designed to.</p>
+<section id="four-systems-four-jobs" class="level2">
+<h2 data-anchor-id="four-systems-four-jobs">Four systems, four jobs</h2>
+<p>Take a single piece of equipment, say a pressure-reduction installation at the edge of a town. Here is roughly how it might appear across the estate. The details are illustrative, but anyone who has done this work will recognise the shape.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Built to answer</th>
+<th>What counts as “one asset”</th>
+<th>Typical identifier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ERP / work management</strong> (e.g.&nbsp;SAP)</td>
+<td>What do we maintain, and what does it cost?</td>
+<td>A maintainable item: a functional location with equipment underneath it</td>
+<td>Functional location code + equipment number</td>
+</tr>
+<tr class="even">
+<td><strong>GIS</strong></td>
+<td>Where is it, and what is it connected to?</td>
+<td>A spatial feature: a point, a line segment, a polygon</td>
+<td>Feature ID, often regenerated on edit</td>
+</tr>
+<tr class="odd">
+<td><strong>Risk model</strong></td>
+<td>What is the risk, and what happens if we intervene?</td>
+<td>A modelled unit, defined by the methodology</td>
+<td>Model-specific key, sometimes derived from one of the above</td>
+</tr>
+<tr class="even">
+<td><strong>Regulatory reporting</strong></td>
+<td>What do we report, and against which category?</td>
+<td>A reportable line, aggregated by the reporting rules</td>
+<td>No asset-level key at all</td>
+</tr>
+</tbody>
+</table>
+<p>None of these definitions is wrong. Each is the <em>correct</em> unit for the job its system does. The problem only appears when someone asks a question that crosses systems, and almost every interesting question does.</p>
+</section>
+<section id="three-taxonomies" class="level2">
+<h2 data-anchor-id="three-taxonomies">Three taxonomies</h2>
+<p>The systems also <em>classify</em> assets differently, and that is where most of the pain lives.</p>
+<ul>
+<li><strong>The ERP hierarchy</strong> follows how work is organised: site, then system, then equipment. A single installation might be one functional location with eight pieces of equipment underneath it.</li>
+<li><strong>The GIS feature classes</strong> follow the physical network: pipes, valves, fittings, installations. The same installation might be one point feature, or a polygon containing several point features, depending on when it was digitised.</li>
+<li><strong>The risk-model asset classes</strong> follow the methodology. They might split one physical installation into several modelled components with separate failure modes, or merge several into one.</li>
+</ul>
+<p>So “how many installations do we have?” can honestly be answered as 1, 8 or 4, depending on whose taxonomy you use. Pick one without saying so and you have created a number that will be contradicted the moment someone looks at another system.</p>
+</section>
+<section id="reconciliation-is-not-de-duplication" class="level2">
+<h2 data-anchor-id="reconciliation-is-not-de-duplication">Reconciliation is not de-duplication</h2>
+<p>The instinct is to treat this as a matching problem: find the common key, join the tables, done. That works for perhaps the easy 70%. The rest falls into categories worth naming, because they need different treatment.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reconcile(a: pd.DataFrame, b: pd.DataFrame, key: <span class="bu">str</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              a_name: <span class="bu">str</span> <span class="op">=</span> <span class="st">"erp"</span>, b_name: <span class="bu">str</span> <span class="op">=</span> <span class="st">"gis"</span>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Outer-join two asset lists and classify every record."""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    a_counts <span class="op">=</span> a.groupby(key).size().rename(<span class="ss">f"n_</span><span class="sc">{</span>a_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    b_counts <span class="op">=</span> b.groupby(key).size().rename(<span class="ss">f"n_</span><span class="sc">{</span>b_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    joined <span class="op">=</span> pd.concat([a_counts, b_counts], axis<span class="op">=</span><span class="dv">1</span>).fillna(<span class="dv">0</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> classify(row):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        na, nb <span class="op">=</span> row[<span class="ss">f"n_</span><span class="sc">{</span>a_name<span class="sc">}</span><span class="ss">"</span>], row[<span class="ss">f"n_</span><span class="sc">{</span>b_name<span class="sc">}</span><span class="ss">"</span>]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> na <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> nb <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"matched 1:1"</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> na <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="ss">f"only in </span><span class="sc">{</span>b_name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> nb <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="ss">f"only in </span><span class="sc">{</span>a_name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> na <span class="op">==</span> <span class="dv">1</span> <span class="kw">or</span> nb <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">"matched 1:many"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"ambiguous many:many"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    joined[<span class="st">"category"</span>] <span class="op">=</span> joined.<span class="bu">apply</span>(classify, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> joined.reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The categories mean different things and lead to different actions.</p>
+<p><strong>Matched 1:1.</strong> These are the good records, but still check their attributes. Two systems can agree that an asset exists and disagree about its material, size or install year. A match with conflicting attributes is a finding in its own right.</p>
+<p><strong>Matched 1:many.</strong> Usually this is a granularity difference rather than an error. One ERP functional location maps to several GIS features, or the other way round. The fix is a documented rule for rolling up or splitting, not a correction to either system.</p>
+<p><strong>Only in one system.</strong> These are the interesting ones. An asset that exists only in GIS might be a real asset that was never set up for maintenance, which is an operational risk. It might be a record of something that was removed and never deleted from the map, which inflates the population. Or it might be a key that failed to match because someone typed it differently. You cannot tell which from the data alone, and it matters a great deal which one it is.</p>
+<p><strong>Ambiguous many:many.</strong> Usually a sign that the “common key” is not really a key. Fix the key before attempting anything else.</p>
+</section>
+<section id="the-crosswalk-is-the-deliverable" class="level2">
+<h2 data-anchor-id="the-crosswalk-is-the-deliverable">The crosswalk is the deliverable</h2>
+<p>The most valuable thing a reconciliation produces is not a corrected count. It is a <strong>crosswalk</strong>: a maintained table that records, for each real-world asset, its identifier in every system, the match category, and the rule used to make the match.</p>
+<pre class="text"><code>asset_ref  erp_floc        erp_equip  gis_feature  risk_key   match_rule         confidence
+---------  --------------  ---------  -----------  ---------  -----------------  ----------
+A-000412   PRI-0412        10088231   GF-77120     R-PRI-412  exact key          high
+A-000413   PRI-0413        10088240   GF-77121     R-PRI-413  exact key          high
+A-000414   PRI-0414        —          GF-77135     R-PRI-414  spatial + name     medium
+A-000415   —               —          GF-77140     —          GIS only           review</code></pre>
+<p>A crosswalk changes the conversation in three ways.</p>
+<ol type="1">
+<li><strong>It makes the disagreement visible and countable.</strong> Instead of four systems quietly holding four different totals, you have one table that shows how many assets each system holds and why they differ.</li>
+<li><strong>It lets every system stay good at its own job.</strong> Nobody has to restructure their ERP hierarchy to match the risk model’s taxonomy. The translation lives in one place.</li>
+<li><strong>It gives data-quality work a queue.</strong> The <code>review</code> rows are a prioritised work list for the people who can actually go and look.</li>
+</ol>
+</section>
+<section id="so-how-many-assets-do-we-have" class="level2">
+<h2 data-anchor-id="so-how-many-assets-do-we-have">So how many assets <em>do</em> we have?</h2>
+<p>Here is the answer I have come to prefer, in roughly this form:</p>
+<blockquote class="blockquote">
+<p>As of 31 March, we hold <strong>N</strong> installations on the risk model’s definition. The ERP and GIS records reconcile to that figure as follows: <strong>a</strong> match one-to-one, <strong>b</strong> differ only in granularity under a documented roll-up rule, and <strong>c</strong> remain unresolved and are under review. The unresolved records could move the total by up to <strong>±c</strong>.</p>
+</blockquote>
+<p>It is longer than a single number, but it is true, it can be checked, and it tells the reader how much to trust it. In a regulated setting, a number that comes with its own error bars beats a precise number nobody can defend.</p>
+</section>
+<section id="a-closing-observation" class="level2">
+<h2 data-anchor-id="a-closing-observation">A closing observation</h2>
+<p>The systems disagree because the organisation asked them to do different things. Reconciliation is not about making them agree. It is about making their disagreement <strong>legible</strong>: knowing where they differ, why, and by how much.</p>
+<p>Once you can say that, “how many assets do we have?” stops being an awkward question and becomes an easy one.</p>
+<div class="post-end">
+<p>Written in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.</p>
+<p>Disagree, or have a better way of doing this? <a href="https://github.com/journeyswithdata">Find me on GitHub</a> — I would rather be corrected than consistent.</p>
+<p><a href="../../writing.html">← All writing</a></p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -222,14 +400,13 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -1,15 +1,19 @@
 [
   {
-    "listing": "/writing.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/ai-with-a-regulator-in-the-room/index.html",
+      "/posts/what-would-have-to-be-true/index.html",
       "/posts/presentation-is-evidence/index.html",
       "/posts/four-systems-three-taxonomies/index.html",
       "/posts/derive-dont-assert/index.html"
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/writing.html",
     "items": [
+      "/posts/ai-with-a-regulator-in-the-room/index.html",
+      "/posts/what-would-have-to-be-true/index.html",
       "/posts/presentation-is-evidence/index.html",
       "/posts/four-systems-three-taxonomies/index.html",
       "/posts/derive-dont-assert/index.html"

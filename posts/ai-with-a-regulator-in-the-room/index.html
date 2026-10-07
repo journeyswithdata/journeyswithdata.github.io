@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-26">
-<meta name="description" content="A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.">
+<meta name="dcterms.date" content="2026-10-07">
+<meta name="description" content="Setting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing.">
 
-<title>Presentation is evidence – Journeys With Data</title>
+<title>AI with a regulator in the room – Journeys With Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,13 +75,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Presentation is evidence – Journeys With Data">
-<meta property="og:description" content="A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.">
-<meta property="og:image" content="https://journeyswithdata.dev/posts/presentation-is-evidence/profile.jpg">
+<meta property="og:title" content="AI with a regulator in the room – Journeys With Data">
+<meta property="og:description" content="Setting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing.">
+<meta property="og:image" content="https://journeyswithdata.dev/posts/ai-with-a-regulator-in-the-room/profile.jpg">
 <meta property="og:site_name" content="Journeys With Data">
-<meta name="twitter:title" content="Presentation is evidence – Journeys With Data">
-<meta name="twitter:description" content="A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.">
-<meta name="twitter:image" content="https://journeyswithdata.dev/posts/presentation-is-evidence/profile.jpg">
+<meta name="twitter:title" content="AI with a regulator in the room – Journeys With Data">
+<meta name="twitter:description" content="Setting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing.">
+<meta name="twitter:image" content="https://journeyswithdata.dev/posts/ai-with-a-regulator-in-the-room/profile.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -181,12 +146,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#the-reader-only-has-the-page" id="toc-the-reader-only-has-the-page" class="nav-link active" data-scroll-target="#the-reader-only-has-the-page">The reader only has the page</a></li>
-  <li><a href="#a-small-catalogue-of-self-inflicted-wounds" id="toc-a-small-catalogue-of-self-inflicted-wounds" class="nav-link" data-scroll-target="#a-small-catalogue-of-self-inflicted-wounds">A small catalogue of self-inflicted wounds</a></li>
-  <li><a href="#the-fix-is-structural-not-cosmetic" id="toc-the-fix-is-structural-not-cosmetic" class="nav-link" data-scroll-target="#the-fix-is-structural-not-cosmetic">The fix is structural, not cosmetic</a></li>
-  <li><a href="#why-this-belongs-to-the-data-scientist" id="toc-why-this-belongs-to-the-data-scientist" class="nav-link" data-scroll-target="#why-this-belongs-to-the-data-scientist">Why this belongs to the data scientist</a></li>
-  <li><a href="#a-short-pre-submission-checklist" id="toc-a-short-pre-submission-checklist" class="nav-link" data-scroll-target="#a-short-pre-submission-checklist">A short pre-submission checklist</a></li>
-  <li><a href="#the-underlying-point" id="toc-the-underlying-point" class="nav-link" data-scroll-target="#the-underlying-point">The underlying point</a></li>
+  <li><a href="#the-question-behind-every-question" id="toc-the-question-behind-every-question" class="nav-link active" data-scroll-target="#the-question-behind-every-question">The question behind every question</a></li>
+  <li><a href="#sort-uses-by-what-an-error-costs" id="toc-sort-uses-by-what-an-error-costs" class="nav-link" data-scroll-target="#sort-uses-by-what-an-error-costs">Sort uses by what an error costs</a></li>
+  <li><a href="#evidence-that-scales-with-the-tier" id="toc-evidence-that-scales-with-the-tier" class="nav-link" data-scroll-target="#evidence-that-scales-with-the-tier">Evidence that scales with the tier</a></li>
+  <li><a href="#sequencing-is-the-strategy" id="toc-sequencing-is-the-strategy" class="nav-link" data-scroll-target="#sequencing-is-the-strategy">Sequencing is the strategy</a></li>
+  <li><a href="#what-this-asks-of-data-scientists" id="toc-what-this-asks-of-data-scientists" class="nav-link" data-scroll-target="#what-this-asks-of-data-scientists">What this asks of data scientists</a></li>
+  <li><a href="#a-closing-thought" id="toc-a-closing-thought" class="nav-link" data-scroll-target="#a-closing-thought">A closing thought</a></li>
   </ul>
 </nav>
     </div>
@@ -195,16 +160,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Presentation is evidence</h1>
+<h1 class="title">AI with a regulator in the room</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">submissions</div>
-    <div class="quarto-category">design</div>
+    <div class="quarto-category">AI strategy</div>
+    <div class="quarto-category">regulation</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.
+    Setting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing.
   </div>
 </div>
 
@@ -215,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 26, 2026</p>
+      <p class="date">October 7, 2026</p>
     </div>
   </div>
   
@@ -227,108 +192,100 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Data scientists tend to treat presentation as the last step: the analysis is the real work, and formatting is what you do once it is finished. In most settings that is a forgivable view. In a regulatory submission it is a mistake, because <strong>the reader cannot tell the difference between a presentation error and a substantive one.</strong></p>
-<section id="the-reader-only-has-the-page" class="level2">
-<h2 data-anchor-id="the-reader-only-has-the-page">The reader only has the page</h2>
-<p>Consider what a reviewer actually has in front of them. They did not see your notebook, your data lineage or the conversation in which the team agreed what a column meant. They have a document, often a long one, read under time pressure and alongside dozens of others.</p>
-<p>So when they reach a process diagram where the last box is clipped at the page edge, they do not think “a rendering bug”. They think “this step is undefined”. When a table’s total does not equal the sum of its rows because of rounding, they do not think “rounding”. They think “these figures have not been checked”. And when a number in the executive summary differs from the same number in an appendix by 0.3%, they do not think “one of these was updated later”. They think “which one is right, and what else is inconsistent?”</p>
-<p>Every one of these is a reasonable inference. Each costs you something you cannot easily get back: the reader’s confidence that the rest of the document is under control.</p>
+<p>Most writing about AI strategy assumes the binding constraint is capability: what the models can do, how fast they are improving, how quickly an organisation can adopt them. In a regulated utility, capability is rarely the constraint. The constraint is whether you can <strong>show your working</strong> — to a regulator, to an auditor, or to your own board — years after a decision was made.</p>
+<p>That changes what a good AI strategy looks like. It is less a list of use cases and more a theory of <em>assurance</em>: which kinds of AI use you can stand behind, what evidence you need for each, and in what order to earn the right to the harder ones.</p>
+<section id="the-question-behind-every-question" class="level2">
+<h2 data-anchor-id="the-question-behind-every-question">The question behind every question</h2>
+<p>Regulators ask a great many specific questions. Underneath almost all of them is one general one: <strong>can you explain why this decision was made, and show that it was a reasonable one at the time?</strong></p>
+<p>For a conventional analytical model, the answer is usually a methodology document, a validated dataset and a reproducible run. For AI systems, particularly generative ones, each of those is harder:</p>
+<ul>
+<li><strong>Methodology.</strong> The behaviour of a large language model cannot be fully specified in a document, and the model itself may be updated by its vendor.</li>
+<li><strong>Data.</strong> What the system “knew” when it produced an output depends on prompts, retrieved context and model version, and none of these is captured by default.</li>
+<li><strong>Reproducibility.</strong> The same input can produce different outputs on different days.</li>
+</ul>
+<p>None of this makes AI unusable in a regulated setting. It does mean that <strong>the evidence has to be designed in from the start</strong>, because it cannot be reconstructed afterwards.</p>
 </section>
-<section id="a-small-catalogue-of-self-inflicted-wounds" class="level2">
-<h2 data-anchor-id="a-small-catalogue-of-self-inflicted-wounds">A small catalogue of self-inflicted wounds</h2>
-<p>These are the faults I see most often. None of them involves the analysis being wrong, and all of them make it <em>look</em> wrong.</p>
-<p><strong>Numbers that disagree with themselves.</strong> The same quantity appears in the text, a table and a chart, and the three were produced at different times from different extracts. This is the most common fault and the most damaging.</p>
-<p><strong>Totals that don’t add.</strong> Rows are rounded independently and the total is rounded separately, so 33 + 33 + 33 = 100. It is mathematically defensible but looks careless. Either show the rounding convention or round so that totals reconcile.</p>
-<p><strong>Truncated or clipped figures.</strong> Diagrams exported at one size and placed at another. Axis labels cut off. Legends overlapping data. A chart that has visibly been squeezed into a space it was not designed for.</p>
-<p><strong>Silent unit changes.</strong> £m in one table, £k in the next. Kilometres of main in the text, metres in an appendix. The reader has to notice, convert and trust that you did the same.</p>
-<p><strong>Unexplained gaps.</strong> A blank cell, a dash, a zero and “n/a” used interchangeably. To you, they may mean “not applicable”, “not yet available”, “genuinely zero” and “suppressed”. To the reader they are four different claims, and you have not said which is which.</p>
-<p><strong>Charts that argue.</strong> Truncated y-axes, inconsistent scales across panels, colour that implies a ranking the data does not support. Even when they are unintentional, they read as advocacy.</p>
-</section>
-<section id="the-fix-is-structural-not-cosmetic" class="level2">
-<h2 data-anchor-id="the-fix-is-structural-not-cosmetic">The fix is structural, not cosmetic</h2>
-<p>The tempting response is a better proof-read. It helps, but it does not scale, and it fails exactly when the deadline is tightest. The durable fix is to make whole classes of error <strong>impossible</strong> rather than unlikely.</p>
-<section id="one-source-for-every-number" class="level3">
-<h3 data-anchor-id="one-source-for-every-number">One source for every number</h3>
-<p>If a figure appears in the document, it should be computed from the data at render time, not typed in. In Quarto, inline expressions make this straightforward:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>The eligible population is <span class="in">`{python} f"{eligible:,}"`</span> assets,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>of which <span class="in">`{python} f"{undetermined:,}"`</span> could not be classified.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now the summary, the table and the chart all read from the same variable. If the data changes, they change together. Self-contradiction becomes structurally impossible rather than something you have to catch.</p>
-</section>
-<section id="checks-that-run-with-the-document" class="level3">
-<h3 data-anchor-id="checks-that-run-with-the-document">Checks that run with the document</h3>
-<p>Some properties of a submission should always hold. Write them down as assertions and run them every time the document is built:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_submission(tables: <span class="bu">dict</span>[<span class="bu">str</span>, pd.DataFrame]) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Totals reconcile to the sum of their rows, after rounding.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, t <span class="kw">in</span> tables.items():</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        body, total <span class="op">=</span> t.iloc[:<span class="op">-</span><span class="dv">1</span>], t.iloc[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> col <span class="kw">in</span> t.select_dtypes(<span class="st">"number"</span>):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">assert</span> <span class="bu">round</span>(body[col].<span class="bu">sum</span>()) <span class="op">==</span> <span class="bu">round</span>(total[col]), <span class="op">\</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                <span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">.</span><span class="sc">{</span>col<span class="sc">}</span><span class="ss">: rows sum to </span><span class="sc">{</span>body[col]<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,.0f}</span><span class="ss">, total says </span><span class="sc">{</span>total[col]<span class="sc">:,.0f}</span><span class="ss">"</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The headline figure is the same everywhere it appears.</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    headline <span class="op">=</span> {name: t.attrs.get(<span class="st">"headline"</span>) <span class="cf">for</span> name, t <span class="kw">in</span> tables.items() <span class="cf">if</span> <span class="st">"headline"</span> <span class="kw">in</span> t.attrs}</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(<span class="bu">set</span>(headline.values())) <span class="op">&lt;=</span> <span class="dv">1</span>, <span class="ss">f"headline figure differs: </span><span class="sc">{</span>headline<span class="sc">}</span><span class="ss">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A failed build is annoying. A reviewer finding the same inconsistency is far worse.</p>
-</section>
-<section id="figures-sized-for-where-they-will-be-read" class="level3">
-<h3 data-anchor-id="figures-sized-for-where-they-will-be-read">Figures sized for where they will be read</h3>
-<p>Produce figures at the dimensions of their final placement, in a vector format where you can, and look at them in the rendered output rather than the plotting window. A diagram that fits on your monitor and gets clipped in the PDF has not been checked.</p>
-</section>
-<section id="a-legend-for-absence" class="level3">
-<h3 data-anchor-id="a-legend-for-absence">A legend for absence</h3>
-<p>Decide once what each kind of missing value means and use it consistently. For example:</p>
+<section id="sort-uses-by-what-an-error-costs" class="level2">
+<h2 data-anchor-id="sort-uses-by-what-an-error-costs">Sort uses by what an error costs</h2>
+<p>The most useful framing I know is to sort uses not by technology, but by <strong>what happens when the system is wrong, and who would notice</strong>.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Symbol</th>
-<th>Meaning</th>
+<th>Tier</th>
+<th>Role of the AI</th>
+<th>Who catches an error</th>
+<th>Examples</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">0</td>
-<td>Measured and genuinely zero</td>
+<td><strong>1. Assistive</strong></td>
+<td>Helps a person do their own work faster</td>
+<td>The person, immediately</td>
+<td>Drafting, summarising, code assistance, searching internal documents</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">–</td>
-<td>Not applicable to this category</td>
+<td><strong>2. Decision support</strong></td>
+<td>Informs a decision a named person makes</td>
+<td>The decision-maker, with effort</td>
+<td>Triage of inspection findings, flagging anomalies in asset data, first-pass review of a submission</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">..</td>
-<td>Not yet available; expected by a stated date</td>
+<td><strong>3. Embedded</strong></td>
+<td>Produces an output that feeds a regulated process</td>
+<td>Possibly nobody, for some time</td>
+<td>Classifying assets for a risk model, generating figures that end up in a submission</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">[c]</td>
-<td>Suppressed for confidentiality</td>
+<td><strong>4. Automated decision</strong></td>
+<td>Acts without a person in the loop</td>
+<td>Only through monitoring</td>
+<td>Automatic prioritisation of work, automated customer decisions</td>
 </tr>
 </tbody>
 </table>
-<p>Put the legend in the document. It takes one table and removes a whole category of ambiguity.</p>
+<p>The tiers are not about how sophisticated the AI is. A simple classifier at tier 3 needs far more assurance than a frontier model at tier 1. Moving up a tier is a governance decision, not a technical upgrade.</p>
 </section>
+<section id="evidence-that-scales-with-the-tier" class="level2">
+<h2 data-anchor-id="evidence-that-scales-with-the-tier">Evidence that scales with the tier</h2>
+<p>Each tier inherits the requirements of the ones below it and adds its own.</p>
+<p><strong>Tier 1 — Assistive.</strong> Clear guidance on what may and may not be put into a tool. Approved tools only. Training that makes people the accountable author of anything they produce with AI help. Most organisations can, and should, move quickly here.</p>
+<p><strong>Tier 2 — Decision support.</strong> All of the above, plus: a named decision-maker for every output; a record that the AI contributed; and a periodic check that people are genuinely reviewing outputs rather than rubber-stamping them. That last one is easy to skip and very important. A human in the loop who agrees 100% of the time is not a control.</p>
+<p><strong>Tier 3 — Embedded.</strong> All of the above, plus everything you would expect of any model feeding a regulated process: a defined validation set with measured performance; versioning of the model, prompts and retrieved context; logs sufficient to reproduce or at least explain a given output; and a fallback if the system becomes unavailable or its vendor changes it.</p>
+<p><strong>Tier 4 — Automated.</strong> All of the above, plus continuous monitoring with thresholds and named owners, a defined route for challenge and correction, and an explicit, documented decision by the accountable executive that automation is appropriate here.</p>
 </section>
-<section id="why-this-belongs-to-the-data-scientist" class="level2">
-<h2 data-anchor-id="why-this-belongs-to-the-data-scientist">Why this belongs to the data scientist</h2>
-<p>It is tempting to hand presentation to someone else: a document team, a graphic designer, whoever “does the formatting”. But most of the faults above are <em>data</em> faults that show up visually. Numbers that disagree come from a broken pipeline. Totals that don’t add come from a rounding decision. Unexplained gaps come from undocumented missing-data semantics.</p>
-<p>The person who understands the data is the person best placed to make sure the page tells the truth about it. That is why I have come to treat the rendered document as part of the analysis, not something that happens afterwards.</p>
+<section id="sequencing-is-the-strategy" class="level2">
+<h2 data-anchor-id="sequencing-is-the-strategy">Sequencing is the strategy</h2>
+<p>Given those tiers, the sequencing almost writes itself.</p>
+<ol type="1">
+<li><strong>Start where errors are cheap and visible.</strong> Tier 1 builds familiarity, surfaces risks in a low-stakes setting, and produces evidence about where the tools are and are not reliable <em>on your own work</em>. That is worth more than any vendor benchmark.</li>
+<li><strong>Build the evidence machinery before you need it.</strong> Logging, versioning, evaluation sets and review records are boring to build and impossible to backfill. Build them during tier 2, so that tier 3 does not start from nothing.</li>
+<li><strong>Promote individual uses, not the whole programme.</strong> A specific use moves up a tier when it has the evidence for that tier. An organisation does not “move to tier 3” all at once.</li>
+<li><strong>Be willing to move uses down.</strong> If monitoring shows a tier 3 use is drifting, demoting it to decision support is a sign that the controls are working, not a failure.</li>
+</ol>
 </section>
-<section id="a-short-pre-submission-checklist" class="level2">
-<h2 data-anchor-id="a-short-pre-submission-checklist">A short pre-submission checklist</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Every number in the text is computed, not typed.</label></li>
-<li><label><input type="checkbox">Every table total reconciles to its rows, or the rounding convention is stated.</label></li>
-<li><label><input type="checkbox">Every figure has been inspected <em>in the final rendered output</em>, at final size.</label></li>
-<li><label><input type="checkbox">Units are stated in every table and axis label, and consistent across the document.</label></li>
-<li><label><input type="checkbox">Every blank, dash and zero means one documented thing.</label></li>
-<li><label><input type="checkbox">Every chart’s axes start where an honest reader would expect them to.</label></li>
-<li><label><input type="checkbox">Someone who has not seen the analysis has read the document cold.</label></li>
+<section id="what-this-asks-of-data-scientists" class="level2">
+<h2 data-anchor-id="what-this-asks-of-data-scientists">What this asks of data scientists</h2>
+<p>The most common failure I see is treating assurance as somebody else’s job: the AI team builds, the governance team approves. That produces systems that are hard to assure and governance that is mostly paperwork.</p>
+<p>The better pattern is for the people building the system to own its evidence, and to design for it from day one. In practice that means:</p>
+<ul>
+<li>writing the evaluation set <em>before</em> building the system, so “good enough” is defined in advance;</li>
+<li>logging every input the output depended on, not only the output;</li>
+<li>reporting performance on the cases that matter most, not just the average;</li>
+<li>and being as clear about what the system should not be used for as about what it can do.</li>
 </ul>
-<p>The last item is the one most often skipped, and the one that catches the most. The reviewer will read your document cold. Someone on your side should do it first.</p>
+<p>None of this is exotic. It is what good analytical practice in a regulated industry has always required. AI does not change the standard of evidence. It raises the cost of not having designed for it.</p>
 </section>
-<section id="the-underlying-point" class="level2">
-<h2 data-anchor-id="the-underlying-point">The underlying point</h2>
-<p>A regulator reads presentation as evidence because, from where they sit, it <em>is</em> evidence. It is the only visible trace of how carefully the work was done. Treat it that way and it will work for you rather than against you.</p>
+<section id="a-closing-thought" class="level2">
+<h2 data-anchor-id="a-closing-thought">A closing thought</h2>
+<p>The organisations that get the most from AI in regulated sectors will not be the ones that adopt fastest. They will be the ones that can show, for every use, why it was appropriate and how they would know if it stopped being so.</p>
+<p>That is a slower start, and a much faster middle.</p>
 <div class="post-end">
 <p>Written in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.</p>
 <p>Disagree, or have a better way of doing this? <a href="https://github.com/journeyswithdata">Find me on GitHub</a> — I would rather be corrected than consistent.</p>

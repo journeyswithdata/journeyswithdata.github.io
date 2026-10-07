@@ -2,23 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>About – Journeys With Data</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4faf44808c66243957c3082ea87d90f3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3943fa867835894f399dd86391a19415.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,6 +73,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="custom.css">
+<meta property="og:title" content="About – Journeys With Data">
+<meta property="og:description" content="Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure.">
+<meta property="og:image" content="https://journeyswithdata.dev/profile.jpg">
+<meta property="og:site_name" content="Journeys With Data">
+<meta property="og:image:alt" content="Portrait">
+<meta name="twitter:title" content="About – Journeys With Data">
+<meta name="twitter:description" content="Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure.">
+<meta name="twitter:image" content="https://journeyswithdata.dev/profile.jpg">
+<meta name="twitter:image:alt" content="Portrait">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
@@ -116,6 +120,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="./writing.xml"> <i class="bi bi-rss" role="img" aria-label="RSS feed">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/journeyswithdata"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -165,6 +174,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-short-version" class="level2">
 <h2 data-anchor-id="the-short-version">The short version</h2>
 <p>I am a data scientist working in energy networks — currently Lead Data Scientist at Wales &amp; West Utilities, where a lot of my time goes on asset risk, network data and the organisation’s direction on AI. Alongside that I am working through an MSc in Data Science at the University of St Andrews.</p>
+</section>
+<section id="what-i-believe-about-data-work" class="level2">
+<h2 data-anchor-id="what-i-believe-about-data-work">What I believe about data work</h2>
+<ul>
+<li><strong>A number is only as good as the rule that produced it.</strong> If nobody can re-run it, nobody can defend it.</li>
+<li><strong>Uncertainty belongs on the page.</strong> A figure with honest error bars beats a precise one nobody trusts.</li>
+<li><strong>The decision is the point.</strong> A model that does not change what someone does is a hobby.</li>
+<li><strong>Presentation is part of the analysis.</strong> The reader only has the document.</li>
+<li><strong>Being wrong in public is cheaper than being wrong in a submission.</strong> That is partly why this site exists.</li>
+</ul>
+</section>
+<section id="what-you-will-find-here" class="level2">
+<h2 data-anchor-id="what-you-will-find-here">What you will find here</h2>
+<p>Longer pieces on <a href="./writing.html#category=method">method</a> and <a href="./writing.html#category=asset data">asset data</a>, thinking-out-loud on <a href="./writing.html#category=AI strategy">AI strategy</a> in regulated settings, and the occasional note on making documents that hold up under scrutiny. There is an <a href="writing.xml">RSS feed</a> if you would like to follow along.</p>
 </section>
 <section id="elsewhere" class="level2">
 <h2 data-anchor-id="elsewhere">Elsewhere</h2>
@@ -231,14 +254,13 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

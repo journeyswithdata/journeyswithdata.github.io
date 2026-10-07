@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "writing.html",
-    "href": "writing.html",
-    "title": "Writing",
-    "section": "",
-    "text": "Notes, working-out and the occasional map. I write to understand things better, not to look clever.\n\n\n\n\n\n\n\n\n\nPresentation is evidence\n\n\n\nsubmissions\n\ndesign\n\n\n\nA diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.\n\n\n\n\n\n26 Sep 2026\n\n1 min\n\n\n\n\n\n\nThe asset that exists in four systems and three taxonomies\n\n\n\nasset data\n\nenergy\n\n\n\nReconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.\n\n\n\n\n\n18 Sep 2026\n\n1 min\n\n\n\n\n\n\nDerive the population, don’t assert it\n\n\n\nmethod\n\nasset data\n\n\n\nWhy an eligibility rule you can re-run beats a number somebody typed in 2019.\n\n\n\n\n\n5 Sep 2026\n\n1 min\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Some posts are maps. Some are sketches.",
     "section": "",
-    "text": "DATA SCIENCE  ENERGY NETWORKS  DECISION MODELLING\n\n\nI am a data scientist working on the systems that keep the gas flowing — asset risk, network data and the decisions a regulated utility has to justify with evidence. This is where I think out loud about it.\n\n\nCurrently Lead Data Scientist, Wales & West Utilities\n\n\nStudying MSc Data Science, University of St Andrews\n\n\nInterested in Applied decision science for energy & infrastructure\nMost data science writing is about models. Comparatively little is about the messy, regulated, consequential systems models get deployed into — where a wrong number becomes a wrong investment, and a regulator will ask you to show your working. That is the part I find interesting, and it is what I write about.\nSee everything in Writing →"
+    "text": "DATA SCIENCE  ENERGY NETWORKS  DECISION MODELLING\n\n\nI am a data scientist working on the systems that keep the gas flowing — asset risk, network data and the decisions a regulated utility has to justify with evidence. This is where I think out loud about it.\n\n\nCurrently Lead Data Scientist, Wales & West Utilities\n\n\nStudying MSc Data Science, University of St Andrews\n\n\nInterested in Applied decision science for energy & infrastructure\nMost data science writing is about models. Comparatively little is about the messy, regulated, consequential systems models get deployed into — where a wrong number becomes a wrong investment, and a regulator will ask you to show your working. That is the part I find interesting, and it is what I write about.\nFour habits that run through everything here. They are less about technique than about making numbers that survive scrutiny.\nSee everything in Writing →"
   },
   {
     "objectID": "index.html#what-i-actually-work-on",
@@ -19,6 +12,13 @@
     "title": "Some posts are maps. Some are sketches.",
     "section": "What I actually work on",
     "text": "What I actually work on"
+  },
+  {
+    "objectID": "index.html#how-i-work",
+    "href": "index.html#how-i-work",
+    "title": "Some posts are maps. Some are sketches.",
+    "section": "How I work",
+    "text": "How I work"
   },
   {
     "objectID": "index.html#latest-writing",
@@ -35,25 +35,11 @@
     "text": "Get in touch\nI am always glad to talk about energy data, decision modelling, or the gap between a good model and a decision anyone will act on.\nFind me on GitHub  more ways to reach me coming shortly."
   },
   {
-    "objectID": "posts/four-systems-three-taxonomies/index.html",
-    "href": "posts/four-systems-three-taxonomies/index.html",
-    "title": "The asset that exists in four systems and three taxonomies",
+    "objectID": "writing.html",
+    "href": "writing.html",
+    "title": "Writing",
     "section": "",
-    "text": "Still being written — the thinking is done, the words are not.\nReconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means."
-  },
-  {
-    "objectID": "posts/derive-dont-assert/index.html",
-    "href": "posts/derive-dont-assert/index.html",
-    "title": "Derive the population, don’t assert it",
-    "section": "",
-    "text": "Still being written — the thinking is done, the words are not.\nWhy an eligibility rule you can re-run beats a number somebody typed in 2019."
-  },
-  {
-    "objectID": "posts/presentation-is-evidence/index.html",
-    "href": "posts/presentation-is-evidence/index.html",
-    "title": "Presentation is evidence",
-    "section": "",
-    "text": "Still being written — the thinking is done, the words are not.\nA diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data."
+    "text": "Notes, working-out and the occasional map. I write to understand things better, not to look clever.\n\n\n\n\n\n\n\n\n\nAI with a regulator in the room\n\n\n\nAI strategy\n\nregulation\n\n\n\nSetting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing.\n\n\n\n\n\n7 Oct 2026\n\n6 min\n\n\n\n\n\n\nWhat would have to be true for the model to be wrong?\n\n\n\nmethod\n\nrisk\n\ndecision science\n\n\n\nA better question to ask of a risk model than “what does it say” — and a small, practical way of answering it.\n\n\n\n\n\n2 Oct 2026\n\n6 min\n\n\n\n\n\n\nPresentation is evidence\n\n\n\nsubmissions\n\ndesign\n\n\n\nA diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.\n\n\n\n\n\n26 Sep 2026\n\n6 min\n\n\n\n\n\n\nThe asset that exists in four systems and three taxonomies\n\n\n\nasset data\n\nenergy\n\n\n\nReconciling an asset population across SAP, GIS and a risk model — and what “how many assets do we have” actually means.\n\n\n\n\n\n18 Sep 2026\n\n7 min\n\n\n\n\n\n\nDerive the population, don’t assert it\n\n\n\nmethod\n\nasset data\n\n\n\nWhy an eligibility rule you can re-run beats a number somebody typed in 2019.\n\n\n\n\n\n5 Sep 2026\n\n9 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "work.html",
@@ -67,21 +53,28 @@
     "href": "work.html#risk-on-a-real-asset-base",
     "title": "Work",
     "section": "Risk on a real asset base",
-    "text": "Risk on a real asset base\nNetwork risk models are only as good as the asset data underneath them, and that data is rarely as complete as the model assumes. A lot of my work is the unglamorous part: establishing what is actually known about an asset population, what is inferred, and what is simply asserted — then being honest about which is which.\n\nThe interesting question is rarely “what does the model say”. It is “what would have to be true for the model to be wrong”."
+    "text": "Risk on a real asset base\nNetwork risk models are only as good as the asset data underneath them, and that data is rarely as complete as the model assumes. A lot of my work is the unglamorous part: establishing what is actually known about an asset population, what is inferred, and what is simply asserted — then being honest about which is which.\nThat means building populations from rules rather than inherited figures, reconciling the same assets across systems that were never designed to agree, and making the gaps visible rather than papering over them.\n\nThe interesting question is rarely “what does the model say”. It is “what would have to be true for the model to be wrong”."
   },
   {
     "objectID": "work.html#ai-with-a-regulator-in-the-room",
     "href": "work.html#ai-with-a-regulator-in-the-room",
     "title": "Work",
     "section": "AI with a regulator in the room",
-    "text": "AI with a regulator in the room\nSetting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny."
+    "text": "AI with a regulator in the room\nSetting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny: sorting uses by what an error costs, building the evidence machinery before it is needed, and earning the right to harder uses one at a time."
   },
   {
     "objectID": "work.html#decision-modelling",
     "href": "work.html#decision-modelling",
     "title": "Work",
     "section": "Decision modelling",
-    "text": "Decision modelling\nOptimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal."
+    "text": "Decision modelling\nOptimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal, and where knowing how stable the answer is matters as much as the answer itself."
+  },
+  {
+    "objectID": "work.html#submissions-and-documents",
+    "href": "work.html#submissions-and-documents",
+    "title": "Work",
+    "section": "Submissions and documents",
+    "text": "Submissions and documents\nA regulatory submission is read by someone who only has the page. I care about the parts of the pipeline that end up in front of that reader: numbers computed rather than typed, totals that reconcile, figures checked at their final size, and one documented meaning for every blank cell."
   },
   {
     "objectID": "work.html#tools",
@@ -91,11 +84,263 @@
     "text": "Tools\nR and Python for the modelling, Quarto for everything that has to be read by someone else, and a long-standing conviction that a well-made document is part of the work rather than an afterthought."
   },
   {
+    "objectID": "work.html#selected-writing-by-theme",
+    "href": "work.html#selected-writing-by-theme",
+    "title": "Work",
+    "section": "Selected writing, by theme",
+    "text": "Selected writing, by theme\n\n\nAsset data\n\nDerive the population, don’t assert it\nThe asset that exists in four systems and three taxonomies\n\n\n\nRisk & decisions\n\nWhat would have to be true for the model to be wrong?\n\n\n\nAI & assurance\n\nAI with a regulator in the room\nPresentation is evidence"
+  },
+  {
+    "objectID": "work.html#ways-to-work-together",
+    "href": "work.html#ways-to-work-together",
+    "title": "Work",
+    "section": "Ways to work together",
+    "text": "Ways to work together\nI am always interested in comparing notes with people working on similar problems. Things I am glad to talk about:\n\nSpeaking and panels on asset data, risk modelling, or AI assurance in regulated industries.\nPeer review of methods, especially the “what would have to be true” kind of review, done before a submission rather than after.\nMentoring people moving into data science from engineering or operations, or the other way round.\nCollaboration with academics and other utilities on shared methodological problems."
+  },
+  {
     "objectID": "work.html#working-on-something-similar",
     "href": "work.html#working-on-something-similar",
     "title": "Work",
     "section": "Working on something similar?",
     "text": "Working on something similar?\nIf you are wrestling with asset data, network risk, or making AI legible to people who have to sign it off, I would be glad to compare notes.\nFind me on GitHub  more ways to reach me coming shortly."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html",
+    "title": "AI with a regulator in the room",
+    "section": "",
+    "text": "Most writing about AI strategy assumes the binding constraint is capability: what the models can do, how fast they are improving, how quickly an organisation can adopt them. In a regulated utility, capability is rarely the constraint. The constraint is whether you can show your working — to a regulator, to an auditor, or to your own board — years after a decision was made.\nThat changes what a good AI strategy looks like. It is less a list of use cases and more a theory of assurance: which kinds of AI use you can stand behind, what evidence you need for each, and in what order to earn the right to the harder ones."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html#the-question-behind-every-question",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html#the-question-behind-every-question",
+    "title": "AI with a regulator in the room",
+    "section": "The question behind every question",
+    "text": "The question behind every question\nRegulators ask a great many specific questions. Underneath almost all of them is one general one: can you explain why this decision was made, and show that it was a reasonable one at the time?\nFor a conventional analytical model, the answer is usually a methodology document, a validated dataset and a reproducible run. For AI systems, particularly generative ones, each of those is harder:\n\nMethodology. The behaviour of a large language model cannot be fully specified in a document, and the model itself may be updated by its vendor.\nData. What the system “knew” when it produced an output depends on prompts, retrieved context and model version, and none of these is captured by default.\nReproducibility. The same input can produce different outputs on different days.\n\nNone of this makes AI unusable in a regulated setting. It does mean that the evidence has to be designed in from the start, because it cannot be reconstructed afterwards."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html#sort-uses-by-what-an-error-costs",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html#sort-uses-by-what-an-error-costs",
+    "title": "AI with a regulator in the room",
+    "section": "Sort uses by what an error costs",
+    "text": "Sort uses by what an error costs\nThe most useful framing I know is to sort uses not by technology, but by what happens when the system is wrong, and who would notice.\n\n\n\n\n\n\n\n\n\nTier\nRole of the AI\nWho catches an error\nExamples\n\n\n\n\n1. Assistive\nHelps a person do their own work faster\nThe person, immediately\nDrafting, summarising, code assistance, searching internal documents\n\n\n2. Decision support\nInforms a decision a named person makes\nThe decision-maker, with effort\nTriage of inspection findings, flagging anomalies in asset data, first-pass review of a submission\n\n\n3. Embedded\nProduces an output that feeds a regulated process\nPossibly nobody, for some time\nClassifying assets for a risk model, generating figures that end up in a submission\n\n\n4. Automated decision\nActs without a person in the loop\nOnly through monitoring\nAutomatic prioritisation of work, automated customer decisions\n\n\n\nThe tiers are not about how sophisticated the AI is. A simple classifier at tier 3 needs far more assurance than a frontier model at tier 1. Moving up a tier is a governance decision, not a technical upgrade."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html#evidence-that-scales-with-the-tier",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html#evidence-that-scales-with-the-tier",
+    "title": "AI with a regulator in the room",
+    "section": "Evidence that scales with the tier",
+    "text": "Evidence that scales with the tier\nEach tier inherits the requirements of the ones below it and adds its own.\nTier 1 — Assistive. Clear guidance on what may and may not be put into a tool. Approved tools only. Training that makes people the accountable author of anything they produce with AI help. Most organisations can, and should, move quickly here.\nTier 2 — Decision support. All of the above, plus: a named decision-maker for every output; a record that the AI contributed; and a periodic check that people are genuinely reviewing outputs rather than rubber-stamping them. That last one is easy to skip and very important. A human in the loop who agrees 100% of the time is not a control.\nTier 3 — Embedded. All of the above, plus everything you would expect of any model feeding a regulated process: a defined validation set with measured performance; versioning of the model, prompts and retrieved context; logs sufficient to reproduce or at least explain a given output; and a fallback if the system becomes unavailable or its vendor changes it.\nTier 4 — Automated. All of the above, plus continuous monitoring with thresholds and named owners, a defined route for challenge and correction, and an explicit, documented decision by the accountable executive that automation is appropriate here."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html#sequencing-is-the-strategy",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html#sequencing-is-the-strategy",
+    "title": "AI with a regulator in the room",
+    "section": "Sequencing is the strategy",
+    "text": "Sequencing is the strategy\nGiven those tiers, the sequencing almost writes itself.\n\nStart where errors are cheap and visible. Tier 1 builds familiarity, surfaces risks in a low-stakes setting, and produces evidence about where the tools are and are not reliable on your own work. That is worth more than any vendor benchmark.\nBuild the evidence machinery before you need it. Logging, versioning, evaluation sets and review records are boring to build and impossible to backfill. Build them during tier 2, so that tier 3 does not start from nothing.\nPromote individual uses, not the whole programme. A specific use moves up a tier when it has the evidence for that tier. An organisation does not “move to tier 3” all at once.\nBe willing to move uses down. If monitoring shows a tier 3 use is drifting, demoting it to decision support is a sign that the controls are working, not a failure."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html#what-this-asks-of-data-scientists",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html#what-this-asks-of-data-scientists",
+    "title": "AI with a regulator in the room",
+    "section": "What this asks of data scientists",
+    "text": "What this asks of data scientists\nThe most common failure I see is treating assurance as somebody else’s job: the AI team builds, the governance team approves. That produces systems that are hard to assure and governance that is mostly paperwork.\nThe better pattern is for the people building the system to own its evidence, and to design for it from day one. In practice that means:\n\nwriting the evaluation set before building the system, so “good enough” is defined in advance;\nlogging every input the output depended on, not only the output;\nreporting performance on the cases that matter most, not just the average;\nand being as clear about what the system should not be used for as about what it can do.\n\nNone of this is exotic. It is what good analytical practice in a regulated industry has always required. AI does not change the standard of evidence. It raises the cost of not having designed for it."
+  },
+  {
+    "objectID": "posts/ai-with-a-regulator-in-the-room/index.html#a-closing-thought",
+    "href": "posts/ai-with-a-regulator-in-the-room/index.html#a-closing-thought",
+    "title": "AI with a regulator in the room",
+    "section": "A closing thought",
+    "text": "A closing thought\nThe organisations that get the most from AI in regulated sectors will not be the ones that adopt fastest. They will be the ones that can show, for every use, why it was appropriate and how they would know if it stopped being so.\nThat is a slower start, and a much faster middle.\n\nWritten in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.\nDisagree, or have a better way of doing this? Find me on GitHub — I would rather be corrected than consistent.\n← All writing"
+  },
+  {
+    "objectID": "posts/what-would-have-to-be-true/index.html",
+    "href": "posts/what-would-have-to-be-true/index.html",
+    "title": "What would have to be true for the model to be wrong?",
+    "section": "",
+    "text": "When a risk model produces a ranked list of assets for intervention, the first question in the room is nearly always what does it say? Which assets are at the top, how much risk is removed, what it costs.\nI have come to think that is the second most useful question. The most useful one is: what would have to be true for this model to be wrong?\nIt is not a cynical question. It is how you find out which parts of the model are carrying the decision, and whether those parts deserve the weight they are carrying."
+  },
+  {
+    "objectID": "posts/what-would-have-to-be-true/index.html#every-model-is-a-stack-of-claims",
+    "href": "posts/what-would-have-to-be-true/index.html#every-model-is-a-stack-of-claims",
+    "title": "What would have to be true for the model to be wrong?",
+    "section": "Every model is a stack of claims",
+    "text": "Every model is a stack of claims\nA typical asset risk model, stripped to its bones, multiplies a probability of failure by a consequence of failure and sums across failure modes:\n\\[\n\\text{Risk}_i = \\sum_{m} P(\\text{failure}_{i,m}) \\times C(\\text{failure}_{i,m})\n\\]\nEach term in that expression rests on claims of very different strength. It helps to sort them into three grades, the same three I use when talking about asset data generally:\n\n\n\n\n\n\n\n\nGrade\nMeaning\nExample\n\n\n\n\nMeasured\nObserved directly, with known error\nRecorded failures over ten years; surveyed pipe diameter\n\n\nInferred\nEstimated from related evidence by a stated method\nInstall year imputed from neighbouring assets; deterioration curve fitted to a cohort\n\n\nAsserted\nSet by judgement, convention or inheritance\nConsequence weights; a default material for unrecorded assets\n\n\n\nA model built mostly on asserted inputs is not necessarily a bad model. Some things can only be set by judgement. But it is a different kind of object from one built on measurement, and it should be presented differently."
+  },
+  {
+    "objectID": "posts/what-would-have-to-be-true/index.html#which-assumptions-actually-matter",
+    "href": "posts/what-would-have-to-be-true/index.html#which-assumptions-actually-matter",
+    "title": "What would have to be true for the model to be wrong?",
+    "section": "Which assumptions actually matter?",
+    "text": "Which assumptions actually matter?\nNot every assumption deserves the same scrutiny. The question is not “is this input uncertain?”, because they all are. It is “if this input were wrong by a plausible amount, would the decision change?”\nThat turns a vague worry into something you can compute. If the decision is “which assets go into next year’s programme”, you can test how stable that list is when you perturb the inputs.\nimport numpy as np\nimport pandas as pd\n\nrng = np.random.default_rng(2026)\n\ndef programme(risk: pd.Series, budget_units: int) -&gt; set:\n    \"\"\"The decision: the top-N assets by risk.\"\"\"\n    return set(risk.nlargest(budget_units).index)\n\ndef stability(assets: pd.DataFrame, budget_units: int, n_sims: int = 2000,\n              pof_sd: float = 0.3, cof_sd: float = 0.2) -&gt; pd.DataFrame:\n    \"\"\"How often does each asset make the programme when inputs are uncertain?\n\n    pof_sd / cof_sd are log-scale standard deviations: 0.3 means the true\n    value is plausibly ~35% above or below the central estimate.\n    \"\"\"\n    base = programme(assets[\"pof\"] * assets[\"cof\"], budget_units)\n    hits = pd.Series(0, index=assets.index)\n    overlaps = []\n\n    for _ in range(n_sims):\n        pof = assets[\"pof\"] * rng.lognormal(0, pof_sd, len(assets))\n        cof = assets[\"cof\"] * rng.lognormal(0, cof_sd, len(assets))\n        chosen = programme(pof * cof, budget_units)\n        hits[list(chosen)] += 1\n        overlaps.append(len(chosen & base) / budget_units)\n\n    out = assets.assign(\n        in_base=assets.index.isin(base),\n        selection_rate=hits / n_sims,\n    )\n    out.attrs[\"mean_overlap\"] = float(np.mean(overlaps))\n    return out.sort_values(\"selection_rate\", ascending=False)\nThis simple simulation gives you three useful things.\nA selection rate for every asset. Assets selected in 99% of simulations are robust choices; the decision does not depend on the fine detail of the model. Assets selected in 55% of simulations are coin flips. They sit at the boundary, and the model cannot really tell them apart from the assets just outside it.\nAn overall stability figure. If the base programme and a typical perturbed programme overlap by 90%, the model is giving you a clear steer. If they overlap by 60%, the model is mostly telling you about its own assumptions.\nA place to direct effort. Re-run the simulation varying one input group at a time. The group whose uncertainty moves the selection most is the one where better data would be worth the most. That is a far better way to prioritise data-improvement work than “fix whatever looks worst”."
+  },
+  {
+    "objectID": "posts/what-would-have-to-be-true/index.html#reading-the-results-honestly",
+    "href": "posts/what-would-have-to-be-true/index.html#reading-the-results-honestly",
+    "title": "What would have to be true for the model to be wrong?",
+    "section": "Reading the results honestly",
+    "text": "Reading the results honestly\nResults from this kind of exercise usually fall into one of three patterns.\n\nA robust core and a fuzzy boundary. This is the most common and the most reassuring. The top of the list is stable; the bottom is not. The honest presentation is to say exactly that, and to make clear that the boundary assets are chosen on grounds the model cannot really distinguish. Deliverability, geography and bundling with other work are all legitimate tie-breakers there.\nAn unstable list throughout. Uncertainty in the inputs swamps the differences between assets. This is a finding, not a failure. It means the model is not yet fit to rank individual assets, though it may still be fine for setting overall volumes. Better to know that before anyone defends a specific asset list on its strength.\nDominated by one assumption. The selection hinges almost entirely on a single parameter, often an asserted consequence weight. That parameter deserves its own paper trail: where it came from, who agreed it, and what the programme would look like if it were set differently."
+  },
+  {
+    "objectID": "posts/what-would-have-to-be-true/index.html#the-pre-mortem-version",
+    "href": "posts/what-would-have-to-be-true/index.html#the-pre-mortem-version",
+    "title": "What would have to be true for the model to be wrong?",
+    "section": "The pre-mortem version",
+    "text": "The pre-mortem version\nNot every question needs a simulation. A lighter version works in any review meeting. Before anyone discusses the results, ask the group to assume it is two years later and the programme has been judged a mistake. Then ask: what is the most likely reason?\nThe answers are usually specific and revealing. “The failure data was dominated by one bad winter.” “The consequence model undervalues supply interruptions in rural areas.” “Half the assets in the top decile had imputed install years.” Each one becomes a named assumption with a test attached."
+  },
+  {
+    "objectID": "posts/what-would-have-to-be-true/index.html#why-this-matters-more-in-regulated-settings",
+    "href": "posts/what-would-have-to-be-true/index.html#why-this-matters-more-in-regulated-settings",
+    "title": "What would have to be true for the model to be wrong?",
+    "section": "Why this matters more in regulated settings",
+    "text": "Why this matters more in regulated settings\nIn a competitive business, a model that is wrong costs money and the market tells you fairly quickly. In a regulated business, a model that is wrong can survive for a whole price-control period, because the feedback loop is long and the people who bear the cost are customers, not the modeller.\nThat is exactly why the question is worth asking out loud. The regulator will ask it eventually, in one form or another. It is much better to have asked it first, to have an answer, and to be able to show which conclusions depend on which assumptions.\n\nThe interesting question is rarely “what does the model say”. It is “what would have to be true for the model to be wrong”.\n\nA model that has been asked that question and survived is worth far more than a precise one that never has been.\n\nWritten in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.\nDisagree, or have a better way of doing this? Find me on GitHub — I would rather be corrected than consistent.\n← All writing"
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html",
+    "href": "posts/presentation-is-evidence/index.html",
+    "title": "Presentation is evidence",
+    "section": "",
+    "text": "Data scientists tend to treat presentation as the last step: the analysis is the real work, and formatting is what you do once it is finished. In most settings that is a forgivable view. In a regulatory submission it is a mistake, because the reader cannot tell the difference between a presentation error and a substantive one."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html#the-reader-only-has-the-page",
+    "href": "posts/presentation-is-evidence/index.html#the-reader-only-has-the-page",
+    "title": "Presentation is evidence",
+    "section": "The reader only has the page",
+    "text": "The reader only has the page\nConsider what a reviewer actually has in front of them. They did not see your notebook, your data lineage or the conversation in which the team agreed what a column meant. They have a document, often a long one, read under time pressure and alongside dozens of others.\nSo when they reach a process diagram where the last box is clipped at the page edge, they do not think “a rendering bug”. They think “this step is undefined”. When a table’s total does not equal the sum of its rows because of rounding, they do not think “rounding”. They think “these figures have not been checked”. And when a number in the executive summary differs from the same number in an appendix by 0.3%, they do not think “one of these was updated later”. They think “which one is right, and what else is inconsistent?”\nEvery one of these is a reasonable inference. Each costs you something you cannot easily get back: the reader’s confidence that the rest of the document is under control."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html#a-small-catalogue-of-self-inflicted-wounds",
+    "href": "posts/presentation-is-evidence/index.html#a-small-catalogue-of-self-inflicted-wounds",
+    "title": "Presentation is evidence",
+    "section": "A small catalogue of self-inflicted wounds",
+    "text": "A small catalogue of self-inflicted wounds\nThese are the faults I see most often. None of them involves the analysis being wrong, and all of them make it look wrong.\nNumbers that disagree with themselves. The same quantity appears in the text, a table and a chart, and the three were produced at different times from different extracts. This is the most common fault and the most damaging.\nTotals that don’t add. Rows are rounded independently and the total is rounded separately, so 33 + 33 + 33 = 100. It is mathematically defensible but looks careless. Either show the rounding convention or round so that totals reconcile.\nTruncated or clipped figures. Diagrams exported at one size and placed at another. Axis labels cut off. Legends overlapping data. A chart that has visibly been squeezed into a space it was not designed for.\nSilent unit changes. £m in one table, £k in the next. Kilometres of main in the text, metres in an appendix. The reader has to notice, convert and trust that you did the same.\nUnexplained gaps. A blank cell, a dash, a zero and “n/a” used interchangeably. To you, they may mean “not applicable”, “not yet available”, “genuinely zero” and “suppressed”. To the reader they are four different claims, and you have not said which is which.\nCharts that argue. Truncated y-axes, inconsistent scales across panels, colour that implies a ranking the data does not support. Even when they are unintentional, they read as advocacy."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html#the-fix-is-structural-not-cosmetic",
+    "href": "posts/presentation-is-evidence/index.html#the-fix-is-structural-not-cosmetic",
+    "title": "Presentation is evidence",
+    "section": "The fix is structural, not cosmetic",
+    "text": "The fix is structural, not cosmetic\nThe tempting response is a better proof-read. It helps, but it does not scale, and it fails exactly when the deadline is tightest. The durable fix is to make whole classes of error impossible rather than unlikely.\n\nOne source for every number\nIf a figure appears in the document, it should be computed from the data at render time, not typed in. In Quarto, inline expressions make this straightforward:\nThe eligible population is `{python} f\"{eligible:,}\"` assets,\nof which `{python} f\"{undetermined:,}\"` could not be classified.\nNow the summary, the table and the chart all read from the same variable. If the data changes, they change together. Self-contradiction becomes structurally impossible rather than something you have to catch.\n\n\nChecks that run with the document\nSome properties of a submission should always hold. Write them down as assertions and run them every time the document is built:\nimport pandas as pd\n\ndef check_submission(tables: dict[str, pd.DataFrame]) -&gt; None:\n    # Totals reconcile to the sum of their rows, after rounding.\n    for name, t in tables.items():\n        body, total = t.iloc[:-1], t.iloc[-1]\n        for col in t.select_dtypes(\"number\"):\n            assert round(body[col].sum()) == round(total[col]), \\\n                f\"{name}.{col}: rows sum to {body[col].sum():,.0f}, total says {total[col]:,.0f}\"\n\n    # The headline figure is the same everywhere it appears.\n    headline = {name: t.attrs.get(\"headline\") for name, t in tables.items() if \"headline\" in t.attrs}\n    assert len(set(headline.values())) &lt;= 1, f\"headline figure differs: {headline}\"\nA failed build is annoying. A reviewer finding the same inconsistency is far worse.\n\n\nFigures sized for where they will be read\nProduce figures at the dimensions of their final placement, in a vector format where you can, and look at them in the rendered output rather than the plotting window. A diagram that fits on your monitor and gets clipped in the PDF has not been checked.\n\n\nA legend for absence\nDecide once what each kind of missing value means and use it consistently. For example:\n\n\n\nSymbol\nMeaning\n\n\n\n\n0\nMeasured and genuinely zero\n\n\n–\nNot applicable to this category\n\n\n..\nNot yet available; expected by a stated date\n\n\n[c]\nSuppressed for confidentiality\n\n\n\nPut the legend in the document. It takes one table and removes a whole category of ambiguity."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html#why-this-belongs-to-the-data-scientist",
+    "href": "posts/presentation-is-evidence/index.html#why-this-belongs-to-the-data-scientist",
+    "title": "Presentation is evidence",
+    "section": "Why this belongs to the data scientist",
+    "text": "Why this belongs to the data scientist\nIt is tempting to hand presentation to someone else: a document team, a graphic designer, whoever “does the formatting”. But most of the faults above are data faults that show up visually. Numbers that disagree come from a broken pipeline. Totals that don’t add come from a rounding decision. Unexplained gaps come from undocumented missing-data semantics.\nThe person who understands the data is the person best placed to make sure the page tells the truth about it. That is why I have come to treat the rendered document as part of the analysis, not something that happens afterwards."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html#a-short-pre-submission-checklist",
+    "href": "posts/presentation-is-evidence/index.html#a-short-pre-submission-checklist",
+    "title": "Presentation is evidence",
+    "section": "A short pre-submission checklist",
+    "text": "A short pre-submission checklist\n\nEvery number in the text is computed, not typed.\nEvery table total reconciles to its rows, or the rounding convention is stated.\nEvery figure has been inspected in the final rendered output, at final size.\nUnits are stated in every table and axis label, and consistent across the document.\nEvery blank, dash and zero means one documented thing.\nEvery chart’s axes start where an honest reader would expect them to.\nSomeone who has not seen the analysis has read the document cold.\n\nThe last item is the one most often skipped, and the one that catches the most. The reviewer will read your document cold. Someone on your side should do it first."
+  },
+  {
+    "objectID": "posts/presentation-is-evidence/index.html#the-underlying-point",
+    "href": "posts/presentation-is-evidence/index.html#the-underlying-point",
+    "title": "Presentation is evidence",
+    "section": "The underlying point",
+    "text": "The underlying point\nA regulator reads presentation as evidence because, from where they sit, it is evidence. It is the only visible trace of how carefully the work was done. Treat it that way and it will work for you rather than against you.\n\nWritten in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.\nDisagree, or have a better way of doing this? Find me on GitHub — I would rather be corrected than consistent.\n← All writing"
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html",
+    "href": "posts/derive-dont-assert/index.html",
+    "title": "Derive the population, don’t assert it",
+    "section": "",
+    "text": "Every regulated investment plan rests on a handful of counts. How many assets are in scope. How many are eligible for intervention. How many will be done in the period, and at what unit cost. Multiply them together and you have a large part of a business plan.\nWhat surprises people outside the industry is how often those counts are asserted rather than derived. Somewhere there is a spreadsheet cell containing 14,382, and that cell has been copied, linked and pasted into a dozen later documents. Ask where it came from and you will hear one of three answers: “it’s the figure from the last submission”, “it came from the asset team”, or a long pause.\nThis post argues for a simple discipline. A population count should be the output of a rule you can re-run, not a number someone remembers."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html#what-an-asserted-number-costs-you",
+    "href": "posts/derive-dont-assert/index.html#what-an-asserted-number-costs-you",
+    "title": "Derive the population, don’t assert it",
+    "section": "What an asserted number costs you",
+    "text": "What an asserted number costs you\nAn asserted number is not necessarily wrong. It may have been carefully worked out by someone competent. The problem is that nobody can tell any more, and that causes three practical failures.\nIt cannot be refreshed. The asset register changes every week. Assets are replaced, surveyed, reclassified and corrected. An asserted count is fixed at the moment someone typed it, and drifts away from reality without anyone noticing.\nIt cannot be explained. When a reviewer asks why 14,382 rather than 13,900, the honest answer is “we don’t know what was included”. That is not an answer you want to give to a regulator, or to your own executive.\nIt cannot be challenged. This is the subtle one. If you cannot see the rule, you cannot argue about it. Disagreements turn into disputes about whose number is right, not productive arguments about which definition is right."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html#what-a-derived-population-looks-like",
+    "href": "posts/derive-dont-assert/index.html#what-a-derived-population-looks-like",
+    "title": "Derive the population, don’t assert it",
+    "section": "What a derived population looks like",
+    "text": "What a derived population looks like\nA derived population is the result of applying an explicit eligibility rule to the asset register as it stands on a given date. The rule is written down, versioned and executable. Here is a deliberately simplified example. The criteria are illustrative and do not describe any real network’s policy.\nimport pandas as pd\n\nRULE_VERSION = \"2026.1\"\n\ndef eligible_population(register: pd.DataFrame, as_of: str) -&gt; pd.DataFrame:\n    \"\"\"Apply the eligibility rule to the register as of a given date.\n\n    Returns every asset with a status and the reason for it. Excluded\n    assets stay in the output; they are not silently dropped.\n    \"\"\"\n    df = register.copy()\n    df[\"status\"] = \"eligible\"\n    df[\"reason\"] = \"meets all criteria\"\n\n    in_scope_materials = [\"cast iron\", \"spun iron\", \"ductile iron\"]\n\n    # Each condition fires only on a *known* value; a missing attribute\n    # is dealt with below rather than being counted as out of scope.\n    rules = [\n        # (label, condition for EXCLUSION)\n        (\"not in service\",        df[\"operational_status\"] != \"in service\"),\n        (\"material out of scope\", df[\"material\"].notna()\n                                  & ~df[\"material\"].isin(in_scope_materials)),\n        (\"diameter out of scope\", df[\"diameter_mm\"] &gt; 200),\n        (\"already scheduled\",     df[\"work_order_id\"].notna()),\n    ]\n\n    for label, excluded in rules:\n        newly_out = excluded & (df[\"status\"] == \"eligible\")\n        df.loc[newly_out, [\"status\", \"reason\"]] = [\"excluded\", label]\n\n    # Assets we cannot classify are neither in nor out — say so.\n    unknown = df[\"material\"].isna() | df[\"diameter_mm\"].isna()\n    df.loc[unknown & (df[\"status\"] == \"eligible\"), [\"status\", \"reason\"]] = [\n        \"undetermined\", \"missing material or diameter\"\n    ]\n\n    df[\"rule_version\"] = RULE_VERSION\n    df[\"as_of\"] = as_of\n    return df\nThere is nothing clever here, and that is the point. Four properties make this better than a typed-in number.\n\nEvery asset gets a status and a reason. Exclusions are not silent. You can count how many assets fell out at each step, and anyone can look up a specific asset and see why it is or is not in scope.\n“Undetermined” is a legitimate answer. Most asserted counts hide the assets nobody could classify. They get quietly included or quietly dropped, depending on who did the work. Here they are reported as their own category, which turns a hidden assumption into a visible data-quality finding.\nThe rule has a version. When the definition changes, and it will, the count changes for a reason you can name.\nIt runs against a dated snapshot. “Eligible as of 31 March” is a claim you can reproduce. “Eligible” on its own is not."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html#the-exclusion-waterfall",
+    "href": "posts/derive-dont-assert/index.html#the-exclusion-waterfall",
+    "title": "Derive the population, don’t assert it",
+    "section": "The exclusion waterfall",
+    "text": "The exclusion waterfall\nThe most useful single output of a derived population is not the final count. It is the waterfall that gets you there.\ndef waterfall(pop: pd.DataFrame) -&gt; pd.DataFrame:\n    steps = (\n        pop.groupby([\"status\", \"reason\"])\n           .size()\n           .rename(\"assets\")\n           .reset_index()\n           .sort_values([\"status\", \"assets\"], ascending=[True, False])\n    )\n    return steps\nPresented as a table it reads something like this (numbers invented):\n\n\n\nStep\nAssets\nRemaining\n\n\n\n\nRegister, all records\n61,240\n61,240\n\n\nNot in service\n−3,115\n58,125\n\n\nMaterial out of scope\n−29,870\n28,255\n\n\nDiameter out of scope\n−8,402\n19,853\n\n\nAlready scheduled\n−4,117\n15,736\n\n\nUndetermined (missing attributes)\n−1,354\n14,382\n\n\nEligible\n\n14,382\n\n\n\nNotice what the table gives a reviewer. They can see that the largest single exclusion is on material, so the quality of the material attribute matters more than anything else. They can see that 1,354 assets are undetermined, and they can ask whether that number is acceptable. If the plan assumes all 14,382 are delivered, they can see that the 1,354 are a risk to that assumption in either direction.\nNone of those questions can even be asked of an asserted number."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html#diffing-two-runs",
+    "href": "posts/derive-dont-assert/index.html#diffing-two-runs",
+    "title": "Derive the population, don’t assert it",
+    "section": "Diffing two runs",
+    "text": "Diffing two runs\nOnce the population is derived, the next question writes itself: what changed since last time? Because each asset carries its own status, you can compare two runs asset by asset rather than total by total.\ndef diff_runs(old: pd.DataFrame, new: pd.DataFrame, key: str = \"asset_id\") -&gt; pd.DataFrame:\n    merged = old[[key, \"status\", \"reason\"]].merge(\n        new[[key, \"status\", \"reason\"]],\n        on=key, how=\"outer\", suffixes=(\"_old\", \"_new\"), indicator=True,\n    )\n    changed = merged[\n        (merged[\"_merge\"] != \"both\")\n        | (merged[\"status_old\"] != merged[\"status_new\"])\n    ]\n    return changed.groupby(\n        [\"_merge\", \"status_old\", \"status_new\"], dropna=False\n    ).size().rename(\"assets\").reset_index()\nThis turns “the number went down by 600” into a statement you can defend: 410 assets were replaced, 130 were reclassified after survey, and 60 left scope because the rule changed in version 2026.1. That last line is the one reviewers will care about most, and now you can show it on its own."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html#objections-i-have-heard",
+    "href": "posts/derive-dont-assert/index.html#objections-i-have-heard",
+    "title": "Derive the population, don’t assert it",
+    "section": "Objections I have heard",
+    "text": "Objections I have heard\n“The rule is too simple to capture engineering judgement.” Then write down the judgement. If an engineer excludes an asset for a reason the rule does not capture, that reason belongs in an override table with a name, a date and a justification attached. Overrides are fine. Untraceable overrides are the problem.\n“We don’t have time to build this.” The first version of a derived population is usually less work than the archaeology needed to explain an asserted one. And it is the last time anyone has to do that archaeology.\n“The derived number is different from the one we submitted.” Almost certainly. That is not a reason to avoid deriving it. It is a reason to find out why, before someone else does."
+  },
+  {
+    "objectID": "posts/derive-dont-assert/index.html#the-general-principle",
+    "href": "posts/derive-dont-assert/index.html#the-general-principle",
+    "title": "Derive the population, don’t assert it",
+    "section": "The general principle",
+    "text": "The general principle\nThis is not really about eligibility rules. It is about where authority sits. An asserted number gets its authority from whoever typed it. A derived number gets its authority from the rule and the data, both of which can be inspected.\nIn a regulated setting, the second kind of authority is the only kind that lasts. People move on and spreadsheets get orphaned, but a rule you can re-run will still give the same answer to the same question long after its author has left.\n\nWritten in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.\nDisagree, or have a better way of doing this? Find me on GitHub — I would rather be corrected than consistent.\n← All writing"
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html",
+    "href": "posts/four-systems-three-taxonomies/index.html",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "",
+    "text": "“How many assets do we have?” sounds like the easiest question in asset management. In practice it is one of the hardest, because the honest answer starts with another question: according to which system?\nIn a typical utility, the same physical object is recorded in at least four places. Each was built for a different job, by a different team, at a different time. They do not agree, and they were never designed to."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html#four-systems-four-jobs",
+    "href": "posts/four-systems-three-taxonomies/index.html#four-systems-four-jobs",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "Four systems, four jobs",
+    "text": "Four systems, four jobs\nTake a single piece of equipment, say a pressure-reduction installation at the edge of a town. Here is roughly how it might appear across the estate. The details are illustrative, but anyone who has done this work will recognise the shape.\n\n\n\n\n\n\n\n\n\nSystem\nBuilt to answer\nWhat counts as “one asset”\nTypical identifier\n\n\n\n\nERP / work management (e.g. SAP)\nWhat do we maintain, and what does it cost?\nA maintainable item: a functional location with equipment underneath it\nFunctional location code + equipment number\n\n\nGIS\nWhere is it, and what is it connected to?\nA spatial feature: a point, a line segment, a polygon\nFeature ID, often regenerated on edit\n\n\nRisk model\nWhat is the risk, and what happens if we intervene?\nA modelled unit, defined by the methodology\nModel-specific key, sometimes derived from one of the above\n\n\nRegulatory reporting\nWhat do we report, and against which category?\nA reportable line, aggregated by the reporting rules\nNo asset-level key at all\n\n\n\nNone of these definitions is wrong. Each is the correct unit for the job its system does. The problem only appears when someone asks a question that crosses systems, and almost every interesting question does."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html#three-taxonomies",
+    "href": "posts/four-systems-three-taxonomies/index.html#three-taxonomies",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "Three taxonomies",
+    "text": "Three taxonomies\nThe systems also classify assets differently, and that is where most of the pain lives.\n\nThe ERP hierarchy follows how work is organised: site, then system, then equipment. A single installation might be one functional location with eight pieces of equipment underneath it.\nThe GIS feature classes follow the physical network: pipes, valves, fittings, installations. The same installation might be one point feature, or a polygon containing several point features, depending on when it was digitised.\nThe risk-model asset classes follow the methodology. They might split one physical installation into several modelled components with separate failure modes, or merge several into one.\n\nSo “how many installations do we have?” can honestly be answered as 1, 8 or 4, depending on whose taxonomy you use. Pick one without saying so and you have created a number that will be contradicted the moment someone looks at another system."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html#reconciliation-is-not-de-duplication",
+    "href": "posts/four-systems-three-taxonomies/index.html#reconciliation-is-not-de-duplication",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "Reconciliation is not de-duplication",
+    "text": "Reconciliation is not de-duplication\nThe instinct is to treat this as a matching problem: find the common key, join the tables, done. That works for perhaps the easy 70%. The rest falls into categories worth naming, because they need different treatment.\nimport pandas as pd\n\ndef reconcile(a: pd.DataFrame, b: pd.DataFrame, key: str,\n              a_name: str = \"erp\", b_name: str = \"gis\") -&gt; pd.DataFrame:\n    \"\"\"Outer-join two asset lists and classify every record.\"\"\"\n    a_counts = a.groupby(key).size().rename(f\"n_{a_name}\")\n    b_counts = b.groupby(key).size().rename(f\"n_{b_name}\")\n    joined = pd.concat([a_counts, b_counts], axis=1).fillna(0).astype(int)\n\n    def classify(row):\n        na, nb = row[f\"n_{a_name}\"], row[f\"n_{b_name}\"]\n        if na == 1 and nb == 1:\n            return \"matched 1:1\"\n        if na == 0:\n            return f\"only in {b_name}\"\n        if nb == 0:\n            return f\"only in {a_name}\"\n        if na == 1 or nb == 1:\n            return \"matched 1:many\"\n        return \"ambiguous many:many\"\n\n    joined[\"category\"] = joined.apply(classify, axis=1)\n    return joined.reset_index()\nThe categories mean different things and lead to different actions.\nMatched 1:1. These are the good records, but still check their attributes. Two systems can agree that an asset exists and disagree about its material, size or install year. A match with conflicting attributes is a finding in its own right.\nMatched 1:many. Usually this is a granularity difference rather than an error. One ERP functional location maps to several GIS features, or the other way round. The fix is a documented rule for rolling up or splitting, not a correction to either system.\nOnly in one system. These are the interesting ones. An asset that exists only in GIS might be a real asset that was never set up for maintenance, which is an operational risk. It might be a record of something that was removed and never deleted from the map, which inflates the population. Or it might be a key that failed to match because someone typed it differently. You cannot tell which from the data alone, and it matters a great deal which one it is.\nAmbiguous many:many. Usually a sign that the “common key” is not really a key. Fix the key before attempting anything else."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html#the-crosswalk-is-the-deliverable",
+    "href": "posts/four-systems-three-taxonomies/index.html#the-crosswalk-is-the-deliverable",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "The crosswalk is the deliverable",
+    "text": "The crosswalk is the deliverable\nThe most valuable thing a reconciliation produces is not a corrected count. It is a crosswalk: a maintained table that records, for each real-world asset, its identifier in every system, the match category, and the rule used to make the match.\nasset_ref  erp_floc        erp_equip  gis_feature  risk_key   match_rule         confidence\n---------  --------------  ---------  -----------  ---------  -----------------  ----------\nA-000412   PRI-0412        10088231   GF-77120     R-PRI-412  exact key          high\nA-000413   PRI-0413        10088240   GF-77121     R-PRI-413  exact key          high\nA-000414   PRI-0414        —          GF-77135     R-PRI-414  spatial + name     medium\nA-000415   —               —          GF-77140     —          GIS only           review\nA crosswalk changes the conversation in three ways.\n\nIt makes the disagreement visible and countable. Instead of four systems quietly holding four different totals, you have one table that shows how many assets each system holds and why they differ.\nIt lets every system stay good at its own job. Nobody has to restructure their ERP hierarchy to match the risk model’s taxonomy. The translation lives in one place.\nIt gives data-quality work a queue. The review rows are a prioritised work list for the people who can actually go and look."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html#so-how-many-assets-do-we-have",
+    "href": "posts/four-systems-three-taxonomies/index.html#so-how-many-assets-do-we-have",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "So how many assets do we have?",
+    "text": "So how many assets do we have?\nHere is the answer I have come to prefer, in roughly this form:\n\nAs of 31 March, we hold N installations on the risk model’s definition. The ERP and GIS records reconcile to that figure as follows: a match one-to-one, b differ only in granularity under a documented roll-up rule, and c remain unresolved and are under review. The unresolved records could move the total by up to ±c.\n\nIt is longer than a single number, but it is true, it can be checked, and it tells the reader how much to trust it. In a regulated setting, a number that comes with its own error bars beats a precise number nobody can defend."
+  },
+  {
+    "objectID": "posts/four-systems-three-taxonomies/index.html#a-closing-observation",
+    "href": "posts/four-systems-three-taxonomies/index.html#a-closing-observation",
+    "title": "The asset that exists in four systems and three taxonomies",
+    "section": "A closing observation",
+    "text": "A closing observation\nThe systems disagree because the organisation asked them to do different things. Reconciliation is not about making them agree. It is about making their disagreement legible: knowing where they differ, why, and by how much.\nOnce you can say that, “how many assets do we have?” stops being an awkward question and becomes an easy one.\n\nWritten in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.\nDisagree, or have a better way of doing this? Find me on GitHub — I would rather be corrected than consistent.\n← All writing"
   },
   {
     "objectID": "about.html#hello-traveller",
@@ -110,6 +355,20 @@
     "title": "About",
     "section": "The short version",
     "text": "The short version\nI am a data scientist working in energy networks — currently Lead Data Scientist at Wales & West Utilities, where a lot of my time goes on asset risk, network data and the organisation’s direction on AI. Alongside that I am working through an MSc in Data Science at the University of St Andrews."
+  },
+  {
+    "objectID": "about.html#what-i-believe-about-data-work",
+    "href": "about.html#what-i-believe-about-data-work",
+    "title": "About",
+    "section": "What I believe about data work",
+    "text": "What I believe about data work\n\nA number is only as good as the rule that produced it. If nobody can re-run it, nobody can defend it.\nUncertainty belongs on the page. A figure with honest error bars beats a precise one nobody trusts.\nThe decision is the point. A model that does not change what someone does is a hobby.\nPresentation is part of the analysis. The reader only has the document.\nBeing wrong in public is cheaper than being wrong in a submission. That is partly why this site exists."
+  },
+  {
+    "objectID": "about.html#what-you-will-find-here",
+    "href": "about.html#what-you-will-find-here",
+    "title": "About",
+    "section": "What you will find here",
+    "text": "What you will find here\nLonger pieces on method and asset data, thinking-out-loud on AI strategy in regulated settings, and the occasional note on making documents that hold up under scrutiny. There is an RSS feed if you would like to follow along."
   },
   {
     "objectID": "about.html#elsewhere",

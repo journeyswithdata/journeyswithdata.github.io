@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-26">
-<meta name="description" content="A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.">
+<meta name="dcterms.date" content="2026-10-02">
+<meta name="description" content="A better question to ask of a risk model than “what does it say” — and a small, practical way of answering it.">
 
-<title>Presentation is evidence – Journeys With Data</title>
+<title>What would have to be true for the model to be wrong? – Journeys With Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,15 +108,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Presentation is evidence – Journeys With Data">
-<meta property="og:description" content="A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.">
-<meta property="og:image" content="https://journeyswithdata.dev/posts/presentation-is-evidence/profile.jpg">
+<meta property="og:title" content="What would have to be true for the model to be wrong? – Journeys With Data">
+<meta property="og:description" content="A better question to ask of a risk model than “what does it say” — and a small, practical way of answering it.">
+<meta property="og:image" content="https://journeyswithdata.dev/posts/what-would-have-to-be-true/profile.jpg">
 <meta property="og:site_name" content="Journeys With Data">
-<meta name="twitter:title" content="Presentation is evidence – Journeys With Data">
-<meta name="twitter:description" content="A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.">
-<meta name="twitter:image" content="https://journeyswithdata.dev/posts/presentation-is-evidence/profile.jpg">
+<meta name="twitter:title" content="What would have to be true for the model to be wrong? – Journeys With Data">
+<meta name="twitter:description" content="A better question to ask of a risk model than “what does it say” — and a small, practical way of answering it.">
+<meta name="twitter:image" content="https://journeyswithdata.dev/posts/what-would-have-to-be-true/profile.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -181,12 +210,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#the-reader-only-has-the-page" id="toc-the-reader-only-has-the-page" class="nav-link active" data-scroll-target="#the-reader-only-has-the-page">The reader only has the page</a></li>
-  <li><a href="#a-small-catalogue-of-self-inflicted-wounds" id="toc-a-small-catalogue-of-self-inflicted-wounds" class="nav-link" data-scroll-target="#a-small-catalogue-of-self-inflicted-wounds">A small catalogue of self-inflicted wounds</a></li>
-  <li><a href="#the-fix-is-structural-not-cosmetic" id="toc-the-fix-is-structural-not-cosmetic" class="nav-link" data-scroll-target="#the-fix-is-structural-not-cosmetic">The fix is structural, not cosmetic</a></li>
-  <li><a href="#why-this-belongs-to-the-data-scientist" id="toc-why-this-belongs-to-the-data-scientist" class="nav-link" data-scroll-target="#why-this-belongs-to-the-data-scientist">Why this belongs to the data scientist</a></li>
-  <li><a href="#a-short-pre-submission-checklist" id="toc-a-short-pre-submission-checklist" class="nav-link" data-scroll-target="#a-short-pre-submission-checklist">A short pre-submission checklist</a></li>
-  <li><a href="#the-underlying-point" id="toc-the-underlying-point" class="nav-link" data-scroll-target="#the-underlying-point">The underlying point</a></li>
+  <li><a href="#every-model-is-a-stack-of-claims" id="toc-every-model-is-a-stack-of-claims" class="nav-link active" data-scroll-target="#every-model-is-a-stack-of-claims">Every model is a stack of claims</a></li>
+  <li><a href="#which-assumptions-actually-matter" id="toc-which-assumptions-actually-matter" class="nav-link" data-scroll-target="#which-assumptions-actually-matter">Which assumptions actually matter?</a></li>
+  <li><a href="#reading-the-results-honestly" id="toc-reading-the-results-honestly" class="nav-link" data-scroll-target="#reading-the-results-honestly">Reading the results honestly</a></li>
+  <li><a href="#the-pre-mortem-version" id="toc-the-pre-mortem-version" class="nav-link" data-scroll-target="#the-pre-mortem-version">The pre-mortem version</a></li>
+  <li><a href="#why-this-matters-more-in-regulated-settings" id="toc-why-this-matters-more-in-regulated-settings" class="nav-link" data-scroll-target="#why-this-matters-more-in-regulated-settings">Why this matters more in regulated settings</a></li>
   </ul>
 </nav>
     </div>
@@ -195,16 +223,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Presentation is evidence</h1>
+<h1 class="title">What would have to be true for the model to be wrong?</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">submissions</div>
-    <div class="quarto-category">design</div>
+    <div class="quarto-category">method</div>
+    <div class="quarto-category">risk</div>
+    <div class="quarto-category">decision science</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.
+    A better question to ask of a risk model than “what does it say” — and a small, practical way of answering it.
   </div>
 </div>
 
@@ -215,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 26, 2026</p>
+      <p class="date">October 2, 2026</p>
     </div>
   </div>
   
@@ -227,108 +256,113 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Data scientists tend to treat presentation as the last step: the analysis is the real work, and formatting is what you do once it is finished. In most settings that is a forgivable view. In a regulatory submission it is a mistake, because <strong>the reader cannot tell the difference between a presentation error and a substantive one.</strong></p>
-<section id="the-reader-only-has-the-page" class="level2">
-<h2 data-anchor-id="the-reader-only-has-the-page">The reader only has the page</h2>
-<p>Consider what a reviewer actually has in front of them. They did not see your notebook, your data lineage or the conversation in which the team agreed what a column meant. They have a document, often a long one, read under time pressure and alongside dozens of others.</p>
-<p>So when they reach a process diagram where the last box is clipped at the page edge, they do not think “a rendering bug”. They think “this step is undefined”. When a table’s total does not equal the sum of its rows because of rounding, they do not think “rounding”. They think “these figures have not been checked”. And when a number in the executive summary differs from the same number in an appendix by 0.3%, they do not think “one of these was updated later”. They think “which one is right, and what else is inconsistent?”</p>
-<p>Every one of these is a reasonable inference. Each costs you something you cannot easily get back: the reader’s confidence that the rest of the document is under control.</p>
-</section>
-<section id="a-small-catalogue-of-self-inflicted-wounds" class="level2">
-<h2 data-anchor-id="a-small-catalogue-of-self-inflicted-wounds">A small catalogue of self-inflicted wounds</h2>
-<p>These are the faults I see most often. None of them involves the analysis being wrong, and all of them make it <em>look</em> wrong.</p>
-<p><strong>Numbers that disagree with themselves.</strong> The same quantity appears in the text, a table and a chart, and the three were produced at different times from different extracts. This is the most common fault and the most damaging.</p>
-<p><strong>Totals that don’t add.</strong> Rows are rounded independently and the total is rounded separately, so 33 + 33 + 33 = 100. It is mathematically defensible but looks careless. Either show the rounding convention or round so that totals reconcile.</p>
-<p><strong>Truncated or clipped figures.</strong> Diagrams exported at one size and placed at another. Axis labels cut off. Legends overlapping data. A chart that has visibly been squeezed into a space it was not designed for.</p>
-<p><strong>Silent unit changes.</strong> £m in one table, £k in the next. Kilometres of main in the text, metres in an appendix. The reader has to notice, convert and trust that you did the same.</p>
-<p><strong>Unexplained gaps.</strong> A blank cell, a dash, a zero and “n/a” used interchangeably. To you, they may mean “not applicable”, “not yet available”, “genuinely zero” and “suppressed”. To the reader they are four different claims, and you have not said which is which.</p>
-<p><strong>Charts that argue.</strong> Truncated y-axes, inconsistent scales across panels, colour that implies a ranking the data does not support. Even when they are unintentional, they read as advocacy.</p>
-</section>
-<section id="the-fix-is-structural-not-cosmetic" class="level2">
-<h2 data-anchor-id="the-fix-is-structural-not-cosmetic">The fix is structural, not cosmetic</h2>
-<p>The tempting response is a better proof-read. It helps, but it does not scale, and it fails exactly when the deadline is tightest. The durable fix is to make whole classes of error <strong>impossible</strong> rather than unlikely.</p>
-<section id="one-source-for-every-number" class="level3">
-<h3 data-anchor-id="one-source-for-every-number">One source for every number</h3>
-<p>If a figure appears in the document, it should be computed from the data at render time, not typed in. In Quarto, inline expressions make this straightforward:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>The eligible population is <span class="in">`{python} f"{eligible:,}"`</span> assets,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>of which <span class="in">`{python} f"{undetermined:,}"`</span> could not be classified.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now the summary, the table and the chart all read from the same variable. If the data changes, they change together. Self-contradiction becomes structurally impossible rather than something you have to catch.</p>
-</section>
-<section id="checks-that-run-with-the-document" class="level3">
-<h3 data-anchor-id="checks-that-run-with-the-document">Checks that run with the document</h3>
-<p>Some properties of a submission should always hold. Write them down as assertions and run them every time the document is built:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_submission(tables: <span class="bu">dict</span>[<span class="bu">str</span>, pd.DataFrame]) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Totals reconcile to the sum of their rows, after rounding.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, t <span class="kw">in</span> tables.items():</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        body, total <span class="op">=</span> t.iloc[:<span class="op">-</span><span class="dv">1</span>], t.iloc[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> col <span class="kw">in</span> t.select_dtypes(<span class="st">"number"</span>):</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">assert</span> <span class="bu">round</span>(body[col].<span class="bu">sum</span>()) <span class="op">==</span> <span class="bu">round</span>(total[col]), <span class="op">\</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                <span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">.</span><span class="sc">{</span>col<span class="sc">}</span><span class="ss">: rows sum to </span><span class="sc">{</span>body[col]<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">:,.0f}</span><span class="ss">, total says </span><span class="sc">{</span>total[col]<span class="sc">:,.0f}</span><span class="ss">"</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The headline figure is the same everywhere it appears.</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    headline <span class="op">=</span> {name: t.attrs.get(<span class="st">"headline"</span>) <span class="cf">for</span> name, t <span class="kw">in</span> tables.items() <span class="cf">if</span> <span class="st">"headline"</span> <span class="kw">in</span> t.attrs}</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(<span class="bu">set</span>(headline.values())) <span class="op">&lt;=</span> <span class="dv">1</span>, <span class="ss">f"headline figure differs: </span><span class="sc">{</span>headline<span class="sc">}</span><span class="ss">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A failed build is annoying. A reviewer finding the same inconsistency is far worse.</p>
-</section>
-<section id="figures-sized-for-where-they-will-be-read" class="level3">
-<h3 data-anchor-id="figures-sized-for-where-they-will-be-read">Figures sized for where they will be read</h3>
-<p>Produce figures at the dimensions of their final placement, in a vector format where you can, and look at them in the rendered output rather than the plotting window. A diagram that fits on your monitor and gets clipped in the PDF has not been checked.</p>
-</section>
-<section id="a-legend-for-absence" class="level3">
-<h3 data-anchor-id="a-legend-for-absence">A legend for absence</h3>
-<p>Decide once what each kind of missing value means and use it consistently. For example:</p>
+<p>When a risk model produces a ranked list of assets for intervention, the first question in the room is nearly always <em>what does it say?</em> Which assets are at the top, how much risk is removed, what it costs.</p>
+<p>I have come to think that is the second most useful question. The most useful one is: <strong>what would have to be true for this model to be wrong?</strong></p>
+<p>It is not a cynical question. It is how you find out which parts of the model are carrying the decision, and whether those parts deserve the weight they are carrying.</p>
+<section id="every-model-is-a-stack-of-claims" class="level2">
+<h2 data-anchor-id="every-model-is-a-stack-of-claims">Every model is a stack of claims</h2>
+<p>A typical asset risk model, stripped to its bones, multiplies a probability of failure by a consequence of failure and sums across failure modes:</p>
+<p><span class="math display">\[
+\text{Risk}_i = \sum_{m} P(\text{failure}_{i,m}) \times C(\text{failure}_{i,m})
+\]</span></p>
+<p>Each term in that expression rests on claims of very different strength. It helps to sort them into three grades, the same three I use when talking about asset data generally:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Symbol</th>
+<th>Grade</th>
 <th>Meaning</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">0</td>
-<td>Measured and genuinely zero</td>
+<td><strong>Measured</strong></td>
+<td>Observed directly, with known error</td>
+<td>Recorded failures over ten years; surveyed pipe diameter</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">–</td>
-<td>Not applicable to this category</td>
+<td><strong>Inferred</strong></td>
+<td>Estimated from related evidence by a stated method</td>
+<td>Install year imputed from neighbouring assets; deterioration curve fitted to a cohort</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">..</td>
-<td>Not yet available; expected by a stated date</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">[c]</td>
-<td>Suppressed for confidentiality</td>
+<td><strong>Asserted</strong></td>
+<td>Set by judgement, convention or inheritance</td>
+<td>Consequence weights; a default material for unrecorded assets</td>
 </tr>
 </tbody>
 </table>
-<p>Put the legend in the document. It takes one table and removes a whole category of ambiguity.</p>
+<p>A model built mostly on asserted inputs is not necessarily a bad model. Some things can only be set by judgement. But it is a different kind of object from one built on measurement, and it should be presented differently.</p>
 </section>
+<section id="which-assumptions-actually-matter" class="level2">
+<h2 data-anchor-id="which-assumptions-actually-matter">Which assumptions actually matter?</h2>
+<p>Not every assumption deserves the same scrutiny. The question is not “is this input uncertain?”, because they all are. It is <strong>“if this input were wrong by a plausible amount, would the decision change?”</strong></p>
+<p>That turns a vague worry into something you can compute. If the decision is “which assets go into next year’s programme”, you can test how stable that list is when you perturb the inputs.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(<span class="dv">2026</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> programme(risk: pd.Series, budget_units: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">set</span>:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""The decision: the top-N assets by risk."""</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">set</span>(risk.nlargest(budget_units).index)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> stability(assets: pd.DataFrame, budget_units: <span class="bu">int</span>, n_sims: <span class="bu">int</span> <span class="op">=</span> <span class="dv">2000</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>              pof_sd: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.3</span>, cof_sd: <span class="bu">float</span> <span class="op">=</span> <span class="fl">0.2</span>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""How often does each asset make the programme when inputs are uncertain?</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">    pof_sd / cof_sd are log-scale standard deviations: 0.3 means the true</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    value is plausibly ~35% above or below the central estimate.</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    base <span class="op">=</span> programme(assets[<span class="st">"pof"</span>] <span class="op">*</span> assets[<span class="st">"cof"</span>], budget_units)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    hits <span class="op">=</span> pd.Series(<span class="dv">0</span>, index<span class="op">=</span>assets.index)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    overlaps <span class="op">=</span> []</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_sims):</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        pof <span class="op">=</span> assets[<span class="st">"pof"</span>] <span class="op">*</span> rng.lognormal(<span class="dv">0</span>, pof_sd, <span class="bu">len</span>(assets))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        cof <span class="op">=</span> assets[<span class="st">"cof"</span>] <span class="op">*</span> rng.lognormal(<span class="dv">0</span>, cof_sd, <span class="bu">len</span>(assets))</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        chosen <span class="op">=</span> programme(pof <span class="op">*</span> cof, budget_units)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        hits[<span class="bu">list</span>(chosen)] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        overlaps.append(<span class="bu">len</span>(chosen <span class="op">&amp;</span> base) <span class="op">/</span> budget_units)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> assets.assign(</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        in_base<span class="op">=</span>assets.index.isin(base),</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        selection_rate<span class="op">=</span>hits <span class="op">/</span> n_sims,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    out.attrs[<span class="st">"mean_overlap"</span>] <span class="op">=</span> <span class="bu">float</span>(np.mean(overlaps))</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out.sort_values(<span class="st">"selection_rate"</span>, ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This simple simulation gives you three useful things.</p>
+<p><strong>A selection rate for every asset.</strong> Assets selected in 99% of simulations are robust choices; the decision does not depend on the fine detail of the model. Assets selected in 55% of simulations are coin flips. They sit at the boundary, and the model cannot really tell them apart from the assets just outside it.</p>
+<p><strong>An overall stability figure.</strong> If the base programme and a typical perturbed programme overlap by 90%, the model is giving you a clear steer. If they overlap by 60%, the model is mostly telling you about its own assumptions.</p>
+<p><strong>A place to direct effort.</strong> Re-run the simulation varying one input group at a time. The group whose uncertainty moves the selection most is the one where better data would be worth the most. That is a far better way to prioritise data-improvement work than “fix whatever looks worst”.</p>
 </section>
-<section id="why-this-belongs-to-the-data-scientist" class="level2">
-<h2 data-anchor-id="why-this-belongs-to-the-data-scientist">Why this belongs to the data scientist</h2>
-<p>It is tempting to hand presentation to someone else: a document team, a graphic designer, whoever “does the formatting”. But most of the faults above are <em>data</em> faults that show up visually. Numbers that disagree come from a broken pipeline. Totals that don’t add come from a rounding decision. Unexplained gaps come from undocumented missing-data semantics.</p>
-<p>The person who understands the data is the person best placed to make sure the page tells the truth about it. That is why I have come to treat the rendered document as part of the analysis, not something that happens afterwards.</p>
+<section id="reading-the-results-honestly" class="level2">
+<h2 data-anchor-id="reading-the-results-honestly">Reading the results honestly</h2>
+<p>Results from this kind of exercise usually fall into one of three patterns.</p>
+<ol type="1">
+<li><strong>A robust core and a fuzzy boundary.</strong> This is the most common and the most reassuring. The top of the list is stable; the bottom is not. The honest presentation is to say exactly that, and to make clear that the boundary assets are chosen on grounds the model cannot really distinguish. Deliverability, geography and bundling with other work are all legitimate tie-breakers there.</li>
+<li><strong>An unstable list throughout.</strong> Uncertainty in the inputs swamps the differences between assets. This is a finding, not a failure. It means the model is not yet fit to rank individual assets, though it may still be fine for setting overall volumes. Better to know that before anyone defends a specific asset list on its strength.</li>
+<li><strong>Dominated by one assumption.</strong> The selection hinges almost entirely on a single parameter, often an asserted consequence weight. That parameter deserves its own paper trail: where it came from, who agreed it, and what the programme would look like if it were set differently.</li>
+</ol>
 </section>
-<section id="a-short-pre-submission-checklist" class="level2">
-<h2 data-anchor-id="a-short-pre-submission-checklist">A short pre-submission checklist</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Every number in the text is computed, not typed.</label></li>
-<li><label><input type="checkbox">Every table total reconciles to its rows, or the rounding convention is stated.</label></li>
-<li><label><input type="checkbox">Every figure has been inspected <em>in the final rendered output</em>, at final size.</label></li>
-<li><label><input type="checkbox">Units are stated in every table and axis label, and consistent across the document.</label></li>
-<li><label><input type="checkbox">Every blank, dash and zero means one documented thing.</label></li>
-<li><label><input type="checkbox">Every chart’s axes start where an honest reader would expect them to.</label></li>
-<li><label><input type="checkbox">Someone who has not seen the analysis has read the document cold.</label></li>
-</ul>
-<p>The last item is the one most often skipped, and the one that catches the most. The reviewer will read your document cold. Someone on your side should do it first.</p>
+<section id="the-pre-mortem-version" class="level2">
+<h2 data-anchor-id="the-pre-mortem-version">The pre-mortem version</h2>
+<p>Not every question needs a simulation. A lighter version works in any review meeting. Before anyone discusses the results, ask the group to assume it is two years later and the programme has been judged a mistake. Then ask: <em>what is the most likely reason?</em></p>
+<p>The answers are usually specific and revealing. “The failure data was dominated by one bad winter.” “The consequence model undervalues supply interruptions in rural areas.” “Half the assets in the top decile had imputed install years.” Each one becomes a named assumption with a test attached.</p>
 </section>
-<section id="the-underlying-point" class="level2">
-<h2 data-anchor-id="the-underlying-point">The underlying point</h2>
-<p>A regulator reads presentation as evidence because, from where they sit, it <em>is</em> evidence. It is the only visible trace of how carefully the work was done. Treat it that way and it will work for you rather than against you.</p>
+<section id="why-this-matters-more-in-regulated-settings" class="level2">
+<h2 data-anchor-id="why-this-matters-more-in-regulated-settings">Why this matters more in regulated settings</h2>
+<p>In a competitive business, a model that is wrong costs money and the market tells you fairly quickly. In a regulated business, a model that is wrong can survive for a whole price-control period, because the feedback loop is long and the people who bear the cost are customers, not the modeller.</p>
+<p>That is exactly why the question is worth asking out loud. The regulator will ask it eventually, in one form or another. It is much better to have asked it first, to have an answer, and to be able to show which conclusions depend on which assumptions.</p>
+<blockquote class="blockquote">
+<p>The interesting question is rarely “what does the model say”. It is “what would have to be true for the model to be wrong”.</p>
+</blockquote>
+<p>A model that has been asked that question and survived is worth far more than a precise one that never has been.</p>
 <div class="post-end">
 <p>Written in a personal capacity. The examples are illustrative and do not describe any particular organisation’s data, systems or policy.</p>
 <p>Disagree, or have a better way of doing this? <a href="https://github.com/journeyswithdata">Find me on GitHub</a> — I would rather be corrected than consistent.</p>

@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://journeyswithdata.dev/writing.html</loc>
-    <lastmod>2026-09-27T19:23:27.757Z</lastmod>
-  </url>
-  <url>
     <loc>https://journeyswithdata.dev/index.html</loc>
-    <lastmod>2026-09-27T19:34:03.850Z</lastmod>
+    <lastmod>2026-10-07T14:48:40.205Z</lastmod>
   </url>
   <url>
-    <loc>https://journeyswithdata.dev/posts/four-systems-three-taxonomies/index.html</loc>
-    <lastmod>2026-09-27T19:34:03.851Z</lastmod>
-  </url>
-  <url>
-    <loc>https://journeyswithdata.dev/posts/derive-dont-assert/index.html</loc>
-    <lastmod>2026-09-27T19:34:03.851Z</lastmod>
-  </url>
-  <url>
-    <loc>https://journeyswithdata.dev/posts/presentation-is-evidence/index.html</loc>
-    <lastmod>2026-09-27T19:34:03.851Z</lastmod>
+    <loc>https://journeyswithdata.dev/writing.html</loc>
+    <lastmod>2026-10-07T14:43:16.218Z</lastmod>
   </url>
   <url>
     <loc>https://journeyswithdata.dev/work.html</loc>
-    <lastmod>2026-09-27T19:34:03.850Z</lastmod>
+    <lastmod>2026-10-07T14:48:40.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://journeyswithdata.dev/posts/ai-with-a-regulator-in-the-room/index.html</loc>
+    <lastmod>2026-10-07T14:50:59.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://journeyswithdata.dev/posts/what-would-have-to-be-true/index.html</loc>
+    <lastmod>2026-10-07T14:50:59.714Z</lastmod>
+  </url>
+  <url>
+    <loc>https://journeyswithdata.dev/posts/presentation-is-evidence/index.html</loc>
+    <lastmod>2026-10-07T14:50:59.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://journeyswithdata.dev/posts/derive-dont-assert/index.html</loc>
+    <lastmod>2026-10-07T14:50:59.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://journeyswithdata.dev/posts/four-systems-three-taxonomies/index.html</loc>
+    <lastmod>2026-10-07T14:50:59.716Z</lastmod>
   </url>
   <url>
     <loc>https://journeyswithdata.dev/about.html</loc>
-    <lastmod>2026-09-27T19:34:03.851Z</lastmod>
+    <lastmod>2026-10-07T14:48:46.249Z</lastmod>
   </url>
 </urlset>

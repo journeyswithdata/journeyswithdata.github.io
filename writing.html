@@ -2,23 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Writing – Journeys With Data</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -44,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4faf44808c66243957c3082ea87d90f3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3943fa867835894f399dd86391a19415.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -122,7 +116,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+      if (mathElements[i].tagName == "SPAN") {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -139,7 +133,15 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="custom.css">
-<link rel="alternate" type="application/rss+xml" title="Journeys With Data" href="writing.xml" data-external="1"></head>
+<link rel="alternate" type="application/rss+xml" title="Journeys With Data" href="writing.xml" data-external="1"><meta property="og:title" content="Writing – Journeys With Data">
+<meta property="og:description" content="Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure.">
+<meta property="og:image" content="https://journeyswithdata.dev/profile.jpg">
+<meta property="og:site_name" content="Journeys With Data">
+<meta name="twitter:title" content="Writing – Journeys With Data">
+<meta name="twitter:description" content="Notes on data science, AI and the systems that keep the lights on — by a data scientist working in regulated energy infrastructure.">
+<meta name="twitter:image" content="https://journeyswithdata.dev/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
 
 <body class="nav-fixed quarto-light">
 
@@ -177,6 +179,11 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
+    <a class="nav-link" href="./writing.xml"> <i class="bi bi-rss" role="img" aria-label="RSS feed">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/journeyswithdata"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
@@ -193,7 +200,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YXNzZXQlMjBkYXRh">asset data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGVzaWdu">design <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW5lcmd5">energy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWV0aG9k">method <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VibWlzc2lvbnM=">submissions <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="QUklMjBzdHJhdGVneQ==">AI strategy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXNzZXQlMjBkYXRh">asset data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGVjaXNpb24lMjBzY2llbmNl">decision science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVzaWdu">design <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZW5lcmd5">energy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWV0aG9k">method <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVndWxhdGlvbg==">regulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmlzaw==">risk <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3VibWlzc2lvbnM=">submissions <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -223,7 +230,59 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="c3VibWlzc2lvbnMlMkNkZXNpZ24=" data-listing-date-sort="1790377200000" data-listing-file-modified-sort="1790537643851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
+<div class="quarto-post image-right" data-index="0" data-categories="QUklMjBzdHJhdGVneSUyQ3JlZ3VsYXRpb24=" data-listing-date-sort="1791331200000" data-listing-file-modified-sort="1791384659715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1047">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/ai-with-a-regulator-in-the-room/index.html" class="no-external">AI with a regulator in the room</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBzdHJhdGVneQ=='); return false;">AI strategy</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmVndWxhdGlvbg=='); return false;">regulation</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/ai-with-a-regulator-in-the-room/index.html" class="no-external">
+<p>Setting a direction for AI in a regulated utility is less about capability and more about evidence, assurance and sequencing.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/ai-with-a-regulator-in-the-room/index.html" class="no-external">
+<div class="listing-date">
+7 Oct 2026
+</div>
+<div class="listing-reading-time">6 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bWV0aG9kJTJDcmlzayUyQ2RlY2lzaW9uJTIwc2NpZW5jZQ==" data-listing-date-sort="1790899200000" data-listing-file-modified-sort="1791384659714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1138">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/what-would-have-to-be-true/index.html" class="no-external">What would have to be true for the model to be wrong?</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWV0aG9k'); return false;">method</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmlzaw=='); return false;">risk</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVjaXNpb24lMjBzY2llbmNl'); return false;">decision science</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/what-would-have-to-be-true/index.html" class="no-external">
+<p>A better question to ask of a risk model than “what does it say” — and a small, practical way of answering it.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/what-would-have-to-be-true/index.html" class="no-external">
+<div class="listing-date">
+2 Oct 2026
+</div>
+<div class="listing-reading-time">6 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="c3VibWlzc2lvbnMlMkNkZXNpZ24=" data-listing-date-sort="1790380800000" data-listing-file-modified-sort="1791384659713" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1160">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/presentation-is-evidence/index.html" class="no-external">Presentation is evidence</a>
@@ -244,11 +303,11 @@ window.Quarto = {
 <div class="listing-date">
 26 Sep 2026
 </div>
-<div class="listing-reading-time">1 min</div>
+<div class="listing-reading-time">6 min</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="YXNzZXQlMjBkYXRhJTJDZW5lcmd5" data-listing-date-sort="1789686000000" data-listing-file-modified-sort="1790537643851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
+<div class="quarto-post image-right" data-index="3" data-categories="YXNzZXQlMjBkYXRhJTJDZW5lcmd5" data-listing-date-sort="1789689600000" data-listing-file-modified-sort="1791384659716" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1387">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/four-systems-three-taxonomies/index.html" class="no-external">The asset that exists in four systems and three taxonomies</a>
@@ -269,11 +328,11 @@ window.Quarto = {
 <div class="listing-date">
 18 Sep 2026
 </div>
-<div class="listing-reading-time">1 min</div>
+<div class="listing-reading-time">7 min</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWV0aG9kJTJDYXNzZXQlMjBkYXRh" data-listing-date-sort="1788562800000" data-listing-file-modified-sort="1790537643851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
+<div class="quarto-post image-right" data-index="4" data-categories="bWV0aG9kJTJDYXNzZXQlMjBkYXRh" data-listing-date-sort="1788566400000" data-listing-file-modified-sort="1791384659715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1616">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/derive-dont-assert/index.html" class="no-external">Derive the population, don’t assert it</a>
@@ -294,7 +353,7 @@ window.Quarto = {
 <div class="listing-date">
 5 Sep 2026
 </div>
-<div class="listing-reading-time">1 min</div>
+<div class="listing-reading-time">9 min</div>
 </a>
 </div>
 </div>
@@ -345,14 +404,13 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
