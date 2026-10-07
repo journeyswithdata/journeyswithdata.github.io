@@ -5,6 +5,104 @@ date: 2026-09-18
 categories: [asset data, energy]
 ---
 
-*Still being written — the thinking is done, the words are not.*
+"How many assets do we have?" sounds like the easiest question in asset management. In practice it is one of the hardest, because the honest answer starts with another question: *according to which system?*
 
-Reconciling an asset population across SAP, GIS and a risk model — and what "how many assets do we have" actually means.
+In a typical utility, the same physical object is recorded in at least four places. Each was built for a different job, by a different team, at a different time. They do not agree, and they were never designed to.
+
+## Four systems, four jobs
+
+Take a single piece of equipment, say a pressure-reduction installation at the edge of a town. Here is roughly how it might appear across the estate. The details are illustrative, but anyone who has done this work will recognise the shape.
+
+| System | Built to answer | What counts as "one asset" | Typical identifier |
+|---|---|---|---|
+| **ERP / work management** (e.g. SAP) | What do we maintain, and what does it cost? | A maintainable item: a functional location with equipment underneath it | Functional location code + equipment number |
+| **GIS** | Where is it, and what is it connected to? | A spatial feature: a point, a line segment, a polygon | Feature ID, often regenerated on edit |
+| **Risk model** | What is the risk, and what happens if we intervene? | A modelled unit, defined by the methodology | Model-specific key, sometimes derived from one of the above |
+| **Regulatory reporting** | What do we report, and against which category? | A reportable line, aggregated by the reporting rules | No asset-level key at all |
+
+None of these definitions is wrong. Each is the *correct* unit for the job its system does. The problem only appears when someone asks a question that crosses systems, and almost every interesting question does.
+
+## Three taxonomies
+
+The systems also *classify* assets differently, and that is where most of the pain lives.
+
+- **The ERP hierarchy** follows how work is organised: site, then system, then equipment. A single installation might be one functional location with eight pieces of equipment underneath it.
+- **The GIS feature classes** follow the physical network: pipes, valves, fittings, installations. The same installation might be one point feature, or a polygon containing several point features, depending on when it was digitised.
+- **The risk-model asset classes** follow the methodology. They might split one physical installation into several modelled components with separate failure modes, or merge several into one.
+
+So "how many installations do we have?" can honestly be answered as 1, 8 or 4, depending on whose taxonomy you use. Pick one without saying so and you have created a number that will be contradicted the moment someone looks at another system.
+
+## Reconciliation is not de-duplication
+
+The instinct is to treat this as a matching problem: find the common key, join the tables, done. That works for perhaps the easy 70%. The rest falls into categories worth naming, because they need different treatment.
+
+```python
+import pandas as pd
+
+def reconcile(a: pd.DataFrame, b: pd.DataFrame, key: str,
+              a_name: str = "erp", b_name: str = "gis") -> pd.DataFrame:
+    """Outer-join two asset lists and classify every record."""
+    a_counts = a.groupby(key).size().rename(f"n_{a_name}")
+    b_counts = b.groupby(key).size().rename(f"n_{b_name}")
+    joined = pd.concat([a_counts, b_counts], axis=1).fillna(0).astype(int)
+
+    def classify(row):
+        na, nb = row[f"n_{a_name}"], row[f"n_{b_name}"]
+        if na == 1 and nb == 1:
+            return "matched 1:1"
+        if na == 0:
+            return f"only in {b_name}"
+        if nb == 0:
+            return f"only in {a_name}"
+        if na == 1 or nb == 1:
+            return "matched 1:many"
+        return "ambiguous many:many"
+
+    joined["category"] = joined.apply(classify, axis=1)
+    return joined.reset_index()
+```
+
+The categories mean different things and lead to different actions.
+
+**Matched 1:1.** These are the good records, but still check their attributes. Two systems can agree that an asset exists and disagree about its material, size or install year. A match with conflicting attributes is a finding in its own right.
+
+**Matched 1:many.** Usually this is a granularity difference rather than an error. One ERP functional location maps to several GIS features, or the other way round. The fix is a documented rule for rolling up or splitting, not a correction to either system.
+
+**Only in one system.** These are the interesting ones. An asset that exists only in GIS might be a real asset that was never set up for maintenance, which is an operational risk. It might be a record of something that was removed and never deleted from the map, which inflates the population. Or it might be a key that failed to match because someone typed it differently. You cannot tell which from the data alone, and it matters a great deal which one it is.
+
+**Ambiguous many:many.** Usually a sign that the "common key" is not really a key. Fix the key before attempting anything else.
+
+## The crosswalk is the deliverable
+
+The most valuable thing a reconciliation produces is not a corrected count. It is a **crosswalk**: a maintained table that records, for each real-world asset, its identifier in every system, the match category, and the rule used to make the match.
+
+```text
+asset_ref  erp_floc        erp_equip  gis_feature  risk_key   match_rule         confidence
+---------  --------------  ---------  -----------  ---------  -----------------  ----------
+A-000412   PRI-0412        10088231   GF-77120     R-PRI-412  exact key          high
+A-000413   PRI-0413        10088240   GF-77121     R-PRI-413  exact key          high
+A-000414   PRI-0414        —          GF-77135     R-PRI-414  spatial + name     medium
+A-000415   —               —          GF-77140     —          GIS only           review
+```
+
+A crosswalk changes the conversation in three ways.
+
+1. **It makes the disagreement visible and countable.** Instead of four systems quietly holding four different totals, you have one table that shows how many assets each system holds and why they differ.
+2. **It lets every system stay good at its own job.** Nobody has to restructure their ERP hierarchy to match the risk model's taxonomy. The translation lives in one place.
+3. **It gives data-quality work a queue.** The `review` rows are a prioritised work list for the people who can actually go and look.
+
+## So how many assets *do* we have?
+
+Here is the answer I have come to prefer, in roughly this form:
+
+> As of 31 March, we hold **N** installations on the risk model's definition. The ERP and GIS records reconcile to that figure as follows: **a** match one-to-one, **b** differ only in granularity under a documented roll-up rule, and **c** remain unresolved and are under review. The unresolved records could move the total by up to **±c**.
+
+It is longer than a single number, but it is true, it can be checked, and it tells the reader how much to trust it. In a regulated setting, a number that comes with its own error bars beats a precise number nobody can defend.
+
+## A closing observation
+
+The systems disagree because the organisation asked them to do different things. Reconciliation is not about making them agree. It is about making their disagreement **legible**: knowing where they differ, why, and by how much.
+
+Once you can say that, "how many assets do we have?" stops being an awkward question and becomes an easy one.
+
+{{< include ../_post-end.md >}}

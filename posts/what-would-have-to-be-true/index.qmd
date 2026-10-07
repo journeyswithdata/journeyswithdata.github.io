@@ -1,0 +1,106 @@
+---
+title: "What would have to be true for the model to be wrong?"
+description: "A better question to ask of a risk model than \"what does it say\" — and a small, practical way of answering it."
+date: 2026-10-02
+categories: [method, risk, decision science]
+---
+
+When a risk model produces a ranked list of assets for intervention, the first question in the room is nearly always *what does it say?* Which assets are at the top, how much risk is removed, what it costs.
+
+I have come to think that is the second most useful question. The most useful one is: **what would have to be true for this model to be wrong?**
+
+It is not a cynical question. It is how you find out which parts of the model are carrying the decision, and whether those parts deserve the weight they are carrying.
+
+## Every model is a stack of claims
+
+A typical asset risk model, stripped to its bones, multiplies a probability of failure by a consequence of failure and sums across failure modes:
+
+$$
+\text{Risk}_i = \sum_{m} P(\text{failure}_{i,m}) \times C(\text{failure}_{i,m})
+$$
+
+Each term in that expression rests on claims of very different strength. It helps to sort them into three grades, the same three I use when talking about asset data generally:
+
+| Grade | Meaning | Example |
+|---|---|---|
+| **Measured** | Observed directly, with known error | Recorded failures over ten years; surveyed pipe diameter |
+| **Inferred** | Estimated from related evidence by a stated method | Install year imputed from neighbouring assets; deterioration curve fitted to a cohort |
+| **Asserted** | Set by judgement, convention or inheritance | Consequence weights; a default material for unrecorded assets |
+
+A model built mostly on asserted inputs is not necessarily a bad model. Some things can only be set by judgement. But it is a different kind of object from one built on measurement, and it should be presented differently.
+
+## Which assumptions actually matter?
+
+Not every assumption deserves the same scrutiny. The question is not "is this input uncertain?", because they all are. It is **"if this input were wrong by a plausible amount, would the decision change?"**
+
+That turns a vague worry into something you can compute. If the decision is "which assets go into next year's programme", you can test how stable that list is when you perturb the inputs.
+
+```python
+import numpy as np
+import pandas as pd
+
+rng = np.random.default_rng(2026)
+
+def programme(risk: pd.Series, budget_units: int) -> set:
+    """The decision: the top-N assets by risk."""
+    return set(risk.nlargest(budget_units).index)
+
+def stability(assets: pd.DataFrame, budget_units: int, n_sims: int = 2000,
+              pof_sd: float = 0.3, cof_sd: float = 0.2) -> pd.DataFrame:
+    """How often does each asset make the programme when inputs are uncertain?
+
+    pof_sd / cof_sd are log-scale standard deviations: 0.3 means the true
+    value is plausibly ~35% above or below the central estimate.
+    """
+    base = programme(assets["pof"] * assets["cof"], budget_units)
+    hits = pd.Series(0, index=assets.index)
+    overlaps = []
+
+    for _ in range(n_sims):
+        pof = assets["pof"] * rng.lognormal(0, pof_sd, len(assets))
+        cof = assets["cof"] * rng.lognormal(0, cof_sd, len(assets))
+        chosen = programme(pof * cof, budget_units)
+        hits[list(chosen)] += 1
+        overlaps.append(len(chosen & base) / budget_units)
+
+    out = assets.assign(
+        in_base=assets.index.isin(base),
+        selection_rate=hits / n_sims,
+    )
+    out.attrs["mean_overlap"] = float(np.mean(overlaps))
+    return out.sort_values("selection_rate", ascending=False)
+```
+
+This simple simulation gives you three useful things.
+
+**A selection rate for every asset.** Assets selected in 99% of simulations are robust choices; the decision does not depend on the fine detail of the model. Assets selected in 55% of simulations are coin flips. They sit at the boundary, and the model cannot really tell them apart from the assets just outside it.
+
+**An overall stability figure.** If the base programme and a typical perturbed programme overlap by 90%, the model is giving you a clear steer. If they overlap by 60%, the model is mostly telling you about its own assumptions.
+
+**A place to direct effort.** Re-run the simulation varying one input group at a time. The group whose uncertainty moves the selection most is the one where better data would be worth the most. That is a far better way to prioritise data-improvement work than "fix whatever looks worst".
+
+## Reading the results honestly
+
+Results from this kind of exercise usually fall into one of three patterns.
+
+1. **A robust core and a fuzzy boundary.** This is the most common and the most reassuring. The top of the list is stable; the bottom is not. The honest presentation is to say exactly that, and to make clear that the boundary assets are chosen on grounds the model cannot really distinguish. Deliverability, geography and bundling with other work are all legitimate tie-breakers there.
+2. **An unstable list throughout.** Uncertainty in the inputs swamps the differences between assets. This is a finding, not a failure. It means the model is not yet fit to rank individual assets, though it may still be fine for setting overall volumes. Better to know that before anyone defends a specific asset list on its strength.
+3. **Dominated by one assumption.** The selection hinges almost entirely on a single parameter, often an asserted consequence weight. That parameter deserves its own paper trail: where it came from, who agreed it, and what the programme would look like if it were set differently.
+
+## The pre-mortem version
+
+Not every question needs a simulation. A lighter version works in any review meeting. Before anyone discusses the results, ask the group to assume it is two years later and the programme has been judged a mistake. Then ask: *what is the most likely reason?*
+
+The answers are usually specific and revealing. "The failure data was dominated by one bad winter." "The consequence model undervalues supply interruptions in rural areas." "Half the assets in the top decile had imputed install years." Each one becomes a named assumption with a test attached.
+
+## Why this matters more in regulated settings
+
+In a competitive business, a model that is wrong costs money and the market tells you fairly quickly. In a regulated business, a model that is wrong can survive for a whole price-control period, because the feedback loop is long and the people who bear the cost are customers, not the modeller.
+
+That is exactly why the question is worth asking out loud. The regulator will ask it eventually, in one form or another. It is much better to have asked it first, to have an answer, and to be able to show which conclusions depend on which assumptions.
+
+> The interesting question is rarely "what does the model say". It is "what would have to be true for the model to be wrong".
+
+A model that has been asked that question and survived is worth far more than a precise one that never has been.
+
+{{< include ../_post-end.md >}}

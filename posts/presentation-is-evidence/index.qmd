@@ -5,6 +5,106 @@ date: 2026-09-26
 categories: [submissions, design]
 ---
 
-*Still being written — the thinking is done, the words are not.*
+Data scientists tend to treat presentation as the last step: the analysis is the real work, and formatting is what you do once it is finished. In most settings that is a forgivable view. In a regulatory submission it is a mistake, because **the reader cannot tell the difference between a presentation error and a substantive one.**
 
-A diagram whose box is cut off does not read as a rendering bug. To a regulator it reads as missing data.
+## The reader only has the page
+
+Consider what a reviewer actually has in front of them. They did not see your notebook, your data lineage or the conversation in which the team agreed what a column meant. They have a document, often a long one, read under time pressure and alongside dozens of others.
+
+So when they reach a process diagram where the last box is clipped at the page edge, they do not think "a rendering bug". They think "this step is undefined". When a table's total does not equal the sum of its rows because of rounding, they do not think "rounding". They think "these figures have not been checked". And when a number in the executive summary differs from the same number in an appendix by 0.3%, they do not think "one of these was updated later". They think "which one is right, and what else is inconsistent?"
+
+Every one of these is a reasonable inference. Each costs you something you cannot easily get back: the reader's confidence that the rest of the document is under control.
+
+## A small catalogue of self-inflicted wounds
+
+These are the faults I see most often. None of them involves the analysis being wrong, and all of them make it *look* wrong.
+
+**Numbers that disagree with themselves.** The same quantity appears in the text, a table and a chart, and the three were produced at different times from different extracts. This is the most common fault and the most damaging.
+
+**Totals that don't add.** Rows are rounded independently and the total is rounded separately, so 33 + 33 + 33 = 100. It is mathematically defensible but looks careless. Either show the rounding convention or round so that totals reconcile.
+
+**Truncated or clipped figures.** Diagrams exported at one size and placed at another. Axis labels cut off. Legends overlapping data. A chart that has visibly been squeezed into a space it was not designed for.
+
+**Silent unit changes.** £m in one table, £k in the next. Kilometres of main in the text, metres in an appendix. The reader has to notice, convert and trust that you did the same.
+
+**Unexplained gaps.** A blank cell, a dash, a zero and "n/a" used interchangeably. To you, they may mean "not applicable", "not yet available", "genuinely zero" and "suppressed". To the reader they are four different claims, and you have not said which is which.
+
+**Charts that argue.** Truncated y-axes, inconsistent scales across panels, colour that implies a ranking the data does not support. Even when they are unintentional, they read as advocacy.
+
+## The fix is structural, not cosmetic
+
+The tempting response is a better proof-read. It helps, but it does not scale, and it fails exactly when the deadline is tightest. The durable fix is to make whole classes of error **impossible** rather than unlikely.
+
+### One source for every number
+
+If a figure appears in the document, it should be computed from the data at render time, not typed in. In Quarto, inline expressions make this straightforward:
+
+```markdown
+The eligible population is `{python} f"{eligible:,}"` assets,
+of which `{python} f"{undetermined:,}"` could not be classified.
+```
+
+Now the summary, the table and the chart all read from the same variable. If the data changes, they change together. Self-contradiction becomes structurally impossible rather than something you have to catch.
+
+### Checks that run with the document
+
+Some properties of a submission should always hold. Write them down as assertions and run them every time the document is built:
+
+```python
+import pandas as pd
+
+def check_submission(tables: dict[str, pd.DataFrame]) -> None:
+    # Totals reconcile to the sum of their rows, after rounding.
+    for name, t in tables.items():
+        body, total = t.iloc[:-1], t.iloc[-1]
+        for col in t.select_dtypes("number"):
+            assert round(body[col].sum()) == round(total[col]), \
+                f"{name}.{col}: rows sum to {body[col].sum():,.0f}, total says {total[col]:,.0f}"
+
+    # The headline figure is the same everywhere it appears.
+    headline = {name: t.attrs.get("headline") for name, t in tables.items() if "headline" in t.attrs}
+    assert len(set(headline.values())) <= 1, f"headline figure differs: {headline}"
+```
+
+A failed build is annoying. A reviewer finding the same inconsistency is far worse.
+
+### Figures sized for where they will be read
+
+Produce figures at the dimensions of their final placement, in a vector format where you can, and look at them in the rendered output rather than the plotting window. A diagram that fits on your monitor and gets clipped in the PDF has not been checked.
+
+### A legend for absence
+
+Decide once what each kind of missing value means and use it consistently. For example:
+
+| Symbol | Meaning |
+|:---:|---|
+| 0 | Measured and genuinely zero |
+| – | Not applicable to this category |
+| .. | Not yet available; expected by a stated date |
+| [c] | Suppressed for confidentiality |
+
+Put the legend in the document. It takes one table and removes a whole category of ambiguity.
+
+## Why this belongs to the data scientist
+
+It is tempting to hand presentation to someone else: a document team, a graphic designer, whoever "does the formatting". But most of the faults above are *data* faults that show up visually. Numbers that disagree come from a broken pipeline. Totals that don't add come from a rounding decision. Unexplained gaps come from undocumented missing-data semantics.
+
+The person who understands the data is the person best placed to make sure the page tells the truth about it. That is why I have come to treat the rendered document as part of the analysis, not something that happens afterwards.
+
+## A short pre-submission checklist
+
+- [ ] Every number in the text is computed, not typed.
+- [ ] Every table total reconciles to its rows, or the rounding convention is stated.
+- [ ] Every figure has been inspected *in the final rendered output*, at final size.
+- [ ] Units are stated in every table and axis label, and consistent across the document.
+- [ ] Every blank, dash and zero means one documented thing.
+- [ ] Every chart's axes start where an honest reader would expect them to.
+- [ ] Someone who has not seen the analysis has read the document cold.
+
+The last item is the one most often skipped, and the one that catches the most. The reviewer will read your document cold. Someone on your side should do it first.
+
+## The underlying point
+
+A regulator reads presentation as evidence because, from where they sit, it *is* evidence. It is the only visible trace of how carefully the work was done. Treat it that way and it will work for you rather than against you.
+
+{{< include ../_post-end.md >}}
