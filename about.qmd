@@ -1,9 +1,24 @@
 ---
 title: "About"
+image: profile.jpg
+page-layout: custom
+about:
+  id: about-block
+  template: trestles
+  image-width: 16em
+  image-shape: rectangle
+  image-alt: "Portrait"
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/journeyswithdata
+    - icon: rss
+      text: RSS
+      href: writing.xml
 ---
 
-![](profile.jpg){.portrait fig-alt="Portrait"}
-
+::: {.wrap}
+::: {#about-block}
 ## Hello, traveller
 
 This site is a trail of notes left while wandering through data science, infrastructure, policy and AI.
@@ -26,14 +41,10 @@ I am a data scientist working in energy networks — currently Lead Data Scienti
 
 ## What you will find here
 
-Longer pieces on [method](writing.qmd#category=method) and [asset data](writing.qmd#category=asset%20data), thinking-out-loud on [AI strategy](writing.qmd#category=AI%20strategy) in regulated settings, and the occasional note on making documents that hold up under scrutiny. There is an [RSS feed](writing.xml) if you would like to follow along.
-
-
-## Elsewhere
-
-- **GitHub** — [journeyswithdata](https://github.com/journeyswithdata)
-- More ways to reach me, shortly.
+Longer pieces on [method](writing.qmd#category=method) and [asset data](writing.qmd#category=asset%20data), thinking-out-loud on [AI strategy](writing.qmd#category=AI%20strategy) in regulated settings, and the occasional note on making documents that hold up under scrutiny.
 
 ::: {.callout-note appearance="simple"}
 Everything here is written in a personal capacity and does not represent the views of my employer.
+:::
+:::
 :::

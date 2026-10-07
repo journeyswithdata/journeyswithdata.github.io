@@ -1,56 +1,44 @@
 ---
 title: "Work"
+subtitle: "I work where data science meets regulated infrastructure: gas distribution, asset risk and the evidence a regulator expects behind an investment case. Below is the shape of that work — **not a CV, which is what LinkedIn is for.**"
+page-layout: custom
 ---
 
-[I work where data science meets regulated infrastructure: gas distribution, asset risk and the evidence a regulator expects behind an investment case. Below is the shape of that work — **not a CV, which is what LinkedIn is for.**]{.lede}
-
+::: {.wrap}
+::: {.grid .cards}
+::: {.g-col-12 .g-col-lg-6}
 ## Risk on a real asset base
 
 Network risk models are only as good as the asset data underneath them, and that data is rarely as complete as the model assumes. A lot of my work is the unglamorous part: establishing what is actually known about an asset population, what is inferred, and what is simply asserted — then being honest about which is which.
 
 That means building populations from rules rather than inherited figures, reconciling the same assets across systems that were never designed to agree, and making the gaps visible rather than papering over them.
+:::
+::: {.g-col-12 .g-col-lg-6}
+## AI with a regulator in the room
+
+Setting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny: sorting uses by what an error costs, building the evidence machinery before it is needed, and earning the right to harder uses one at a time.
+:::
+::: {.g-col-12 .g-col-lg-6}
+## Decision modelling
+
+Optimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal, and where knowing *how stable* the answer is matters as much as the answer itself.
+:::
+::: {.g-col-12 .g-col-lg-6}
+## Submissions and documents
+
+A regulatory submission is read by someone who only has the page. I care about the parts of the pipeline that end up in front of that reader: numbers computed rather than typed, totals that reconcile, figures checked at their final size, and one documented meaning for every blank cell.
+:::
+:::
 
 ::: {.pullquote}
 The interesting question is rarely "what does the model say". It is "what would have to be true for the model to be wrong".
 :::
 
-## AI with a regulator in the room
-
-Setting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny: sorting uses by what an error costs, building the evidence machinery before it is needed, and earning the right to harder uses one at a time.
-
-## Decision modelling
-
-Optimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal, and where knowing *how stable* the answer is matters as much as the answer itself.
-
-## Submissions and documents
-
-A regulatory submission is read by someone who only has the page. I care about the parts of the pipeline that end up in front of that reader: numbers computed rather than typed, totals that reconcile, figures checked at their final size, and one documented meaning for every blank cell.
-
+::: {.grid}
+::: {.g-col-12 .g-col-lg-8}
 ## Tools
 
 R and Python for the modelling, Quarto for everything that has to be read by someone else, and a long-standing conviction that a well-made document is part of the work rather than an afterthought.
-
-## Selected writing, by theme
-
-::: {.theme-list}
-::: {}
-[Asset data]{.tag}
-
-- [Derive the population, don't assert it](posts/derive-dont-assert/index.qmd)
-- [The asset that exists in four systems and three taxonomies](posts/four-systems-three-taxonomies/index.qmd)
-:::
-::: {}
-[Risk & decisions]{.tag}
-
-- [What would have to be true for the model to be wrong?](posts/what-would-have-to-be-true/index.qmd)
-:::
-::: {}
-[AI & assurance]{.tag}
-
-- [AI with a regulator in the room](posts/ai-with-a-regulator-in-the-room/index.qmd)
-- [Presentation is evidence](posts/presentation-is-evidence/index.qmd)
-:::
-:::
 
 ## Ways to work together
 
@@ -60,10 +48,30 @@ I am always interested in comparing notes with people working on similar problem
 - **Peer review** of methods, especially the "what would have to be true" kind of review, done before a submission rather than after.
 - **Mentoring** people moving into data science from engineering or operations, or the other way round.
 - **Collaboration** with academics and other utilities on shared methodological problems.
+:::
+::: {.g-col-12 .g-col-lg-4}
+## Selected writing, by theme
+
+[Asset data]{.tag}
+
+- [Derive the population, don't assert it](posts/derive-dont-assert/index.qmd)
+- [The asset that exists in four systems and three taxonomies](posts/four-systems-three-taxonomies/index.qmd)
+
+[Risk & decisions]{.tag .moss}
+
+- [What would have to be true for the model to be wrong?](posts/what-would-have-to-be-true/index.qmd)
+
+[AI & assurance]{.tag .teal}
+
+- [AI with a regulator in the room](posts/ai-with-a-regulator-in-the-room/index.qmd)
+- [Presentation is evidence](posts/presentation-is-evidence/index.qmd)
+:::
+:::
 
 ::: {.contact}
 ## Working on something similar?
 If you are wrestling with asset data, network risk, or making AI legible to people who have to sign it off, I would be glad to compare notes.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
+:::
 :::

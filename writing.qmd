@@ -1,13 +1,20 @@
 ---
 title: "Writing"
+subtitle: "Notes, working-out and the occasional map. I write to understand things better, not to look clever."
+page-layout: custom
 listing:
+  id: all-posts
   contents: posts
   type: default
   sort: "date desc"
   fields: [date, title, description, categories, reading-time]
   date-format: "D MMM YYYY"
-  categories: true
   feed: true
 ---
 
-[Notes, working-out and the occasional map. I write to understand things better, not to look clever.]{.lede}
+::: {.wrap}
+Click any tag to filter the list. [Show all](writing.qmd)
+
+::: {#all-posts}
+:::
+:::

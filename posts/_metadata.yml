@@ -1,9 +1,8 @@
 # Applied to every post in this folder.
+title-block-banner: true      # coloured by title-banner-bg in _brand.yml
 toc: true
 toc-location: right
 toc-title: "On this page"
 toc-depth: 2
 code-copy: true
 code-overflow: wrap
-reading-time: true
-title-block-categories: true

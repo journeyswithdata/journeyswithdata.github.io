@@ -1,0 +1,64 @@
+# Colours and fonts for the site (Quarto brand file).
+# theme.scss builds on these via $brand-* variables.
+color:
+  palette:
+    white: "#ffffff"
+    sage-50: "#f4f7f2"
+    sage-100: "#e8efe5"
+    sage-300: "#b9cbb3"
+    forest: "#2f5d46"
+    forest-900: "#1d2b24"
+    moss: "#6f8f4e"
+    teal: "#4b7f84"
+    text-soft: "#56645b"
+    text-faint: "#8a978e"
+    rule: "#e1e7de"
+  foreground: forest-900
+  background: white
+  primary: forest
+
+typography:
+  fonts:
+    - family: IBM Plex Sans
+      source: google
+      weight: [300, 400, 600]
+      style: [normal, italic]
+    - family: Instrument Serif
+      source: google
+      weight: [400]
+      style: [normal, italic]
+    - family: IBM Plex Mono
+      source: google
+      weight: [400, 600]
+  base:
+    family: IBM Plex Sans
+    size: 17px
+    line-height: 1.65
+  headings:
+    family: Instrument Serif
+    weight: 400
+  monospace: IBM Plex Mono
+
+# Theme variables the brand schema doesn't cover directly.
+defaults:
+  bootstrap:
+    defaults:
+      navbar-bg: $brand-white
+      navbar-fg: $brand-text-soft
+      navbar-hl: $brand-forest
+      footer-bg: $brand-sage-50
+      footer-fg: $brand-text-soft
+      code-color: $brand-forest
+      code-bg: $brand-sage-50
+      code-block-bg: $brand-sage-50
+      border-color: $brand-rule
+      table-border-color: $brand-rule
+      text-muted: $brand-text-soft
+      callout-color-note: $brand-teal
+      callout-border-width: 3px
+      border-radius: 0
+      border-radius-sm: 0
+      border-radius-lg: 0
+      title-banner-bg: $brand-sage-50
+      title-banner-color: $brand-forest-900
+      web-font-path: false   # cosmo would otherwise load Source Sans Pro
