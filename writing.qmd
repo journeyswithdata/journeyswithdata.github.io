@@ -1,13 +1,27 @@
 ---
-title: "Writing"
+pagetitle: "Writing"
+title-block-style: none
 listing:
+  id: all-posts
   contents: posts
   type: default
   sort: "date desc"
   fields: [date, title, description, categories, reading-time]
   date-format: "D MMM YYYY"
-  categories: true
   feed: true
 ---
 
+::: {.column-screen}
+::: {.wrap}
+[ALL POSTS]{.eyebrow}
+
+# Writing {.page-title}
+
 [Notes, working-out and the occasional map. I write to understand things better, not to look clever.]{.lede}
+
+[Click any tag to filter the list. [Show all](writing.qmd)]{.meta}
+
+::: {#all-posts}
+:::
+:::
+:::

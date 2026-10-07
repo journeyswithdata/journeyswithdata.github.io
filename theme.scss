@@ -60,9 +60,9 @@ $table-border-color:   $rule;
 $callout-color-note:   $teal;
 
 // layout widths (Quarto defaults: 800 / 250 / 250)
-$grid-body-width:    1000px;
+$grid-body-width:    1100px;
 $grid-sidebar-width: 260px;
-$grid-margin-width:  280px;
+$grid-margin-width:  300px;
 
 
 /*-- scss:rules --*/
@@ -86,12 +86,14 @@ h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this desig
 .nav-footer .nav-footer-center { font-family: $headings-font-family; font-style: italic;
   text-transform: none; letter-spacing: 0; font-size: .95rem; }
 
-// ---------- home page width ----------
-// Quarto's grid is fixed-width by design. The home page uses .column-screen
-// bands, and .wrap gives their contents a share of the screen instead, so it
-// scales on large and 4K displays.
+// ---------- page width ----------
+// Quarto's grid is fixed-width by design. Home, Work, About and Writing wrap
+// their content in a .column-screen band with .wrap inside, so every main page
+// keeps the same share of the screen on large and 4K displays. Posts use
+// Quarto's normal article layout with the contents sidebar.
 .wrap { width: min(88%, 2000px); margin-inline: auto;
-  > p { max-width: 75ch; } }   // keep running text at a readable length
+  p, li { max-width: 75ch; } }   // keep running text at a readable length
+.wrap h1.page-title { font-size: clamp(2.4rem, 4vw, 3.4rem); margin: 0 0 1.25rem; }
 
 // ---------- home hero (a .column-screen band) ----------
 // body-classes: home (index.qmd) lets the hero sit directly under the navbar.
@@ -144,11 +146,22 @@ h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this desig
 // ---------- card grids: focus areas and principles ----------
 .areas, .principles {
   display: grid; gap: 1px; background: $rule; border: 1px solid $rule; margin: 2rem 0;
-  > div { background: $white; padding: 1.6rem 1.4rem; }
+  > * { background: $white; padding: 1.6rem 1.4rem; margin: 0; }
   h3 { font-size: 1.35rem; margin: .5rem 0 .6rem; }
   p { margin: 0; color: $text-soft; font-size: .95rem; line-height: 1.6; }
 }
 .areas { grid-template-columns: repeat(3, 1fr); }
+.work-areas { grid-template-columns: repeat(2, 1fr);
+  h2 { font-size: 1.6rem; margin: 0 0 .75rem; }
+  p + p { margin-top: .75rem; } }
+
+// two-column page body: running text beside a narrower aside
+.split { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 2rem 5rem; align-items: start; margin-top: 1rem;
+  .aside-col h2:first-child, .main-col > section:first-child > h2 { margin-top: 0; }
+  .aside-col .theme-list { grid-template-columns: 1fr; gap: 1.25rem; }
+  .aside-col img.portrait, .aside-col .portrait img { float: none; width: 100%; max-width: 360px;
+    height: auto; aspect-ratio: 1; margin: 0 0 1.5rem; } }
 .principles { grid-template-columns: repeat(4, 1fr);
   .num { @extend %label; color: $moss; } }
 .areas > div:nth-child(1) .tag, .theme-list > div:nth-child(1) .tag { background: $forest; }
@@ -161,7 +174,7 @@ h2 { border-bottom: none; padding-bottom: 0; }   // Quarto rules h2s; this desig
 
 @media (max-width: 1000px) { .principles { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 760px) {
-  .areas, .principles, .theme-list { grid-template-columns: 1fr; }
+  .areas, .principles, .theme-list, .work-areas, .split { grid-template-columns: 1fr; }
   .chart-hero { padding: 3.5rem 0 3rem; }
 }
 

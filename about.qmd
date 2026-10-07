@@ -1,9 +1,16 @@
 ---
-title: "About"
+pagetitle: "About"
+title-block-style: none
 ---
 
-![](profile.jpg){.portrait fig-alt="Portrait"}
+::: {.column-screen}
+::: {.wrap}
+[WHO I AM]{.eyebrow}
 
+# About {.page-title}
+
+::: {.split}
+::: {.main-col}
 ## Hello, traveller
 
 This site is a trail of notes left while wandering through data science, infrastructure, policy and AI.
@@ -27,7 +34,10 @@ I am a data scientist working in energy networks — currently Lead Data Scienti
 ## What you will find here
 
 Longer pieces on [method](writing.qmd#category=method) and [asset data](writing.qmd#category=asset%20data), thinking-out-loud on [AI strategy](writing.qmd#category=AI%20strategy) in regulated settings, and the occasional note on making documents that hold up under scrutiny. There is an [RSS feed](writing.xml) if you would like to follow along.
+:::
 
+::: {.aside-col}
+![](profile.jpg){.portrait fig-alt="Portrait"}
 
 ## Elsewhere
 
@@ -36,4 +46,8 @@ Longer pieces on [method](writing.qmd#category=method) and [asset data](writing.
 
 ::: {.callout-note appearance="simple"}
 Everything here is written in a personal capacity and does not represent the views of my employer.
+:::
+:::
+:::
+:::
 :::

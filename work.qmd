@@ -1,35 +1,65 @@
 ---
-title: "Work"
+pagetitle: "Work"
+title-block-style: none
 ---
+
+::: {.column-screen}
+::: {.wrap}
+[WHAT I DO]{.eyebrow}
+
+# Work {.page-title}
 
 [I work where data science meets regulated infrastructure: gas distribution, asset risk and the evidence a regulator expects behind an investment case. Below is the shape of that work — **not a CV, which is what LinkedIn is for.**]{.lede}
 
+::: {.areas .work-areas}
+::: {.card}
 ## Risk on a real asset base
 
 Network risk models are only as good as the asset data underneath them, and that data is rarely as complete as the model assumes. A lot of my work is the unglamorous part: establishing what is actually known about an asset population, what is inferred, and what is simply asserted — then being honest about which is which.
 
 That means building populations from rules rather than inherited figures, reconciling the same assets across systems that were never designed to agree, and making the gaps visible rather than papering over them.
+:::
+
+::: {.card}
+## AI with a regulator in the room
+
+Setting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny: sorting uses by what an error costs, building the evidence machinery before it is needed, and earning the right to harder uses one at a time.
+:::
+
+::: {.card}
+## Decision modelling
+
+Optimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal, and where knowing *how stable* the answer is matters as much as the answer itself.
+:::
+
+::: {.card}
+## Submissions and documents
+
+A regulatory submission is read by someone who only has the page. I care about the parts of the pipeline that end up in front of that reader: numbers computed rather than typed, totals that reconcile, figures checked at their final size, and one documented meaning for every blank cell.
+:::
+:::
 
 ::: {.pullquote}
 The interesting question is rarely "what does the model say". It is "what would have to be true for the model to be wrong".
 :::
 
-## AI with a regulator in the room
-
-Setting a direction for AI inside a utility is a different problem from setting one inside a tech company. The constraint is not capability — it is assurance, evidence, and the ability to explain a decision years after it was made. I am interested in the versions of this that survive scrutiny: sorting uses by what an error costs, building the evidence machinery before it is needed, and earning the right to harder uses one at a time.
-
-## Decision modelling
-
-Optimisation and scenario work aimed at an actual decision: what to do, in what order, under what budget. Scheduling, siting, prioritisation — problems where the answer has to be defensible as well as optimal, and where knowing *how stable* the answer is matters as much as the answer itself.
-
-## Submissions and documents
-
-A regulatory submission is read by someone who only has the page. I care about the parts of the pipeline that end up in front of that reader: numbers computed rather than typed, totals that reconcile, figures checked at their final size, and one documented meaning for every blank cell.
-
+::: {.split}
+::: {.main-col}
 ## Tools
 
 R and Python for the modelling, Quarto for everything that has to be read by someone else, and a long-standing conviction that a well-made document is part of the work rather than an afterthought.
 
+## Ways to work together
+
+I am always interested in comparing notes with people working on similar problems. Things I am glad to talk about:
+
+- **Speaking and panels** on asset data, risk modelling, or AI assurance in regulated industries.
+- **Peer review** of methods, especially the "what would have to be true" kind of review, done before a submission rather than after.
+- **Mentoring** people moving into data science from engineering or operations, or the other way round.
+- **Collaboration** with academics and other utilities on shared methodological problems.
+:::
+
+::: {.aside-col}
 ## Selected writing, by theme
 
 ::: {.theme-list}
@@ -51,19 +81,14 @@ R and Python for the modelling, Quarto for everything that has to be read by som
 - [Presentation is evidence](posts/presentation-is-evidence/index.qmd)
 :::
 :::
-
-## Ways to work together
-
-I am always interested in comparing notes with people working on similar problems. Things I am glad to talk about:
-
-- **Speaking and panels** on asset data, risk modelling, or AI assurance in regulated industries.
-- **Peer review** of methods, especially the "what would have to be true" kind of review, done before a submission rather than after.
-- **Mentoring** people moving into data science from engineering or operations, or the other way round.
-- **Collaboration** with academics and other utilities on shared methodological problems.
+:::
+:::
 
 ::: {.contact}
 ## Working on something similar?
 If you are wrestling with asset data, network risk, or making AI legible to people who have to sign it off, I would be glad to compare notes.
 
 [Find me on GitHub](https://github.com/journeyswithdata) []{.dot} more ways to reach me coming shortly.
+:::
+:::
 :::
